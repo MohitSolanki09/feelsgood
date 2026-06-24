@@ -1,0 +1,48 @@
+/* :root {
+  --fg-navy: #0b1f35;
+  --fg-gold: #d79229;
+  --fg-brass: #cc7e20;
+  --fg-cream: #f8f3ea;
+  --fg-surface: #e9ecef;
+  --fg-slate: #465566;
+  --fg-white: #ffffff;
+  --fg-black: #050505;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+} */
+
+
+
+@import "tailwindcss";
+
+:root {
+  --fg-navy: #0b1f35;
+  --fg-gold: #d79229;
+  --fg-brass: #cc7e20;
+  --fg-cream: #f8f3ea;
+  --fg-border: #e7e1d7;
+  --fg-slate: #465566;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #ffffff;
+  color: var(--fg-navy);
+}
