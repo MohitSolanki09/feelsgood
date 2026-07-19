@@ -47,17 +47,7 @@ export default function BrassProductVisual({ type }: BrassProductVisualProps) {
                 </div>
             )}
 
-            {type === "cnc" && (
-                <div className="relative h-[210px] w-[210px] rounded-full bg-gradient-to-br from-[#F5C66E] via-[#D79229] to-[#9B5B17] shadow-2xl">
-                    <div className="absolute inset-[26px] rounded-full border-[18px] border-[#F8F3EA]" />
-                    <div
-                        className="absolute -right-12 top-1/2 h-[85px] w-[150px] -translate-y-1/2 bg-[#D79229]"
-                        style={{
-                            clipPath: "polygon(0 20%, 100% 0, 100% 100%, 0 80%)",
-                        }}
-                    />
-                </div>
-            )}
+
 
             {type === "custom" && (
                 <div
