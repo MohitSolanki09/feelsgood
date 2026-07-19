@@ -28,7 +28,6 @@ const inquiryTypes = [
     "Brass Fittings",
     "Brass Fasteners",
     "Brass Electrical Parts",
-    "CNC Turned Components",
     "Custom Brass Components",
 ];
 

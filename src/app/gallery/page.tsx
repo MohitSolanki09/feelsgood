@@ -17,60 +17,54 @@ const galleryItems = [
     },
     {
         number: "03",
-        title: "CNC Turned Parts",
-        category: "Precision Machining",
-        type: "cnc",
-    },
-    {
-        number: "04",
         title: "Brass Fasteners",
         category: "Assembly Components",
         type: "fastener",
     },
     {
-        number: "05",
+        number: "04",
         title: "Electrical Brass Parts",
         category: "Conductive Parts",
         type: "electrical",
     },
     {
-        number: "06",
+        number: "05",
         title: "Quality Inspection",
         category: "QC Process",
         type: "quality",
     },
     {
-        number: "07",
+        number: "06",
         title: "Custom Components",
         category: "Drawing Based Parts",
         type: "custom",
     },
     {
-        number: "08",
+        number: "07",
         title: "Packing & Dispatch",
         category: "Safe Delivery",
         type: "packing",
     },
     {
-        number: "09",
+        number: "08",
         title: "Electrical Brass Parts",
         category: "Conductive Parts",
         type: "electrical",
     },
     {
-        number: "10",
+        number: "09",
         title: "Quality Inspection",
         category: "QC Process",
         type: "quality",
     },
     {
-        number: "11",
+        number: "10",
         title: "Custom Components",
         category: "Drawing Based Parts",
         type: "custom",
     },
     {
-        number: "12",
+        number: "11",
         title: "Packing & Dispatch",
         category: "Safe Delivery",
         type: "packing",
@@ -116,16 +110,6 @@ function BrassVisual({ type }: { type: string }) {
                     <div className="absolute -left-10 top-1/2 h-[95px] w-[95px] -translate-y-1/2 rounded-full bg-[#D79229]" />
                     <div className="absolute -right-10 top-1/2 h-[95px] w-[95px] -translate-y-1/2 rounded-full bg-[#D79229]" />
                     <div className="absolute left-1/2 top-1/2 h-[68px] w-[175px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#F8F3EA]" />
-                </div>
-            )}
-
-            {type === "cnc" && (
-                <div className="relative h-[230px] w-[230px] rounded-full bg-gradient-to-br from-[#F8CF78] via-[#D79229] to-[#8F5518] shadow-2xl">
-                    <div className="absolute inset-[30px] rounded-full border-[18px] border-[#F8F3EA]" />
-                    <div
-                        className="absolute -right-14 top-1/2 h-[85px] w-[160px] -translate-y-1/2 bg-[#D79229]"
-                        style={{ clipPath: "polygon(0 20%, 100% 0, 100% 100%, 0 80%)" }}
-                    />
                 </div>
             )}
 
@@ -238,9 +222,9 @@ export default function GalleryPage() {
                         </div>
 
                         <p className="max-w-[760px] text-[19px] leading-[1.8] text-[#465566] max-md:text-[16px]">
-                            A visual overview of brass inserts, fittings, CNC turned
-                            components, electrical parts, fasteners, custom parts, quality
-                            inspection, and dispatch preparation.
+                            A visual overview of brass inserts, fittings, electrical parts,
+                            fasteners, custom parts, quality inspection, and dispatch
+                            preparation.
                         </p>
                     </div>
 

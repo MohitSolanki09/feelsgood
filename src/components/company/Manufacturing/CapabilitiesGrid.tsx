@@ -3,7 +3,7 @@
 const capabilities = [
     {
         number: "01",
-        title: "CNC Turning",
+        title: "Automatic Bar/Lathe Turning",
         text: "Accurate brass turned parts, inserts, connectors, bushes, pins, and custom round components.",
     },
     {

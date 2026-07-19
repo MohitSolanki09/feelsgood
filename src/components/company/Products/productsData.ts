@@ -5,7 +5,6 @@ export type ProductVisual =
     | "fitting"
     | "fastener"
     | "electrical"
-    | "cnc"
     | "custom";
 
 export type Product = {
@@ -139,36 +138,6 @@ export const products: Product[] = [
             "Accurate drilling and threading",
             "Clean finishing for assembly",
             "Custom design support",
-        ],
-    },
-    {
-        slug: "cnc-turned-components",
-        title: "CNC Turned Components",
-        label: "Accurate CNC Brass Turned Parts",
-        visual: "cnc",
-        shortText:
-            "CNC turned brass components for OEM, industrial, automotive, and electrical applications.",
-        description:
-            "We manufacture CNC turned brass components with high accuracy, repeat quality, and consistent finishing. These parts are suitable for custom industrial assemblies, OEM supply, electrical products, and precision engineering applications.",
-        components: [
-            "CNC Brass Parts",
-            "Brass Bushes",
-            "Brass Sleeves",
-            "Brass Pins",
-            "Brass Shafts",
-            "Custom Turned Components",
-        ],
-        applications: [
-            "OEM manufacturing",
-            "Machinery assemblies",
-            "Automotive parts",
-            "Industrial components",
-        ],
-        specifications: [
-            "Tight dimensional control",
-            "Repeat batch production",
-            "Turning, threading, drilling support",
-            "Drawing-based manufacturing",
         ],
     },
     {

@@ -219,24 +219,19 @@ const processSteps: ProcessStep[] = [
         side: "right",
     },
     {
-        title: "CNC Manufacturing",
-        text: "Precision brass inserts, fittings, fasteners, electrical parts, and custom turned components are produced using reliable machining processes.",
-        side: "left",
-    },
-    {
         title: "Quality Inspection",
         text: "Every batch is checked for dimensions, threading, surface finish, material quality, and consistency before dispatch.",
-        side: "right",
+        side: "left",
     },
     {
         title: "Finishing & Packaging",
         text: "Components are cleaned, finished, packed safely, and prepared for local or export delivery as per customer needs.",
-        side: "left",
+        side: "right",
     },
     {
         title: "Dispatch & Support",
         text: "Orders are shipped on time with proper coordination, documentation, and after-sales support for repeat requirements.",
-        side: "right",
+        side: "left",
     },
 ];
 
