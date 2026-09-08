@@ -8,7 +8,7 @@ const qualityItems = [
     },
     {
         title: "Precision Tolerances",
-        text: "Accurate CNC machining for brass inserts, fittings, fasteners, and custom turned components.",
+        text: "Accurate machining for brass inserts, fittings, fasteners, and custom turned components.",
         icon: "tolerance",
     },
     {

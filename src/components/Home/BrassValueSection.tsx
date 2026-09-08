@@ -33,7 +33,6 @@ const cards = [
         title: "Transforming Brass Parts Manufacturing",
         href: "/products",
         variant: "gold",
-        image: "/images/sections/brass-parts.png",
     },
     {
         eyebrow: "Quality",
@@ -110,18 +109,6 @@ export default function BrassValueSection() {
                                         }`}
                                 />
 
-                                {/* Product image for middle card */}
-                                {card.image && (
-                                    <div className="absolute bottom-0 right-[-18px] z-10 h-[390px] w-[260px] transition-transform duration-700 group-hover/card:translate-x-3 group-hover/card:scale-105 max-xl:w-[220px] max-lg:right-0 max-sm:opacity-50">
-                                        <Image
-                                            src={card.image}
-                                            alt={card.title}
-                                            fill
-                                            sizes="260px"
-                                            className="object-contain object-bottom"
-                                        />
-                                    </div>
-                                )}
 
                                 <div className="relative z-20 flex h-full min-h-[445px] flex-col justify-between px-10 pb-0 pt-12 max-md:px-5">
                                     <div className="flex items-center gap-2 text-[20px] font-medium tracking-[-0.4px] text-[#465566] transition-colors duration-300 group-hover/card:text-white">
@@ -134,8 +121,8 @@ export default function BrassValueSection() {
                                     <div className="pb-[96px]">
                                         <h3
                                             className={`max-w-[360px] text-[31px] font-extrabold uppercase leading-[1.16] tracking-[-1px] transition-colors duration-300 max-xl:text-[27px] max-md:text-[25px] ${isGold
-                                                    ? "text-white"
-                                                    : "text-[#0B1F35] group-hover/card:text-white"
+                                                ? "text-white"
+                                                : "text-[#0B1F35] group-hover/card:text-white"
                                                 }`}
                                         >
                                             {card.title}
@@ -146,8 +133,8 @@ export default function BrassValueSection() {
                                 {/* Arrow button */}
                                 <div
                                     className={`absolute bottom-0 left-0 z-30 flex h-[70px] w-[108px] items-center justify-center transition-all duration-300 ${isGold
-                                            ? "bg-white text-[#D79229] group-hover/card:bg-[#D79229] group-hover/card:text-white"
-                                            : "bg-[#D79229] text-white group-hover/card:bg-white group-hover/card:text-[#0B1F35]"
+                                        ? "bg-white text-[#D79229] group-hover/card:bg-[#D79229] group-hover/card:text-white"
+                                        : "bg-[#D79229] text-white group-hover/card:bg-white group-hover/card:text-[#0B1F35]"
                                         }`}
                                 >
                                     <ArrowIcon />

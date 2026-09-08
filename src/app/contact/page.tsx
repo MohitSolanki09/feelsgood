@@ -12,7 +12,7 @@ const contactCards = [
     {
         number: "02",
         title: "Call Support",
-        text: "Discuss your brass inserts, fittings, fasteners, CNC parts, or custom components.",
+        text: "Discuss your brass inserts, fittings, fasteners, or custom components.",
         value: "+91 00000 00000",
     },
     {

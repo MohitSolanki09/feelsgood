@@ -58,9 +58,7 @@ export default function QualityProcess() {
                     </div>
 
                     <p className="max-w-[720px] text-[19px] leading-[1.8] text-[#465566] max-md:text-[16px]">
-                        Our quality process is designed to maintain consistency in brass
-                        inserts, brass fittings, brass fasteners, CNC turned parts,
-                        electrical brass parts, and custom components.
+                        Our quality process is designed to maintain consistent standards across brass inserts, brass fittings, brass fasteners, precision turned parts, electrical brass components, and customized products, ensuring accuracy, durability, and reliable performance.
                     </p>
                 </div>
 
@@ -69,8 +67,8 @@ export default function QualityProcess() {
                         <div
                             key={item.title}
                             className={`group min-h-[370px] px-9 py-12 transition-colors duration-500 hover:bg-[#0B1F35] max-md:min-h-[300px] max-md:px-6 ${index !== processItems.length - 1
-                                    ? "border-r border-[#e7e1d7]"
-                                    : ""
+                                ? "border-r border-[#e7e1d7]"
+                                : ""
                                 } max-lg:border-b max-lg:border-r-0`}
                         >
                             <div className="mb-10 text-[#b8c0c8] transition-colors duration-500 group-hover:text-[#D79229]">

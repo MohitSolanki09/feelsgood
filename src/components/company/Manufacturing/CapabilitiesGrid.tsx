@@ -49,9 +49,7 @@ export default function CapabilitiesGrid() {
                     </div>
 
                     <p className="max-w-[720px] text-[19px] leading-[1.8] text-[#465566] max-md:text-[16px]">
-                        Our manufacturing setup supports precision brass inserts, fittings,
-                        fasteners, electrical parts, CNC turned parts, sanitary parts, and
-                        customized components for different industrial applications.
+                        Our manufacturing setup supports the production of precision brass inserts, fittings, fasteners, electrical parts, turned components, sanitary parts, and customized brass products, ensuring consistent quality, reliable performance, and timely delivery for diverse industrial applications.
                     </p>
                 </div>
 

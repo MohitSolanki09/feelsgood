@@ -9,7 +9,7 @@ const milestones = [
     {
         year: "2010",
         title: "Precision Machining",
-        text: "Expanded machining capacity for brass inserts, fittings, fasteners, and CNC turned brass parts.",
+        text: "Expanded manufacturing capacity for brass inserts, fittings, fasteners, precision turned brass parts, and customized components.",
     },
     {
         year: "2020",

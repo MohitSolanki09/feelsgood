@@ -134,10 +134,7 @@ export default function QualityPage() {
                                 </h1>
 
                                 <p className="mt-8 max-w-[720px] text-[18px] leading-[1.85] text-[#465566] max-md:text-[16px]">
-                                    Our quality process is built to maintain accurate dimensions,
-                                    clean finishing, proper threading, and consistent production
-                                    for brass inserts, fittings, fasteners, electrical parts, CNC
-                                    turned parts, and custom brass components.
+                                    Our quality process is built to maintain accurate dimensions, clean finishing, proper threading, and consistent production for brass inserts, fittings, fasteners, electrical parts, precision turned components, and custom brass products, ensuring reliable quality and long-lasting performance.
                                 </p>
 
                                 <div className="mt-10 flex flex-wrap gap-4">
@@ -191,8 +188,8 @@ export default function QualityPage() {
                             <div
                                 key={item.title}
                                 className={`group min-h-[370px] px-10 py-12 transition-colors duration-500 hover:bg-[#0B1F35] max-md:min-h-[300px] max-md:px-6 ${index !== qualityPillars.length - 1
-                                        ? "border-r border-[#e7e1d7] max-lg:border-r-0 max-lg:border-b"
-                                        : ""
+                                    ? "border-r border-[#e7e1d7] max-lg:border-r-0 max-lg:border-b"
+                                    : ""
                                     }`}
                             >
                                 <span className="mb-12 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
@@ -265,9 +262,7 @@ export default function QualityPage() {
                         </div>
 
                         <p className="max-w-[760px] text-[19px] leading-[1.8] text-[#465566] max-md:text-[16px]">
-                            Our inspection checklist helps maintain consistency in custom
-                            brass components, CNC turned components, electrical brass parts,
-                            fittings, inserts, and fasteners.
+                            Our inspection checklist helps maintain consistency in custom brass components, precision turned components, electrical brass parts, fittings, inserts, and fasteners, while ensuring accurate dimensions, proper finishing, and reliable product performance.
                         </p>
                     </div>
 
@@ -328,7 +323,7 @@ export default function QualityPage() {
 
                                 <p className="mt-5 text-[16px] leading-[1.7] text-[#465566]">
                                     Get support for brass inserts, fittings, fasteners, electrical
-                                    parts, CNC turned parts, and custom brass components.
+                                    parts,and custom brass components.
                                 </p>
 
                                 <Link
