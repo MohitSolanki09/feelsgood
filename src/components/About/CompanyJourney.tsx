@@ -2,17 +2,17 @@
 
 const milestones = [
     {
-        year: "1997",
+        year: "1998",
         title: "Foundation Started",
         text: "Started with a clear focus on reliable brass component manufacturing for local industrial requirements.",
     },
     {
-        year: "2010",
+        year: "2008",
         title: "Precision Machining",
         text: "Expanded manufacturing capacity for brass inserts, fittings, fasteners, precision turned brass parts, and customized components.",
     },
     {
-        year: "2020",
+        year: "2016",
         title: "Custom Development",
         text: "Improved custom brass component development as per client drawings, samples, sizes, and material needs.",
     },

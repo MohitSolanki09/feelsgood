@@ -85,7 +85,7 @@ export default function LeadershipMessage() {
                                 className="group absolute bottom-0 right-0 flex h-[78px] w-[330px] items-center justify-between bg-[#0B1F35] px-9 text-white transition-colors duration-300 hover:bg-[#D79229] max-md:w-full"
                             >
                                 <span className="text-[15px] font-extrabold uppercase tracking-[3px]">
-                                    Meet Our Team
+                                    Our Products
                                 </span>
 
                                 <ArrowIcon />

@@ -47,29 +47,29 @@ const navItems: NavItem[] = [
     {
         label: "Products",
         href: "/products",
-        mega: {
-            title: "High Quality Brass Parts And Components",
-            image: "/images/menu/products.jpg",
-            cta: "View Products",
-            ctaHref: "/products",
-            links: [
-                { label: "Brass Cpvc Inserts", href: "/products/brass-inserts" },
-                { label: "Brass ppr Inserts", href: "/products/brass-fittings" },
-                { label: "Brass Inserts", href: "/products/brass-fasteners" },
-                {
-                    label: "Brass Nut",
-                    href: "/products/brass-electrical-parts",
-                },
-                {
-                    label: "Brass Reducer",
-                    href: "/products/cnc-turned-components",
-                },
-                {
-                    label: "Brass Sanitary Fitting",
-                    href: "/products/custom-brass-components",
-                },
-            ],
-        },
+        // mega: {
+        //     title: "High Quality Brass Parts And Components",
+        //     image: "/images/menu/products.jpg",
+        //     cta: "View Products",
+        //     ctaHref: "/products",
+        //     links: [
+        //         { label: "Brass Cpvc Inserts", href: "/products/brass-inserts" },
+        //         { label: "Brass ppr Inserts", href: "/products/brass-fittings" },
+        //         { label: "Brass Inserts", href: "/products/brass-fasteners" },
+        //         {
+        //             label: "Brass Nut",
+        //             href: "/products/brass-electrical-parts",
+        //         },
+        //         {
+        //             label: "Brass Reducer",
+        //             href: "/products/cnc-turned-components",
+        //         },
+        //         {
+        //             label: "Brass Sanitary Fitting",
+        //             href: "/products/custom-brass-components",
+        //         },
+        //     ],
+        // },
     },
     { label: "Quality", href: "/quality" },
     { label: "Gallery", href: "/gallery" },
