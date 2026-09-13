@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import aboutHero from "@/public/images/hero/hero_brass.png"
+import aboutHero from "@/public/images/about/about_hero.png"
 
 function ArrowIcon() {
     return (
@@ -62,11 +62,11 @@ export default function AboutHero() {
                 <div className="relative h-[430px] overflow-hidden max-xl:h-[390px] max-lg:h-[350px] max-md:h-[300px] max-sm:h-[240px]">
                     <Image
                         src={aboutHero}
-                        alt="Feel Good Brass Industry manufacturing facility"
+                        alt="Feel Good Brass Industry precision brass manufacturing"
                         fill
                         priority
                         sizes="100vw"
-                        className="object-cover object-center"
+                        className="object-cover object-[80%_center]"
                     />
 
                     <div className="absolute inset-0 bg-gradient-to-r from-[#0B1F35]/20 via-transparent to-[#D79229]/10" />

@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import founderImage from "@/public/images/hero/hero_brass.png";
-import factoryImage from "@/public/images/hero/brass_left.png";
+import founderImage from "@/public/images/about/about-leadership.webp";
+import factoryImage from "@/public/images/about/about-bottom.webp";
 
 function ArrowIcon() {
     return (
@@ -34,7 +34,7 @@ export default function LeadershipMessage() {
                         <div className="relative h-[470px] w-full overflow-hidden bg-[#F8F3EA] max-lg:h-[420px] max-md:h-[340px]">
                             <Image
                                 src={founderImage}
-                                alt="Feel Good Brass Industry leadership"
+                                alt="Feel Good Brass Industry leadership and manufacturing"
                                 fill
                                 sizes="(max-width: 1024px) 100vw, 460px"
                                 className="object-cover object-center transition-transform duration-700 hover:scale-105"
@@ -72,7 +72,7 @@ export default function LeadershipMessage() {
                         <div className="relative h-[560px] w-full overflow-hidden bg-[#F8F3EA] max-lg:h-[440px] max-md:h-[350px]">
                             <Image
                                 src={factoryImage}
-                                alt="Feel Good Brass Industry manufacturing unit"
+                                alt="Precision brass parts manufacturing at Feel Good Brass Industry"
                                 fill
                                 sizes="(max-width: 1024px) 100vw, 460px"
                                 className="object-cover object-center transition-transform duration-700 hover:scale-105"

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import brassParts from "@/public/images/hero/brass_left.png";
+import brassParts from "@/public/images/manufacturing/manufacturing-main.webp";
 
 function ArrowIcon() {
     return (
@@ -26,7 +26,7 @@ export default function ManufacturingCTA() {
                     <div className="relative h-[560px] max-lg:h-[420px] max-md:h-[320px]">
                         <Image
                             src={brassParts}
-                            alt="Custom brass parts manufacturing"
+                            alt="Precision brass parts manufacturing at Feel Good Brass Industry"
                             fill
                             sizes="(max-width: 1024px) 100vw, 750px"
                             className="object-cover object-center"

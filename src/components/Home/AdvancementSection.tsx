@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import brassAdvance from "@/public/images/hero/brass_left.png";
+import brassAdvance from "@/public/images/hero/brass_part.png";
 
 function ArrowIcon() {
     return (

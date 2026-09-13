@@ -1,7 +1,7 @@
 // src/components/Company/CompanyOverview.tsx
 
 import Image from "next/image";
-import brassCompany from "@/public/images/hero/brass_left.png";
+import brassCompany from "@/public/images/about/about-manufacturing.webp";
 
 function InspectionIcon() {
     return (
@@ -74,7 +74,7 @@ export default function CompanyOverview() {
                     <div className="relative col-span-2 min-h-[500px] overflow-hidden border-r border-t border-[#e7e1d7] max-lg:col-span-1 max-lg:border-b max-lg:border-r-0 max-md:min-h-[420px] max-sm:min-h-[360px]">
                         <Image
                             src={brassCompany}
-                            alt="Brass parts manufacturing"
+                            alt="Precision brass components manufacturing facility"
                             fill
                             sizes="(max-width: 1024px) 100vw, 1000px"
                             className="object-cover object-center"

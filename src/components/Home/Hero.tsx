@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import heroImage from "@/public/images/hero/hero_brass.png"
+import heroImage from "@/public/images/hero/hero_rep.png"
 
 export default function Hero() {
     return (
@@ -32,7 +32,7 @@ export default function Hero() {
                         fill
                         priority
                         sizes="100vw"
-                        className="object-cover object-center"
+                        className="object-cover object-[75%_center]"
                     />
 
                     <div className="absolute inset-0 bg-gradient-to-r from-[#0B1F35]/45 via-[#0B1F35]/10 to-[#D79229]/15" />

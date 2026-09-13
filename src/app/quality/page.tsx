@@ -1,6 +1,7 @@
 // src/app/quality/page.tsx
 
 import Link from "next/link";
+import QualityInspectionVisual from "@/src/components/QualityInspectionVisual";
 
 const qualityPillars = [
     {
@@ -88,33 +89,6 @@ function CheckIcon() {
     );
 }
 
-function BrassQualityVisual() {
-    return (
-        <div className="relative flex min-h-[560px] items-center justify-center overflow-hidden bg-[#F8F3EA] max-lg:min-h-[440px] max-md:min-h-[340px]">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_28%_24%,rgba(215,146,41,0.28),transparent_34%),radial-gradient(circle_at_78%_80%,rgba(11,31,53,0.14),transparent_34%)]" />
-
-            <div className="absolute left-10 top-10 h-24 w-24 rounded-full border border-[#D79229]/25" />
-            <div className="absolute bottom-12 right-12 h-36 w-36 rounded-full border border-[#0B1F35]/10" />
-
-            <div className="relative h-[290px] w-[290px] rounded-[42px] bg-gradient-to-br from-[#F8CF78] via-[#D79229] to-[#8F5518] shadow-2xl max-md:h-[220px] max-md:w-[220px]">
-                <div className="absolute left-1/2 top-1/2 h-[148px] w-[148px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#F8F3EA] shadow-inner max-md:h-[110px] max-md:w-[110px]" />
-
-                <div className="absolute left-8 top-8 h-10 w-10 rounded-full bg-white/30" />
-                <div className="absolute bottom-8 right-8 h-10 w-10 rounded-full bg-[#0B1F35]/20" />
-
-                <div className="absolute -bottom-8 left-1/2 flex h-16 -translate-x-1/2 items-center gap-3 bg-[#0B1F35] px-7 text-white shadow-xl">
-                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#D79229]">
-                        <CheckIcon />
-                    </span>
-                    <span className="text-[13px] font-extrabold uppercase tracking-[3px]">
-                        QC Passed
-                    </span>
-                </div>
-            </div>
-        </div>
-    );
-}
-
 export default function QualityPage() {
     return (
         <main>
@@ -157,7 +131,7 @@ export default function QualityPage() {
                             </div>
                         </div>
 
-                        <BrassQualityVisual />
+                        <QualityInspectionVisual />
                     </div>
                 </div>
             </section>

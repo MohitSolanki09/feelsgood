@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import qualityImage from "@/public/images/hero/hero_brass.png";
 
 function ArrowIcon() {
     return (
@@ -55,8 +54,8 @@ export default function QualityCTA() {
 
                     <div className="relative h-[560px] max-lg:h-[420px] max-md:h-[320px]">
                         <Image
-                            src={qualityImage}
-                            alt="Brass parts quality checking"
+                            src="/images/quality/quality_main.png"
+                            alt="Precision quality inspection of brass components"
                             fill
                             sizes="(max-width: 1024px) 100vw, 750px"
                             className="object-cover object-center"

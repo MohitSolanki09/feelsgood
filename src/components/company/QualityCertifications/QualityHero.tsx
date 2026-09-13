@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import qualityHero from "@/public/images/hero/brass_left.png";
 
 function ArrowIcon() {
     return (
@@ -51,8 +50,8 @@ export default function QualityHero() {
 
                 <div className="relative h-[520px] overflow-hidden max-xl:h-[450px] max-md:h-[320px]">
                     <Image
-                        src={qualityHero}
-                        alt="Brass parts quality inspection"
+                        src="/images/quality/quality_hero.png"
+                        alt="Quality inspection and precision brass manufacturing at Feel Good Brass Industry"
                         fill
                         priority
                         sizes="100vw"

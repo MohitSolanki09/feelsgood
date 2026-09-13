@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import manufacturingHero from "@/public/images/hero/brass_left.png";
+import manufacturingHero from "@/public/images/manufacturing/manufacturing-hero.webp";
 
 function ArrowIcon() {
     return (
@@ -52,11 +52,11 @@ export default function ManufacturingHero() {
                 <div className="relative h-[520px] overflow-hidden max-xl:h-[450px] max-md:h-[320px]">
                     <Image
                         src={manufacturingHero}
-                        alt="Brass manufacturing capabilities"
+                        alt="Feel Good Brass Industry precision brass manufacturing facility"
                         fill
                         priority
                         sizes="100vw"
-                        className="object-cover object-center"
+                        className="object-cover object-[85%_center]"
                     />
 
                     <div className="absolute inset-0 bg-gradient-to-r from-[#0B1F35]/35 via-transparent to-[#D79229]/15" />
