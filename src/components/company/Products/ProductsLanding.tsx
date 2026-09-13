@@ -1,8 +1,24 @@
 // src/components/company/Products/ProductsLanding.tsx
 
 import Link from "next/link";
-import { products } from "./productsData";
+import { productCards } from "./productsData";
 import BrassProductVisual from "./BrassProductVisual";
+import cpvcImage from "@/public/images/products/brass-cpvc-inserts.png";
+import insertsImage from "@/public/images/products/brass-inserts.png";
+import nutImage from "@/public/images/products/brass-nut.png";
+import pprImage from "@/public/images/products/brass-ppr-fitting-inserts.png";
+import reducerImage from "@/public/images/products/brass-reducer.png";
+import sanitaryImage from "@/public/images/products/brass-sanitary-fitting.png";
+
+// Static imports give replaced card images content-specific URLs.
+const cardImages = {
+    "brass-cpvc-inserts": cpvcImage,
+    "brass-inserts": insertsImage,
+    "brass-nut": nutImage,
+    "brass-ppr-fitting-inserts": pprImage,
+    "brass-reducer": reducerImage,
+    "brass-sanitary-fitting": sanitaryImage,
+};
 
 function ArrowIcon() {
     return (
@@ -71,14 +87,19 @@ export default function ProductsLanding() {
                     </div>
 
                     <div className="grid grid-cols-3 gap-6 max-xl:grid-cols-2 max-md:grid-cols-1">
-                        {products.map((product, index) => (
+                        {productCards.map((product, index) => (
                             <Link
                                 key={product.slug}
-                                href={`/products/${product.slug}`}
+                                href={product.href}
                                 className="group overflow-hidden bg-[#F8F3EA] transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
                             >
                                 <div className="h-[340px]">
-                                    <BrassProductVisual type={product.visual} />
+                                    <BrassProductVisual
+                                        type={product.visual}
+                                        imageSrc={cardImages[product.slug as keyof typeof cardImages].src}
+                                        imageAlt={product.title}
+                                        sizes="(max-width: 767px) 100vw, (max-width: 1279px) 50vw, 470px"
+                                    />
                                 </div>
 
                                 <div className="bg-white px-8 py-8 transition-colors duration-500 group-hover:bg-[#0B1F35] max-md:px-6">

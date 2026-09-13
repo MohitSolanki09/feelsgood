@@ -57,7 +57,12 @@ export default function ProductDetail({ product }: ProductDetailProps) {
                             </div>
                         </div>
 
-                        <BrassProductVisual type={product.visual} />
+                        <BrassProductVisual
+                            type={product.visual}
+                            imageSrc={product.imageSrc}
+                            imageAlt={product.title}
+                            sizes="(max-width: 1023px) 100vw, 740px"
+                        />
                     </div>
                 </div>
             </section>

@@ -12,6 +12,7 @@ export type Product = {
     title: string;
     label: string;
     visual: ProductVisual;
+    imageSrc?: string;
     shortText: string;
     description: string;
     components: string[];
@@ -22,6 +23,7 @@ export type Product = {
 export const products: Product[] = [
     {
         slug: "brass-inserts",
+        imageSrc: "/images/products/brass-inserts.png",
         title: "Brass Inserts",
         label: "Threaded Brass Insert Solutions",
         visual: "insert",
@@ -172,6 +174,78 @@ export const products: Product[] = [
     },
 ];
 
+const newProducts: Product[] = ([
+    {
+        slug: "brass-cpvc-inserts",
+        title: "Brass CPVC Inserts",
+        label: "Brass Inserts For CPVC Fittings",
+        visual: "insert",
+        shortText: "Brass inserts for threaded connections in CPVC fittings and plumbing assemblies.",
+        description: "Brass CPVC inserts provide a threaded connection within CPVC fittings. Explore female, male, and knurled insert designs, with requirements reviewed against your fitting design, drawing, or sample.",
+        components: ["Female CPVC Inserts", "Male CPVC Inserts", "Knurled CPVC Inserts", "Threaded CPVC Inserts", "CPVC Fitting Inserts", "Custom CPVC Inserts"],
+        applications: ["CPVC fitting assemblies", "Threaded plumbing connections", "Moulded fitting components", "Drawing-based fitting development"],
+        specifications: ["Share the required thread details", "Provide the mating fitting dimensions", "Specify the insert profile and finish", "Submit a drawing or sample for review"],
+    },
+    {
+        slug: "brass-nut",
+        title: "Brass Nut",
+        label: "Brass Nuts For Threaded Assemblies",
+        visual: "fastener",
+        shortText: "Brass nuts for threaded fastenings, hardware, and component assemblies.",
+        description: "Brass nuts pair with mating threaded parts in hardware and component assemblies. Hex and check nut designs can be discussed using your drawing or sample to establish the required form and fit.",
+        components: ["Brass Hex Nuts", "Brass Check Nuts", "Brass Hex Check Nuts", "Threaded Brass Nuts", "Assembly Nuts", "Custom Brass Nuts"],
+        applications: ["Threaded component assemblies", "Hardware fastenings", "Machinery assembly", "Replacement part development"],
+        specifications: ["Share the mating thread details", "Provide the nut profile and dimensions", "Specify the required surface finish", "Submit a drawing or sample for review"],
+    },
+    {
+        slug: "brass-ppr-fitting-inserts",
+        title: "Brass PPR Fitting Inserts",
+        label: "Brass Inserts For PPR Fittings",
+        visual: "insert",
+        shortText: "Brass inserts for threaded connections in PPR fittings and pipe assemblies.",
+        description: "Brass PPR fitting inserts form the threaded interface within PPR fittings. Female, male, and knurled designs are available for discussion based on the mating parts and your drawing or sample.",
+        components: ["Female PPR Inserts", "Male PPR Inserts", "Knurled PPR Inserts", "Threaded PPR Inserts", "PPR Fitting Inserts", "Custom PPR Inserts"],
+        applications: ["PPR fitting assemblies", "Threaded pipe connections", "Moulded plumbing fittings", "Drawing-based fitting development"],
+        specifications: ["Share the required thread details", "Provide the mating fitting dimensions", "Specify the insert profile and finish", "Submit a drawing or sample for review"],
+    },
+    {
+        slug: "brass-reducer",
+        title: "Brass Reducer",
+        label: "Brass Reducers For Fitting Connections",
+        visual: "fitting",
+        shortText: "Brass reducers for connecting mating fittings of different sizes.",
+        description: "Brass reducers connect fittings with different connection sizes. Explore threaded and hex reducer forms, with the connection arrangement and dimensions reviewed against your assembly requirements.",
+        components: ["Brass Reducers", "Brass Hex Reducers", "Brass Pipe Reducers", "Threaded Brass Reducers", "Reducer Bushes", "Custom Brass Reducers"],
+        applications: ["Pipe fitting assemblies", "Connections between different sizes", "Plumbing component assemblies", "Replacement fitting development"],
+        specifications: ["Provide both connection sizes", "Share the required thread details", "Specify the reducer form and finish", "Submit a drawing or sample for review"],
+    },
+    {
+        slug: "brass-sanitary-fitting",
+        title: "Brass Sanitary Fitting",
+        label: "Brass Fittings For Sanitary Assemblies",
+        visual: "fitting",
+        shortText: "Brass fittings for sanitary connections and plumbing component assemblies.",
+        description: "Brass sanitary fittings connect components in sanitary and plumbing assemblies. Threaded fittings and union components can be reviewed against the required connection arrangement, drawing, or sample.",
+        components: ["Threaded Sanitary Fittings", "Brass Sanitary Adaptors", "Brass Sanitary Connectors", "Brass Union Components", "Brass Composite Unions", "Custom Sanitary Fittings"],
+        applications: ["Sanitary fitting assemblies", "Plumbing connections", "Union and adaptor assemblies", "Replacement fitting development"],
+        specifications: ["Share the connection arrangement", "Provide the required thread details", "Specify the fitting dimensions and finish", "Submit a drawing or sample for review"],
+    },
+] satisfies Product[]).map((product) => ({ ...product, imageSrc: `/images/products/${product.slug}.png` }));
+
+// Retain the older detail routes alongside the six featured products.
+products.push(...newProducts);
+
 export function getProductBySlug(slug: string) {
     return products.find((product) => product.slug === slug);
 }
+
+// Featured listing order; every card uses the same data as its detail page.
+export const productCards = [
+    newProducts[0],
+    products[0],
+    ...newProducts.slice(1),
+].map((product) => ({
+    ...product,
+    imageSrc: `/images/products/${product.slug}.png`,
+    href: `/products/${product.slug}`,
+}));

@@ -1,12 +1,24 @@
 // src/components/company/Products/BrassProductVisual.tsx
 
+import Image from "next/image";
 import type { ProductVisual } from "./productsData";
 
 type BrassProductVisualProps = {
     type: ProductVisual;
+    imageSrc?: string;
+    imageAlt?: string;
+    sizes?: string;
 };
 
-export default function BrassProductVisual({ type }: BrassProductVisualProps) {
+export default function BrassProductVisual({ type, imageSrc, imageAlt = "", sizes }: BrassProductVisualProps) {
+    if (imageSrc) {
+        return (
+            <div className="relative flex h-full min-h-[360px] items-center justify-center overflow-hidden bg-[#F8F3EA]">
+                <Image src={imageSrc} alt={imageAlt} fill sizes={sizes} className="object-contain" />
+            </div>
+        );
+    }
+
     return (
         <div className="relative flex h-full min-h-[360px] items-center justify-center overflow-hidden bg-[#F8F3EA]">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(215,146,41,0.24),transparent_32%),radial-gradient(circle_at_80%_80%,rgba(11,31,53,0.12),transparent_30%)]" />
