@@ -30,6 +30,8 @@
 
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
+import MotionProvider from "@/src/components/common/MotionProvider";
+import "lenis/dist/lenis.css";
 import Header from "@/src/components/common/Header/Header";
 import Footer from "@/src/components/common/Footer/Footer";
 import "./globals.css";
@@ -42,6 +44,9 @@ const manrope = Manrope({
 export const metadata: Metadata = {
   title: "Feel Good Brass Industry",
   description: "Precision brass parts manufacturer",
+  icons: {
+    icon: "/images/logo/favicon_logo.png",
+  },
 };
 
 export default function RootLayout({
@@ -52,6 +57,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={manrope.className}>
+        <MotionProvider />
         <Header />
         {children}
         <Footer />

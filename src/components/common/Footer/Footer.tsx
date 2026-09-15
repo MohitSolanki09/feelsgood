@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import logo from "@/public/images/logo/feelsgood_logo.png";
+import footerLogo from "@/public/images/logo/FEEL_GOOD_LOGO.png";
 
 function LinkedinIcon() {
     return (
@@ -32,11 +32,11 @@ export default function Footer() {
                             className="relative block h-[78px] w-[320px] max-md:w-[280px] max-sm:w-[230px]"
                         >
                             <Image
-                                src={logo}
+                                src={footerLogo}
                                 alt="Feel Good Brass Industry"
                                 fill
-                                sizes="320px"
-                                className="object-contain object-left"
+                                sizes="(max-width: 767px) 160px, (max-width: 1279px) 180px, 205px"
+                                className="max-w-[205px] object-contain object-left max-xl:max-w-[180px] max-md:max-w-[160px]"
                             />
                         </Link>
 

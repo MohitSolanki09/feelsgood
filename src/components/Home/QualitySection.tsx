@@ -122,7 +122,7 @@ export default function QualitySection() {
                         / Quality Assurance
                     </span>
 
-                    <h2 className="text-[62px] font-extrabold uppercase leading-[1.08] tracking-[-2.5px] text-[#050505] max-xl:text-[52px] max-lg:text-[42px] max-md:text-[34px] max-sm:text-[30px]">
+                    <h2 data-reveal="fade-up" className="text-[62px] font-extrabold uppercase leading-[1.08] tracking-[-2.5px] text-[#050505] max-xl:text-[52px] max-lg:text-[42px] max-md:text-[34px] max-sm:text-[30px]">
                         Quality From Start To Finish
                     </h2>
                 </div>

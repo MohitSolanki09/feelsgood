@@ -47,7 +47,7 @@ export default function CompanyOverview() {
                 <div className="grid grid-cols-3 border-x border-[#e7e1d7] max-lg:grid-cols-1">
                     {/* Top left heading */}
                     <div className="min-h-[345px] border-r border-[#e7e1d7] px-10 py-14 max-lg:min-h-0 max-lg:border-b max-lg:border-r-0 max-md:px-5">
-                        <h2 className="max-w-[390px] text-[28px] font-extrabold uppercase leading-[1.18] tracking-[-0.8px] text-[#050505] max-md:text-[24px]">
+                        <h2 data-reveal="fade-up" className="max-w-[390px] text-[28px] font-extrabold uppercase leading-[1.18] tracking-[-0.8px] text-[#050505] max-md:text-[24px]">
                             The Next Generation Of Brass Manufacturing: Precision,
                             Consistency And Speed
                         </h2>

@@ -52,7 +52,7 @@ export default function QualityProcess() {
                             / Inspection Process
                         </span>
 
-                        <h2 className="text-[58px] font-extrabold uppercase leading-[1.08] tracking-[-2px] text-[#050505] max-xl:text-[48px] max-md:text-[36px] max-sm:text-[30px]">
+                        <h2 data-reveal="fade-up" className="text-[58px] font-extrabold uppercase leading-[1.08] tracking-[-2px] text-[#050505] max-xl:text-[48px] max-md:text-[36px] max-sm:text-[30px]">
                             Quality From Material To Dispatch
                         </h2>
                     </div>

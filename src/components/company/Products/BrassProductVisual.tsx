@@ -8,19 +8,20 @@ type BrassProductVisualProps = {
     imageSrc?: string;
     imageAlt?: string;
     sizes?: string;
+    compact?: boolean;
 };
 
-export default function BrassProductVisual({ type, imageSrc, imageAlt = "", sizes }: BrassProductVisualProps) {
+export default function BrassProductVisual({ type, imageSrc, imageAlt = "", sizes, compact = false }: BrassProductVisualProps) {
     if (imageSrc) {
         return (
-            <div className="relative flex h-full min-h-[360px] items-center justify-center overflow-hidden bg-[#F8F3EA]">
-                <Image src={imageSrc} alt={imageAlt} fill sizes={sizes} className="object-contain" />
+            <div className={`relative flex h-full ${compact ? "min-h-0" : "min-h-[360px]"} items-center justify-center overflow-hidden bg-[#F8F3EA]`}>
+                <Image src={imageSrc} alt={imageAlt} fill sizes={sizes ?? "(max-width: 1023px) 100vw, 740px"} className="object-contain" />
             </div>
         );
     }
 
     return (
-        <div className="relative flex h-full min-h-[360px] items-center justify-center overflow-hidden bg-[#F8F3EA]">
+        <div className={`relative flex h-full ${compact ? "min-h-0" : "min-h-[360px]"} items-center justify-center overflow-hidden bg-[#F8F3EA] max-sm:[&>div.relative]:scale-75`}>
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(215,146,41,0.24),transparent_32%),radial-gradient(circle_at_80%_80%,rgba(11,31,53,0.12),transparent_30%)]" />
 
             <div className="absolute left-8 top-8 h-20 w-20 rounded-full border border-[#D79229]/30" />

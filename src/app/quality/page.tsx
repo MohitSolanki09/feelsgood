@@ -145,7 +145,7 @@ export default function QualityPage() {
                                 / Our Quality Standard
                             </span>
 
-                            <h2 className="text-[56px] font-extrabold uppercase leading-[1.08] tracking-[-2px] text-[#050505] max-xl:text-[46px] max-md:text-[34px] max-sm:text-[29px]">
+                            <h2 data-reveal="fade-up" className="text-[56px] font-extrabold uppercase leading-[1.08] tracking-[-2px] text-[#050505] max-xl:text-[46px] max-md:text-[34px] max-sm:text-[29px]">
                                 Quality Built Into Manufacturing
                             </h2>
                         </div>

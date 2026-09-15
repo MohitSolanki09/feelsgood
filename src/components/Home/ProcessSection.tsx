@@ -198,6 +198,7 @@ import {
     useScroll,
     useSpring,
     useTransform,
+    useReducedMotion,
 } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
@@ -263,18 +264,19 @@ function useElementHeight(ref: React.RefObject<HTMLDivElement | null>) {
 }
 
 function ArrowNutComponent({ y }: { y: MotionValue<number> }) {
+    const reducedMotion = useReducedMotion();
     return (
         <motion.div
-            style={{ y }}
+            style={{ y: reducedMotion ? 0 : y }}
             className="pointer-events-none absolute left-1/2 top-0 z-30 flex h-[126px] w-[126px] -translate-x-1/2 items-center justify-center max-lg:left-[26px] max-lg:h-[96px] max-lg:w-[96px]"
         >
             <motion.div
                 animate={{
-                    rotate: [0, 8, -6, 0],
+                    rotate: reducedMotion ? 0 : [0, 8, -6, 0],
                 }}
                 transition={{
                     duration: 5,
-                    repeat: Infinity,
+                    repeat: reducedMotion ? 0 : Infinity,
                     ease: "easeInOut",
                 }}
                 className="relative h-[112px] w-[112px] max-lg:h-[82px] max-lg:w-[82px]"
@@ -372,10 +374,11 @@ function ProcessCard({
     index: number;
 }) {
     const isLeft = step.side === "left";
+    const reducedMotion = useReducedMotion();
 
     return (
         <motion.div
-            initial={{
+            initial={reducedMotion ? false : {
                 opacity: 0,
                 x: isLeft ? -45 : 45,
                 y: 25,
@@ -391,7 +394,7 @@ function ProcessCard({
                 delay: index * 0.08,
                 ease: [0.22, 1, 0.36, 1],
             }}
-            className="relative grid min-h-[280px] grid-cols-[1fr_160px_1fr] max-lg:grid-cols-[52px_1fr] max-lg:gap-5 max-md:min-h-[250px]"
+            className="relative grid min-h-[280px] grid-cols-[minmax(0,1fr)_160px_minmax(0,1fr)] max-lg:grid-cols-[52px_minmax(0,1fr)] max-lg:gap-5 max-md:min-h-[250px]"
         >
             {isLeft && (
                 <div className="col-start-1 pr-16 text-left max-lg:col-start-2 max-lg:pr-0">
@@ -413,6 +416,7 @@ function ProcessCard({
 }
 
 export default function ProcessSection() {
+    const reducedMotion = useReducedMotion();
     const sectionRef = useRef<HTMLElement | null>(null);
     const timelineRef = useRef<HTMLDivElement | null>(null);
 
@@ -446,7 +450,7 @@ export default function ProcessSection() {
         >
             <div className="mx-auto max-w-[1220px] px-6">
                 <motion.div
-                    initial={{ opacity: 0, y: 35 }}
+                    initial={reducedMotion ? false : { opacity: 0, y: 35 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.7, ease: "easeOut" }}
@@ -467,7 +471,7 @@ export default function ProcessSection() {
 
                     {/* scroll fill line */}
                     <motion.div
-                        style={{ scaleY: lineScale }}
+                        style={{ scaleY: reducedMotion ? 1 : lineScale }}
                         className="absolute left-1/2 top-0 h-full w-px origin-top -translate-x-1/2 bg-[#D79229] max-lg:left-[26px]"
                     />
 

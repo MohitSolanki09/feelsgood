@@ -2,8 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import logo from '@/public/images/logo/feelsgood_logo.png'
+import { useCallback, useEffect, useRef, useState } from "react";
 
 type MegaMenuItem = {
     label: string;
@@ -83,12 +82,13 @@ function Logo() {
             className="relative block h-[58px] w-[285px] max-xl:w-[250px] max-md:h-[52px] max-md:w-[220px] max-sm:w-[190px]"
         >
             <Image
-                src={logo}
+                src="/images/logo/header_logo.png"
                 alt="Feel Good Brass Industry"
-                fill
+                width={1983}
+                height={793}
                 priority
-                sizes="285px"
-                className="object-contain object-left"
+                sizes="(max-width: 639px) 130px, (max-width: 1279px) 150px, 175px"
+                className="absolute left-0 top-1/2 h-auto w-[175px] -translate-y-1/2 object-contain object-center max-xl:w-[150px] max-sm:w-[130px]"
             />
         </Link>
     );
@@ -210,6 +210,8 @@ function SearchPanel({
 }) {
     return (
         <div
+            inert={!isOpen}
+            aria-hidden={!isOpen}
             className={`fixed right-0 top-[84px] z-[70] w-[620px] bg-[#F8F3EA] px-9 py-5 shadow-[0_15px_45px_rgba(11,31,53,0.12)] transition-all duration-300 max-lg:left-0 max-lg:w-full max-sm:px-5 ${isOpen
                 ? "translate-y-0 opacity-100"
                 : "pointer-events-none -translate-y-4 opacity-0"
@@ -219,7 +221,8 @@ function SearchPanel({
                 <input
                     type="text"
                     placeholder="Search here"
-                    className="h-[58px] flex-1 bg-white px-6 text-[15px] font-medium text-[#0B1F35] outline-none placeholder:text-[#465566]"
+                    aria-label="Search the website"
+                    className="h-[58px] min-w-0 flex-1 bg-white px-6 text-[16px] font-medium text-[#0B1F35] outline-none placeholder:text-[#465566]"
                 />
 
                 <button
@@ -266,7 +269,7 @@ function SearchPanel({
 
 //                     <div className="relative mb-12 h-[90px] w-[330px] max-sm:w-[250px]">
 //                         <Image
-//                             src="/images/logo/feel-good-brass.png"
+//                             src="/images/logo/header_logo.png"
 //                             alt="Feel Good Brass Industry"
 //                             fill
 //                             sizes="330px"
@@ -329,6 +332,31 @@ function SideMenu({
     isOpen: boolean;
     onClose: () => void;
 }) {
+    const drawerRef = useRef<HTMLElement>(null);
+    useEffect(() => {
+        if (!isOpen) return;
+        const previous = document.activeElement as HTMLElement | null;
+        const drawer = drawerRef.current;
+        drawer?.querySelector<HTMLButtonElement>("button")?.focus();
+        const handleKey = (event: KeyboardEvent) => {
+            if (event.key === "Escape") onClose();
+            if (event.key !== "Tab" || !drawer) return;
+            const items = Array.from(drawer.querySelectorAll<HTMLElement>("a[href], button"))
+                .filter((element) => element.getClientRects().length > 0);
+            const first = items[0];
+            const last = items[items.length - 1];
+            if (event.shiftKey && document.activeElement === first) {
+                event.preventDefault(); last?.focus();
+            } else if (!event.shiftKey && document.activeElement === last) {
+                event.preventDefault(); first?.focus();
+            }
+        };
+        document.addEventListener("keydown", handleKey);
+        return () => {
+            document.removeEventListener("keydown", handleKey);
+            previous?.focus();
+        };
+    }, [isOpen, onClose]);
     return (
         <>
             <div
@@ -338,10 +366,18 @@ function SideMenu({
             />
 
             <aside
-                className={`fixed right-0 top-0 z-[90] flex h-screen w-[640px] flex-col overflow-hidden bg-white transition-transform duration-500 max-md:w-[88vw] ${isOpen ? "translate-x-0" : "translate-x-full"
+                ref={drawerRef}
+                id="site-menu"
+                role="dialog"
+                aria-modal="true"
+                aria-label="Site menu"
+                aria-hidden={!isOpen}
+                inert={!isOpen}
+                data-lenis-prevent
+                className={`fixed right-0 top-0 z-[90] flex h-dvh w-[640px] max-w-full flex-col overflow-hidden bg-white transition-transform duration-500 max-md:w-[88vw] ${isOpen ? "translate-x-0" : "invisible translate-x-full"
                     }`}
             >
-                <div className="relative flex flex-1 flex-col px-[80px] pt-10 max-md:px-8">
+                <div className="relative flex min-h-0 flex-1 flex-col overflow-y-auto overscroll-contain px-[80px] pt-10 pb-8 max-md:px-6">
                     <button
                         type="button"
                         onClick={onClose}
@@ -351,27 +387,44 @@ function SideMenu({
                         <CloseIcon />
                     </button>
 
-                    <div className="relative mb-10 h-[82px] w-[310px] max-sm:w-[230px]">
+                    <div className="relative mb-10 h-[82px] w-[310px] max-w-[calc(100%-48px)] shrink-0 max-sm:w-[230px]">
                         <Image
-                            src="/images/logo/feel-good-brass.png"
+                            src="/images/logo/header_logo.png"
                             alt="Feel Good Brass Industry"
                             fill
                             sizes="310px"
-                            className="object-contain object-left"
+                            className="object-contain object-center"
                         />
                     </div>
+
+                    <nav aria-label="Mobile navigation" className="mb-8 grid border-t border-[#e7e1d7] pt-4 xl:hidden">
+                        {navItems.map((item) => (
+                            <div key={item.label}>
+                                <Link href={item.href} onClick={onClose} className="flex min-h-11 items-center py-2 text-[15px] font-extrabold uppercase tracking-[2px] text-[#0B1F35]">
+                                    {item.label}
+                                </Link>
+                                {item.mega && <div className="grid pl-4">
+                                    {item.mega.links.map((link) => (
+                                        <Link key={link.href} href={link.href} onClick={onClose} className="flex min-h-11 items-center py-2 text-[14px] font-semibold text-[#465566]">
+                                            {link.label}
+                                        </Link>
+                                    ))}
+                                </div>}
+                            </div>
+                        ))}
+                    </nav>
 
                     <div className="mb-6 flex items-center gap-2 text-[19px] text-[#465566]">
                         <span className="text-[#D79229]">/</span>
                         <span>Contact us</span>
                     </div>
 
-                    <h2 className="mb-7 text-[42px] font-extrabold uppercase leading-[1.15] tracking-[-1.2px] text-[#0B1F35] max-md:text-[31px]">
+                    <h2 className="mb-7 text-[42px] font-extrabold uppercase leading-[1.15] tracking-[-1.2px] text-[#0B1F35] max-md:text-[clamp(24px,6vw,31px)]">
                         Feel Good <br />
                         Brass Industry
                     </h2>
 
-                    <div className="space-y-7 text-[19px] leading-[1.45] text-[#465566] max-md:text-[16px]">
+                    <div className="space-y-7 break-words text-[19px] leading-[1.45] text-[#465566] max-md:text-[16px]">
                         <p>
                             Jamnagar, Gujarat, 
                             India
@@ -400,12 +453,13 @@ function SideMenu({
 export default function Header() {
     const [searchOpen, setSearchOpen] = useState(false);
     const [sideOpen, setSideOpen] = useState(false);
+    const closeSideMenu = useCallback(() => setSideOpen(false), []);
 
     useEffect(() => {
-        document.body.style.overflow = sideOpen ? "hidden" : "";
+        document.documentElement.dataset.scrollLocked = String(sideOpen);
 
         return () => {
-            document.body.style.overflow = "";
+            delete document.documentElement.dataset.scrollLocked;
         };
     }, [sideOpen]);
 
@@ -413,11 +467,11 @@ export default function Header() {
         <>
             <header className="sticky top-0 z-50 h-[84px] border-b border-[#e7e1d7] bg-white">
                 <div className="flex h-full items-stretch">
-                    <div className="flex h-full w-[350px] items-center pl-10 max-xl:w-[300px] max-lg:flex-1 max-md:pl-5">
+                    <div className="flex h-full min-w-0 w-[350px] items-center pl-10 max-xl:w-[300px] max-lg:flex-1 max-md:pl-5">
                         <Logo />
                     </div>
 
-                    <nav className="hidden flex-1 items-center justify-center gap-8 xl:flex">
+                    <nav aria-label="Main navigation" className="hidden min-w-0 flex-1 items-center justify-center gap-8 xl:flex">
                         {navItems.map((item) => (
                             <div key={item.label} className="group flex h-full items-center">
                                 <Link
@@ -441,7 +495,7 @@ export default function Header() {
                         ))}
                     </nav>
 
-                    <div className="ml-auto flex items-stretch">
+                    <div className="ml-auto flex shrink-0 items-stretch">
                         <button
                             type="button"
                             aria-label="Search"
@@ -457,6 +511,8 @@ export default function Header() {
                         <button
                             type="button"
                             aria-label="Open menu"
+                            aria-expanded={sideOpen}
+                            aria-controls="site-menu"
                             onClick={() => {
                                 setSideOpen(true);
                                 setSearchOpen(false);
@@ -470,7 +526,7 @@ export default function Header() {
             </header>
 
             <SearchPanel isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
-            <SideMenu isOpen={sideOpen} onClose={() => setSideOpen(false)} />
+            <SideMenu isOpen={sideOpen} onClose={closeSideMenu} />
         </>
     );
 }

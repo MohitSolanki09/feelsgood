@@ -48,7 +48,7 @@ export default function AdvancementSection() {
                             Become a Customer
                         </p>
 
-                        <h2 className="text-[62px] font-extrabold uppercase leading-[1.16] tracking-[-2.2px] text-[#050505] max-2xl:text-[56px] max-xl:text-[48px] max-md:text-[38px] max-sm:text-[32px]">
+                        <h2 data-reveal="fade-up" className="text-[62px] font-extrabold uppercase leading-[1.16] tracking-[-2.2px] text-[#050505] max-2xl:text-[56px] max-xl:text-[48px] max-md:text-[38px] max-sm:text-[32px]">
                             Advancements In The Brass Parts Industry
                         </h2>
 

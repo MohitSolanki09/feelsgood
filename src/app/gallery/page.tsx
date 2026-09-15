@@ -111,7 +111,7 @@ function ArrowIcon() {
 function BrassVisual({ image, alt }: { image: string; alt: string }) {
     return (
         <div className="relative flex h-full min-h-[360px] items-center justify-center overflow-hidden bg-[#F8F3EA]">
-            <Image src={image} alt={alt} fill unoptimized className="object-contain" />
+            <Image src={image} alt={alt} fill sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, (max-width: 1535px) 33vw, 355px" className="object-contain" />
         </div>
     );
 }
@@ -164,7 +164,7 @@ export default function GalleryPage() {
                                 / Product Gallery
                             </span>
 
-                            <h2 className="text-[56px] font-extrabold uppercase leading-[1.08] tracking-[-2px] text-[#050505] max-xl:text-[46px] max-md:text-[34px] max-sm:text-[29px]">
+                            <h2 data-reveal="fade-up" className="text-[56px] font-extrabold uppercase leading-[1.08] tracking-[-2px] text-[#050505] max-xl:text-[46px] max-md:text-[34px] max-sm:text-[29px]">
                                 Premium Brass Parts Collection
                             </h2>
                         </div>

@@ -74,7 +74,7 @@ export default function ProductsLanding() {
                                 / Product Range
                             </span>
 
-                            <h2 className="text-[56px] font-extrabold uppercase leading-[1.08] tracking-[-2px] text-[#050505] max-xl:text-[46px] max-md:text-[34px] max-sm:text-[29px]">
+                            <h2 data-reveal="fade-up" className="text-[56px] font-extrabold uppercase leading-[1.08] tracking-[-2px] text-[#050505] max-xl:text-[46px] max-md:text-[34px] max-sm:text-[29px]">
                                 Brass Products For Multiple Industries
                             </h2>
                         </div>
@@ -95,6 +95,7 @@ export default function ProductsLanding() {
                             >
                                 <div className="h-[340px]">
                                     <BrassProductVisual
+                                        compact
                                         type={product.visual}
                                         imageSrc={cardImages[product.slug as keyof typeof cardImages].src}
                                         imageAlt={product.title}
