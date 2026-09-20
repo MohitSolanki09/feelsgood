@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
+import { products } from "@/src/components/company/Products/productsData";
 
 type MegaMenuItem = {
     label: string;
@@ -73,6 +74,17 @@ const navItems: NavItem[] = [
     { label: "Quality", href: "/quality" },
     { label: "Gallery", href: "/gallery" },
     { label: "Contact", href: "/contact" },
+];
+
+const searchItems = [
+    ...Array.from(new Map(navItems.flatMap((item) => [item, ...(item.mega?.links ?? [])])
+        .map((item) => [item.href, { title: item.label, href: item.href, type: "Page", text: item.label }])).values()),
+    ...products.map((product) => ({
+        title: product.title,
+        href: `/products/${product.slug}`,
+        type: "Product",
+        text: `${product.title} ${product.shortText}`,
+    })),
 ];
 
 function Logo() {
@@ -208,8 +220,38 @@ function SearchPanel({
     isOpen: boolean;
     onClose: () => void;
 }) {
+    const [query, setQuery] = useState("");
+    const inputRef = useRef<HTMLInputElement>(null);
+    const panelRef = useRef<HTMLDivElement>(null);
+    const terms = query.trim().toLowerCase().split(/\s+/).filter(Boolean);
+    const results = terms.length ? searchItems.filter((item) =>
+        terms.every((term) => item.text.toLowerCase().includes(term))) : [];
+
+    useEffect(() => {
+        if (!isOpen) return;
+        const previous = document.activeElement as HTMLElement | null;
+        const panel = panelRef.current;
+        inputRef.current?.focus();
+        inputRef.current?.select();
+        const handleKey = (event: KeyboardEvent) => {
+            if (event.key === "Escape") {
+                event.preventDefault();
+                onClose();
+            }
+        };
+        document.addEventListener("keydown", handleKey);
+        return () => {
+            document.removeEventListener("keydown", handleKey);
+            if (panel?.contains(document.activeElement)) previous?.focus();
+        };
+    }, [isOpen, onClose]);
+
     return (
         <div
+            ref={panelRef}
+            id="site-search"
+            role="search"
+            aria-label="Website search"
             inert={!isOpen}
             aria-hidden={!isOpen}
             className={`fixed right-0 top-[84px] z-[70] w-[620px] bg-[#F8F3EA] px-9 py-5 shadow-[0_15px_45px_rgba(11,31,53,0.12)] transition-all duration-300 max-lg:left-0 max-lg:w-full max-sm:px-5 ${isOpen
@@ -219,7 +261,11 @@ function SearchPanel({
         >
             <div className="flex items-center gap-7">
                 <input
+                    ref={inputRef}
                     type="text"
+                    value={query}
+                    onChange={(event) => setQuery(event.target.value)}
+                    aria-controls="site-search-results"
                     placeholder="Search here"
                     aria-label="Search the website"
                     className="h-[58px] min-w-0 flex-1 bg-white px-6 text-[16px] font-medium text-[#0B1F35] outline-none placeholder:text-[#465566]"
@@ -234,6 +280,21 @@ function SearchPanel({
                     <CloseIcon />
                 </button>
             </div>
+            {isOpen && <>
+                <p role="status" className="mt-4 text-sm text-[#465566]">
+                    {terms.length ? (results.length ? `${results.length} results` : "No matching pages or products.") : "Search pages and products."}
+                </p>
+                <ul id="site-search-results" data-lenis-prevent className="max-h-[min(420px,calc(100dvh-240px))] overflow-y-auto overscroll-contain">
+                    {results.map((item) => (
+                        <li key={item.href}>
+                            <Link href={item.href} onClick={onClose} className="flex min-h-11 items-center justify-between gap-4 border-b border-[#e7e1d7] py-3 text-[#0B1F35] hover:text-[#D79229] focus-visible:outline-2 focus-visible:outline-[#D79229]">
+                                <span className="font-semibold">{item.title}</span>
+                                <span className="shrink-0 text-xs text-[#465566]">{item.type}</span>
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
+            </>}
         </div>
     );
 }
@@ -454,6 +515,7 @@ export default function Header() {
     const [searchOpen, setSearchOpen] = useState(false);
     const [sideOpen, setSideOpen] = useState(false);
     const closeSideMenu = useCallback(() => setSideOpen(false), []);
+    const closeSearch = useCallback(() => setSearchOpen(false), []);
 
     useEffect(() => {
         document.documentElement.dataset.scrollLocked = String(sideOpen);
@@ -499,6 +561,8 @@ export default function Header() {
                         <button
                             type="button"
                             aria-label="Search"
+                            aria-expanded={searchOpen}
+                            aria-controls="site-search"
                             onClick={() => {
                                 setSearchOpen((prev) => !prev);
                                 setSideOpen(false);
@@ -525,7 +589,7 @@ export default function Header() {
                 </div>
             </header>
 
-            <SearchPanel isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
+            <SearchPanel isOpen={searchOpen} onClose={closeSearch} />
             <SideMenu isOpen={sideOpen} onClose={closeSideMenu} />
         </>
     );
