@@ -1,3 +1,5 @@
+import { pageMetadata, seoPages } from "@/src/lib/seo";
+import { BreadcrumbSchema } from "@/src/components/common/StructuredData";
 // src/app/contact/page.tsx
 
 import Link from "next/link";
@@ -7,13 +9,13 @@ const contactCards = [
         number: "01",
         title: "Send Inquiry",
         text: "Share your drawing, sample, material grade, quantity, and finish requirement.",
-        value: "info@feelgoodbrass.com",
+        value: "feelgoodbrass@gmail.com",
     },
     {
         number: "02",
         title: "Call Support",
         text: "Discuss your brass inserts, fittings, fasteners, or custom components.",
-        value: "+91 00000 00000",
+        value: "+91 93166-36271",
     },
     {
         number: "03",
@@ -90,9 +92,12 @@ function ContactVisual() {
     );
 }
 
+export const metadata = pageMetadata(...seoPages["/contact"], "/contact");
+
 export default function ContactPage() {
     return (
         <main>
+            <BreadcrumbSchema items={[{ name: "Contact", path: "/contact" }]} />
             {/* HERO */}
             <section className="bg-white">
                 <div className="mx-auto max-w-[1600px] px-5">
@@ -117,7 +122,7 @@ export default function ContactPage() {
                                 </p>
 
                                 <Link
-                                    href="mailto:info@feelgoodbrass.com"
+                                    href="mailto:feelgoodbrass@gmail.com"
                                     className="group mt-8 inline-flex h-[60px] w-fit items-center justify-center gap-4 bg-[#D79229] px-8 text-[14px] font-extrabold uppercase tracking-[3px] text-white transition-colors duration-300 hover:bg-[#0B1F35]"
                                 >
                                     Email Us
@@ -162,7 +167,7 @@ export default function ContactPage() {
                         <div className="border-t border-[#e7e1d7]">
                             <div className="grid grid-cols-3 max-lg:grid-cols-1">
                                 {contactCards.map((item, index) => (
-                                    <div
+                                    <div data-reveal="fade-up" data-reveal-stagger
                                         key={item.title}
                                         className={`group relative min-h-[360px] overflow-hidden bg-white p-10 transition-colors duration-500 hover:bg-[#0B1F35] max-md:min-h-[280px] max-md:p-6 ${index !== contactCards.length - 1
                                                 ? "border-r border-[#e7e1d7] max-lg:border-r-0 max-lg:border-b"
@@ -177,9 +182,9 @@ export default function ContactPage() {
                                                     {item.number}
                                                 </span>
 
-                                                <h3 className="max-w-[320px] text-[30px] font-extrabold uppercase leading-[1.08] tracking-[-0.8px] text-[#0B1F35] transition-colors duration-500 group-hover:text-white max-md:text-[25px]">
+                                                <h2 className="max-w-[320px] text-[30px] font-extrabold uppercase leading-[1.08] tracking-[-0.8px] text-[#0B1F35] transition-colors duration-500 group-hover:text-white max-md:text-[25px]">
                                                     {item.title}
-                                                </h3>
+                                                </h2>
 
                                                 <p className="mt-6 max-w-[340px] text-[16px] leading-[1.75] text-[#465566] transition-colors duration-500 group-hover:text-white/70">
                                                     {item.text}
@@ -196,7 +201,7 @@ export default function ContactPage() {
                                                     </a>
                                                 ) : item.value.includes("+") ? (
                                                     <a
-                                                        href={`tel:${item.value.replace(/\s/g, "")}`}
+                                                        href={`tel:${item.value.replace(/[^+\d]/g, "")}`}
                                                         className="text-[15px] font-extrabold uppercase tracking-[2px] text-[#0B1F35] transition-colors duration-500 group-hover:text-[#D79229] max-md:text-[13px]"
                                                     >
                                                         {item.value}
@@ -220,15 +225,15 @@ export default function ContactPage() {
             <section className="bg-white py-[110px] max-lg:py-20 max-md:py-16">
                 <div className="mx-auto grid max-w-[1500px] grid-cols-[0.85fr_1.15fr] gap-10 px-10 max-lg:grid-cols-1 max-md:px-5">
                     <div className="bg-[#0B1F35] p-12 max-md:p-6">
-                        <span className="mb-6 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
+                        <span data-reveal="fade-up" className="mb-6 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
                             / Inquiry Details
                         </span>
 
-                        <h2 className="text-[52px] font-extrabold uppercase leading-[1.08] tracking-[-2px] text-white max-xl:text-[42px] max-md:text-[34px]">
+                        <h2 data-reveal="fade-up" className="text-[52px] font-extrabold uppercase leading-[1.08] tracking-[-2px] text-white max-xl:text-[42px] max-md:text-[34px]">
                             Share Your Brass Part Requirement
                         </h2>
 
-                        <p className="mt-7 text-[17px] leading-[1.8] text-white/70">
+                        <p data-reveal="fade-up" data-reveal-delay="70" className="mt-7 text-[17px] leading-[1.8] text-white/70">
                             Add your product type, dimensions, material grade, finish,
                             quantity, and application details. For custom parts, mention if
                             you have a drawing or sample available.
@@ -250,7 +255,7 @@ export default function ContactPage() {
                     </div>
 
                     <form
-                        action="mailto:info@feelgoodbrass.com"
+                        action="mailto:feelgoodbrass@gmail.com"
                         method="post"
                         encType="text/plain"
                         className="grid gap-6 bg-[#F8F3EA] p-12 max-md:p-6"
@@ -360,15 +365,15 @@ export default function ContactPage() {
                 <div className="mx-auto max-w-[1500px] px-10 max-md:px-5">
                     <div className="grid overflow-hidden border border-[#e7e1d7] lg:grid-cols-[0.9fr_1.1fr]">
                         <div className="bg-[#F8F3EA] p-12 max-md:p-6">
-                            <span className="mb-6 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
+                            <span data-reveal="fade-up" className="mb-6 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
                                 / Visit & Connect
                             </span>
 
-                            <h2 className="text-[48px] font-extrabold uppercase leading-[1.1] tracking-[-2px] text-[#050505] max-md:text-[34px]">
+                            <h2 data-reveal="fade-up" className="text-[48px] font-extrabold uppercase leading-[1.1] tracking-[-2px] text-[#050505] max-md:text-[34px]">
                                 Manufacturing Support From Jamnagar
                             </h2>
 
-                            <p className="mt-7 text-[17px] leading-[1.8] text-[#465566]">
+                            <p data-reveal="fade-up" data-reveal-delay="70" className="mt-7 text-[17px] leading-[1.8] text-[#465566]">
                                 Feel Good Brass Industry supports brass parts manufacturing for
                                 OEMs, traders, exporters, industrial suppliers, and businesses
                                 requiring custom brass components.
@@ -386,7 +391,7 @@ export default function ContactPage() {
                                 </p>
 
                                 <p className="mt-5 text-[16px] leading-[1.7] text-[#465566]">
-                                    Brass manufacturing and custom component supply support.
+                                    Feel Good Brass Industry, Plot No. 50/2, Survey No.45, FCI Godown Zone, Lalpur Road, Dared, Jamnagar-361004.
                                 </p>
                             </div>
 

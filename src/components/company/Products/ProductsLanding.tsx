@@ -58,7 +58,7 @@ export default function ProductsLanding() {
                                 <p className="text-[18px] leading-[1.8] text-white/75">
                                     Explore brass inserts, fittings, fasteners, electrical parts,
                                     CNC turned components, and custom brass products manufactured
-                                    for industrial use.
+                                    for industrial use with <Link href="/quality">quality inspection</Link>.
                                 </p>
                             </div>
                         </div>
@@ -70,7 +70,7 @@ export default function ProductsLanding() {
                 <div className="mx-auto max-w-[1500px] px-10 max-md:px-5">
                     <div className="mb-16 grid grid-cols-[0.8fr_1.2fr] gap-16 max-lg:grid-cols-1 max-lg:gap-8">
                         <div>
-                            <span className="mb-5 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
+                            <span data-reveal="fade-up" className="mb-5 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
                                 / Product Range
                             </span>
 
@@ -88,7 +88,7 @@ export default function ProductsLanding() {
 
                     <div className="grid grid-cols-3 gap-6 max-xl:grid-cols-2 max-md:grid-cols-1">
                         {productCards.map((product, index) => (
-                            <Link
+                            <Link data-reveal="fade-up" data-reveal-stagger data-image-hover
                                 key={product.slug}
                                 href={product.href}
                                 className="group overflow-hidden bg-[#F8F3EA] transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
@@ -98,7 +98,7 @@ export default function ProductsLanding() {
                                         compact
                                         type={product.visual}
                                         imageSrc={cardImages[product.slug as keyof typeof cardImages].src}
-                                        imageAlt={product.title}
+                                        imageAlt={`${product.title} by Feel Good Brass Industry`}
                                         sizes="(max-width: 767px) 100vw, (max-width: 1279px) 50vw, 470px"
                                     />
                                 </div>

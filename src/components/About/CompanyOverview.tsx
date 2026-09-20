@@ -1,6 +1,7 @@
 // src/components/Company/CompanyOverview.tsx
 
 import Image from "next/image";
+import Link from "next/link";
 import brassCompany from "@/public/images/about/about-manufacturing.webp";
 
 function InspectionIcon() {
@@ -56,7 +57,7 @@ export default function CompanyOverview() {
                     {/* Top center paragraph */}
                     <div className="min-h-[345px] border-r border-[#e7e1d7] px-10 py-14 max-lg:min-h-0 max-lg:border-b max-lg:border-r-0 max-md:px-5">
                         <p className="text-[17px] leading-[1.6] tracking-[-0.2px] text-[#465566] max-md:text-[16px]">
-                            At Feel Good Brass Industry, we manufacture high-quality brass inserts, fittings, fasteners, electrical parts, turned components, and customized brass parts, with a strong focus on precision, superior finish, durability, and long-term reliability.
+                            At Feel Good Brass Industry in Jamnagar, Gujarat, India, we manufacture <Link href="/products">brass inserts, fittings, fasteners, electrical parts, turned components, and customized brass parts</Link>, with a strong focus on precision, superior finish, durability, and long-term reliability.
                         </p>
                     </div>
 
@@ -71,8 +72,8 @@ export default function CompanyOverview() {
                     </div>
 
                     {/* Image area spanning 2 columns */}
-                    <div className="relative col-span-2 min-h-[500px] overflow-hidden border-r border-t border-[#e7e1d7] max-lg:col-span-1 max-lg:border-b max-lg:border-r-0 max-md:min-h-[420px] max-sm:min-h-[360px]">
-                        <Image
+                    <div data-reveal="image-in" className="relative col-span-2 min-h-[500px] overflow-hidden border-r border-t border-[#e7e1d7] max-lg:col-span-1 max-lg:border-b max-lg:border-r-0 max-md:min-h-[420px] max-sm:min-h-[360px]">
+                        <Image data-reveal-image
                             src={brassCompany}
                             alt="Precision brass components manufacturing facility"
                             fill

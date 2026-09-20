@@ -1,8 +1,21 @@
+import { pageMetadata } from "@/src/lib/seo";
+import { BreadcrumbSchema } from "@/src/components/common/StructuredData";
 // src/app/products/[slug]/page.tsx
 
 import { notFound } from "next/navigation";
 import ProductDetail from "@/src/components/company/Products/ProductDetail";
 import { getProductBySlug, products } from "@/src/components/company/Products/productsData";
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+    const product = getProductBySlug((await params).slug);
+    if (!product) notFound();
+    return pageMetadata(
+        product.title + " Manufacturer in Jamnagar",
+        product.shortText + " Manufactured by Feel Good Brass Industry in Jamnagar, Gujarat.",
+        "/products/" + product.slug,
+        product.imageSrc,
+    );
+}
 
 export function generateStaticParams() {
     return products.map((product) => ({
@@ -22,5 +35,5 @@ export default async function ProductPage({
         notFound();
     }
 
-    return <ProductDetail product={product} />;
+    return <><BreadcrumbSchema items={[{ name: "Products", path: "/products" }, { name: product.title, path: `/products/${product.slug}` }]} /><ProductDetail product={product} /></>;
 }

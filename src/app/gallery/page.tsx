@@ -1,3 +1,5 @@
+import { pageMetadata, seoPages } from "@/src/lib/seo";
+import { BreadcrumbSchema } from "@/src/components/common/StructuredData";
 // src/app/gallery/page.tsx
 
 import Link from "next/link";
@@ -110,15 +112,18 @@ function ArrowIcon() {
 
 function BrassVisual({ image, alt }: { image: string; alt: string }) {
     return (
-        <div className="relative flex h-full min-h-[360px] items-center justify-center overflow-hidden bg-[#F8F3EA]">
-            <Image src={image} alt={alt} fill sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, (max-width: 1535px) 33vw, 355px" className="object-contain" />
+        <div data-reveal="image-in" className="relative flex h-full min-h-[360px] items-center justify-center overflow-hidden bg-[#F8F3EA]">
+            <Image data-reveal-image src={image} alt={alt} fill sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, (max-width: 1535px) 33vw, 355px" className="object-contain" />
         </div>
     );
 }
 
+export const metadata = pageMetadata(...seoPages["/gallery"], "/gallery");
+
 export default function GalleryPage() {
     return (
         <main>
+            <BreadcrumbSchema items={[{ name: "Gallery", path: "/gallery" }]} />
             {/* HERO */}
             <section className="bg-white">
                 <div className="mx-auto max-w-[1600px] px-5">
@@ -160,7 +165,7 @@ export default function GalleryPage() {
                 <div className="mx-auto max-w-[1500px] px-10 max-md:px-5">
                     <div className="mb-16 grid grid-cols-[0.8fr_1.2fr] gap-16 max-lg:grid-cols-1 max-lg:gap-8">
                         <div>
-                            <span className="mb-5 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
+                            <span data-reveal="fade-up" className="mb-5 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
                                 / Product Gallery
                             </span>
 
@@ -178,7 +183,7 @@ export default function GalleryPage() {
 
                     <div className="grid auto-rows-fr grid-cols-4 gap-6 max-2xl:grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1">
                         {galleryItems.map((item, index) => (
-                            <div
+                            <div data-reveal="fade-up" data-reveal-stagger data-image-hover
                                 key={item.number}
                                 className={`group overflow-hidden bg-[#F8F3EA] transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl ${index === 0 || index === 6 ? "max-2xl:col-span-2 max-md:col-span-1" : ""
                                     }`}

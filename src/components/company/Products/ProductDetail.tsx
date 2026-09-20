@@ -60,7 +60,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
                         <BrassProductVisual
                             type={product.visual}
                             imageSrc={product.imageSrc}
-                            imageAlt={product.title}
+                            imageAlt={`${product.title} by Feel Good Brass Industry`}
                             sizes="(max-width: 1023px) 100vw, 740px"
                         />
                     </div>
@@ -70,18 +70,18 @@ export default function ProductDetail({ product }: ProductDetailProps) {
             <section className="bg-white py-[110px] max-lg:py-20 max-md:py-16">
                 <div className="mx-auto max-w-[1500px] px-10 max-md:px-5">
                     <div className="mb-14">
-                        <span className="mb-5 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
+                        <span data-reveal="fade-up" className="mb-5 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
                             / Components
                         </span>
 
-                        <h2 className="text-[52px] font-extrabold uppercase leading-[1.1] tracking-[-2px] text-[#050505] max-md:text-[34px]">
+                        <h2 data-reveal="fade-up" className="text-[52px] font-extrabold uppercase leading-[1.1] tracking-[-2px] text-[#050505] max-md:text-[34px]">
                             Available Product Types
                         </h2>
                     </div>
 
                     <div className="grid grid-cols-3 border border-[#e7e1d7] max-lg:grid-cols-2 max-md:grid-cols-1">
                         {product.components.map((item, index) => (
-                            <div
+                            <div data-reveal="fade-up" data-reveal-stagger
                                 key={item}
                                 className="group min-h-[210px] border-r border-b border-[#e7e1d7] px-8 py-8 transition-colors duration-500 hover:bg-[#0B1F35] max-md:px-6"
                             >
@@ -102,11 +102,11 @@ export default function ProductDetail({ product }: ProductDetailProps) {
                 <div className="mx-auto max-w-[1500px] px-10 max-md:px-5">
                     <div className="grid grid-cols-2 gap-8 max-lg:grid-cols-1">
                         <div className="bg-white p-12 max-md:p-6">
-                            <span className="mb-5 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
+                            <span data-reveal="fade-up" className="mb-5 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
                                 / Applications
                             </span>
 
-                            <h2 className="mb-10 text-[42px] font-extrabold uppercase leading-[1.1] text-[#050505] max-md:text-[30px]">
+                            <h2 data-reveal="fade-up" className="mb-10 text-[42px] font-extrabold uppercase leading-[1.1] text-[#050505] max-md:text-[30px]">
                                 Where It Is Used
                             </h2>
 
@@ -121,11 +121,11 @@ export default function ProductDetail({ product }: ProductDetailProps) {
                         </div>
 
                         <div className="bg-[#0B1F35] p-12 max-md:p-6">
-                            <span className="mb-5 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
+                            <span data-reveal="fade-up" className="mb-5 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
                                 / Specifications
                             </span>
 
-                            <h2 className="mb-10 text-[42px] font-extrabold uppercase leading-[1.1] text-white max-md:text-[30px]">
+                            <h2 data-reveal="fade-up" className="mb-10 text-[42px] font-extrabold uppercase leading-[1.1] text-white max-md:text-[30px]">
                                 Manufacturing Support
                             </h2>
 
@@ -142,7 +142,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
 
                     <div className="mt-8 bg-white px-12 py-12 max-md:px-6">
                         <div className="flex items-center justify-between gap-8 max-lg:flex-col max-lg:items-start">
-                            <h2 className="max-w-[760px] text-[42px] font-extrabold uppercase leading-[1.1] text-[#050505] max-md:text-[30px]">
+                            <h2 data-reveal="fade-up" className="max-w-[760px] text-[42px] font-extrabold uppercase leading-[1.1] text-[#050505] max-md:text-[30px]">
                                 Need {product.title} As Per Drawing Or Sample?
                             </h2>
 

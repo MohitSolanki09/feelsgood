@@ -24,7 +24,7 @@ export default function ManufacturingCTA() {
             <div className="mx-auto max-w-[1500px] px-10 max-md:px-5">
                 <div className="grid overflow-hidden bg-[#F8F3EA] lg:grid-cols-2">
                     <div className="relative h-[560px] max-lg:h-[420px] max-md:h-[320px]">
-                        <Image
+                        <Image data-reveal-image
                             src={brassParts}
                             alt="Precision brass parts manufacturing at Feel Good Brass Industry"
                             fill
@@ -37,15 +37,15 @@ export default function ManufacturingCTA() {
 
                     <div className="flex items-center px-[80px] py-[80px] max-xl:px-12 max-md:px-6 max-md:py-12">
                         <div>
-                            <span className="mb-6 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
+                            <span data-reveal="fade-up" className="mb-6 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
                                 / Custom Manufacturing
                             </span>
 
-                            <h2 className="max-w-[650px] text-[54px] font-extrabold uppercase leading-[1.1] tracking-[-2px] text-[#050505] max-xl:text-[44px] max-md:text-[34px] max-sm:text-[29px]">
+                            <h2 data-reveal="fade-up" className="max-w-[650px] text-[54px] font-extrabold uppercase leading-[1.1] tracking-[-2px] text-[#050505] max-xl:text-[44px] max-md:text-[34px] max-sm:text-[29px]">
                                 Share Your Drawing, Sample Or Brass Part Requirement
                             </h2>
 
-                            <p className="mt-7 max-w-[560px] text-[17px] leading-[1.8] text-[#465566]">
+                            <p data-reveal="fade-up" data-reveal-delay="70" className="mt-7 max-w-[560px] text-[17px] leading-[1.8] text-[#465566]">
                                 We help you manufacture brass parts with the right material,
                                 accurate size, clean finish, inspection support, and dependable
                                 delivery for repeat production.

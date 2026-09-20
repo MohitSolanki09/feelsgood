@@ -48,7 +48,7 @@ export default function QualityProcess() {
             <div className="mx-auto max-w-[1500px] px-10 max-md:px-5">
                 <div className="mb-16 grid grid-cols-[0.8fr_1.2fr] gap-16 max-lg:grid-cols-1 max-lg:gap-8">
                     <div>
-                        <span className="mb-5 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
+                        <span data-reveal="fade-up" className="mb-5 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
                             / Inspection Process
                         </span>
 
@@ -64,7 +64,7 @@ export default function QualityProcess() {
 
                 <div className="grid grid-cols-4 border border-[#e7e1d7] max-lg:grid-cols-2 max-md:grid-cols-1">
                     {processItems.map((item, index) => (
-                        <div
+                        <div data-reveal="fade-up" data-reveal-stagger
                             key={item.title}
                             className={`group min-h-[370px] px-9 py-12 transition-colors duration-500 hover:bg-[#0B1F35] max-md:min-h-[300px] max-md:px-6 ${index !== processItems.length - 1
                                 ? "border-r border-[#e7e1d7]"

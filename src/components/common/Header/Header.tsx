@@ -33,7 +33,7 @@ const navItems: NavItem[] = [
         href: "/company/about",
         mega: {
             title: "Precision Brass Manufacturing With Innovation And Trust",
-            image: "/images/menu/factory.jpg",
+            image: "/images/about/about-manufacturing.webp",
             cta: "About Company",
             ctaHref: "/company/about",
             links: [
@@ -294,8 +294,8 @@ function SearchPanel({
 //                         </p>
 
 //                         <p>
-//                             info@feelgoodbrass.com <br />
-//                             +91 00000 00000
+//                             feelgoodbrass@gmail.com <br />
+//                             +91 93166-36271
 //                         </p>
 //                     </div>
 
@@ -431,8 +431,8 @@ function SideMenu({
                         </p>
 
                         <p>
-                            info@feelgoodbrass.com <br />
-                            +91 00000 00000
+                            feelgoodbrass@gmail.com <br />
+                            +91 93166-36271
                         </p>
                     </div>
                 </div>

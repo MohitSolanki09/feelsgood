@@ -118,7 +118,7 @@ export default function QualitySection() {
         <section className="bg-white py-[110px] max-lg:py-20 max-md:py-16">
             <div className="mx-auto max-w-[1500px] px-10 max-md:px-5">
                 <div className="mb-[70px] max-w-[720px] max-md:mb-12">
-                    <span className="mb-5 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
+                    <span data-reveal="fade-up" className="mb-5 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
                         / Quality Assurance
                     </span>
 
@@ -129,7 +129,7 @@ export default function QualitySection() {
 
                 <div className="grid grid-cols-4 border-y border-[#e7e1d7] max-lg:grid-cols-2 max-sm:grid-cols-1">
                     {qualityItems.map((item, index) => (
-                        <div
+                        <div data-reveal="fade-up" data-reveal-stagger
                             key={item.title}
                             className="group min-h-[330px] border-r border-[#e7e1d7] px-10 py-[82px] transition-colors duration-500 last:border-r-0 hover:bg-[#0B1F35] max-xl:px-8 max-lg:border-b max-lg:last:border-b-0 max-lg:nth-[2n]:border-r-0 max-sm:min-h-[260px] max-sm:border-r-0 max-sm:px-6 max-sm:py-10"
                         >

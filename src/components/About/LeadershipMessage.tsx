@@ -31,8 +31,8 @@ export default function LeadershipMessage() {
                 <div className="grid min-h-[720px] grid-cols-3 border-x border-y border-[#e7e1d7] max-lg:grid-cols-1">
                     {/* Left Image */}
                     <div className="flex items-center border-r border-[#e7e1d7] px-10 py-[90px] max-lg:border-b max-lg:border-r-0 max-md:px-5 max-md:py-12">
-                        <div className="relative h-[470px] w-full overflow-hidden bg-[#F8F3EA] max-lg:h-[420px] max-md:h-[340px]">
-                            <Image
+                        <div data-reveal="image-in" className="relative h-[470px] w-full overflow-hidden bg-[#F8F3EA] max-lg:h-[420px] max-md:h-[340px]">
+                            <Image data-reveal-image
                                 src={founderImage}
                                 alt="Feel Good Brass Industry leadership and manufacturing"
                                 fill
@@ -69,8 +69,8 @@ export default function LeadershipMessage() {
 
                     {/* Right Image CTA */}
                     <div className="flex items-center px-10 py-[90px] max-md:px-5 max-md:py-12">
-                        <div className="relative h-[560px] w-full overflow-hidden bg-[#F8F3EA] max-lg:h-[440px] max-md:h-[350px]">
-                            <Image
+                        <div data-reveal="image-in" className="relative h-[560px] w-full overflow-hidden bg-[#F8F3EA] max-lg:h-[440px] max-md:h-[350px]">
+                            <Image data-reveal-image
                                 src={factoryImage}
                                 alt="Precision brass parts manufacturing at Feel Good Brass Industry"
                                 fill

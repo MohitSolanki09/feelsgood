@@ -74,11 +74,11 @@ export default function CompanyJourney() {
             <div className="mx-auto max-w-[1500px] px-10 max-md:px-5">
                 {/* Top intro */}
                 <div className="mx-auto mb-[80px] max-w-[980px] text-center max-md:mb-14">
-                    <span className="mb-5 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
+                    <span data-reveal="fade-up" className="mb-5 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
                         / Our Journey
                     </span>
 
-                    <h2 className="text-[42px] font-extrabold uppercase leading-[1.18] tracking-[-1.6px] text-[#050505] max-lg:text-[34px] max-md:text-[28px]">
+                    <h2 data-reveal="fade-up" className="text-[42px] font-extrabold uppercase leading-[1.18] tracking-[-1.6px] text-[#050505] max-lg:text-[34px] max-md:text-[28px]">
                         Since our beginning, Feel Good Brass Industry has grown with a clear
                         commitment to precision brass parts, reliable quality, and long-term
                         customer trust.
@@ -90,7 +90,7 @@ export default function CompanyJourney() {
                     <div className="grid grid-cols-[0.9fr_1.1fr] max-lg:grid-cols-1">
                         {/* Visual */}
                         <div className="relative flex min-h-[520px] items-center justify-center bg-[#0B1F35] px-10 py-16 max-lg:min-h-[420px] max-md:px-5">
-                            <div className="absolute left-0 top-0 h-[6px] w-[38%] bg-[#D79229]" />
+                            <div data-reveal="line-x" className="absolute left-0 top-0 h-[6px] w-[38%] bg-[#D79229]" />
 
                             <div className="text-center">
                                 <BrassPartVisual />
@@ -109,11 +109,11 @@ export default function CompanyJourney() {
                         {/* Timeline */}
                         <div className="grid grid-cols-2 max-md:grid-cols-1">
                             {milestones.map((item, index) => (
-                                <div
+                                <div data-reveal="fade-up" data-reveal-stagger
                                     key={item.year}
                                     className="group relative min-h-[260px] border-b border-r border-[#e7e1d7] bg-white px-10 py-10 transition-colors duration-500 hover:bg-[#F8F3EA] max-md:border-r-0 max-md:px-6"
                                 >
-                                    <div className="absolute left-10 top-0 h-[4px] w-[80px] bg-[#D79229] transition-all duration-500 group-hover:w-[140px] max-md:left-6" />
+                                    <div data-reveal="line-x" className="absolute left-10 top-0 h-[4px] w-[80px] bg-[#D79229] transition-all duration-500 group-hover:w-[140px] max-md:left-6" />
 
                                     <span className="text-[15px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
                                         0{index + 1}

@@ -40,15 +40,15 @@ export default function CertificationStandards() {
         <section className="bg-[#F8F3EA] py-[110px] max-lg:py-20 max-md:py-16">
             <div className="mx-auto max-w-[1500px] px-10 max-md:px-5">
                 <div className="mx-auto mb-16 max-w-[850px] text-center">
-                    <span className="mb-5 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
+                    <span data-reveal="fade-up" className="mb-5 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
                         / Certifications & Standards
                     </span>
 
-                    <h2 className="text-[56px] font-extrabold uppercase leading-[1.1] tracking-[-2px] text-[#050505] max-xl:text-[46px] max-md:text-[34px] max-sm:text-[29px]">
+                    <h2 data-reveal="fade-up" className="text-[56px] font-extrabold uppercase leading-[1.1] tracking-[-2px] text-[#050505] max-xl:text-[46px] max-md:text-[34px] max-sm:text-[29px]">
                         Reliable Standards For Industrial Brass Supply
                     </h2>
 
-                    <p className="mx-auto mt-7 max-w-[720px] text-[18px] leading-[1.8] text-[#465566] max-md:text-[16px]">
+                    <p data-reveal="fade-up" data-reveal-delay="70" className="mx-auto mt-7 max-w-[720px] text-[18px] leading-[1.8] text-[#465566] max-md:text-[16px]">
                         We follow structured inspection, documentation, and packing
                         practices to support consistent brass part manufacturing.
                     </p>
@@ -56,7 +56,7 @@ export default function CertificationStandards() {
 
                 <div className="grid grid-cols-3 gap-6 max-lg:grid-cols-1">
                     {certifications.map((item) => (
-                        <div
+                        <div data-reveal="fade-up" data-reveal-stagger
                             key={item.title}
                             className="group bg-white px-10 py-12 transition-all duration-500 hover:-translate-y-2 hover:bg-[#0B1F35] max-md:px-6"
                         >

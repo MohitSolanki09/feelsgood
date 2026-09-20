@@ -29,8 +29,8 @@ export default function AdvancementSection() {
             <div className="mx-auto max-w-[1500px] px-10 max-md:px-5">
                 <div className="grid items-center gap-[110px] lg:grid-cols-2 max-2xl:gap-[80px] max-xl:gap-[60px] max-lg:gap-12">
                     {/* Image */}
-                    <div className="relative h-[560px] overflow-hidden bg-[#F8F3EA] max-xl:h-[500px] max-lg:h-[430px] max-md:h-[340px] max-sm:h-[280px]">
-                        <Image
+                    <div data-reveal="image-in" className="relative h-[560px] overflow-hidden bg-[#F8F3EA] max-xl:h-[500px] max-lg:h-[430px] max-md:h-[340px] max-sm:h-[280px]">
+                        <Image data-reveal-image
                             src={brassAdvance}
                             alt="Brass parts manufacturing"
                             fill
@@ -43,7 +43,7 @@ export default function AdvancementSection() {
 
                     {/* Content */}
                     <div className="max-w-[600px]">
-                        <p className="mb-9 flex items-center gap-2 text-[20px] font-medium tracking-[-0.5px] text-[#0B1F35] max-md:text-[17px]">
+                        <p data-reveal="fade-up" className="mb-9 flex items-center gap-2 text-[20px] font-medium tracking-[-0.5px] text-[#0B1F35] max-md:text-[17px]">
                             <span className="text-[#D79229]">/</span>
                             Become a Customer
                         </p>
@@ -52,7 +52,7 @@ export default function AdvancementSection() {
                             Advancements In The Brass Parts Industry
                         </h2>
 
-                        <p className="mt-8 max-w-[500px] text-[17px] leading-[1.8] text-[#465566]">
+                        <p data-reveal="fade-up" data-reveal-delay="70" className="mt-8 max-w-[500px] text-[17px] leading-[1.8] text-[#465566]">
                             We manufacture precision brass inserts, fittings, fasteners, turned parts, electrical components, and custom brass parts with reliable quality and consistent production standards.
                         </p>
 

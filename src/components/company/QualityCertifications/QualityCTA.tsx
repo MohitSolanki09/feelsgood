@@ -28,15 +28,15 @@ export default function QualityCTA() {
                 <div className="grid overflow-hidden bg-[#0B1F35] lg:grid-cols-2">
                     <div className="flex items-center px-[80px] py-[80px] max-xl:px-12 max-md:px-6 max-md:py-12">
                         <div>
-                            <span className="mb-6 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
+                            <span data-reveal="fade-up" className="mb-6 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
                                 / Quality Support
                             </span>
 
-                            <h2 className="max-w-[650px] text-[54px] font-extrabold uppercase leading-[1.1] tracking-[-2px] text-white max-xl:text-[44px] max-md:text-[34px] max-sm:text-[29px]">
+                            <h2 data-reveal="fade-up" className="max-w-[650px] text-[54px] font-extrabold uppercase leading-[1.1] tracking-[-2px] text-white max-xl:text-[44px] max-md:text-[34px] max-sm:text-[29px]">
                                 Need Brass Parts With Consistent Quality?
                             </h2>
 
-                            <p className="mt-7 max-w-[560px] text-[17px] leading-[1.8] text-white/70">
+                            <p data-reveal="fade-up" data-reveal-delay="70" className="mt-7 max-w-[560px] text-[17px] leading-[1.8] text-white/70">
                                 Share your drawing, tolerance, finish requirement, quantity, or
                                 sample. We will guide you with the right manufacturing and
                                 inspection approach.
@@ -53,7 +53,7 @@ export default function QualityCTA() {
                     </div>
 
                     <div className="relative h-[560px] max-lg:h-[420px] max-md:h-[320px]">
-                        <Image
+                        <Image data-reveal-image
                             src="/images/quality/quality_main.png"
                             alt="Precision quality inspection of brass components"
                             fill

@@ -1,33 +1,5 @@
-// // src/app/layout.tsx
-
-// import type { Metadata } from "next";
-// import Header from "@/src/components/common/Header/Header";
-// import Footer from "@/src/components/common/Footer/Footer";
-// import "./globals.css";
-
-// export const metadata: Metadata = {
-//   title: "Feel Good Brass Industry",
-//   description: "Precision brass parts manufacturer",
-// };
-
-// export default function RootLayout({
-//   children,
-// }: {
-//   children: React.ReactNode;
-// }) {
-//   return (
-//     <html lang="en">
-//       <body>
-//         <Header />
-//         {children}
-//         <Footer />
-//       </body>
-//     </html>
-//   );
-// }
-
-
-
+import { pageMetadata, business, defaultDescription, siteUrl } from "@/src/lib/seo";
+import { BusinessSchema } from "@/src/components/common/StructuredData";
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import MotionProvider from "@/src/components/common/MotionProvider";
@@ -42,8 +14,10 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Feel Good Brass Industry",
-  description: "Precision brass parts manufacturer",
+  ...pageMetadata("Brass Parts Manufacturer in Jamnagar", defaultDescription, "/"),
+  metadataBase: new URL(siteUrl),
+  title: { default: `${business.name} | Brass Parts Manufacturer in Jamnagar`, template: `%s | ${business.name}` },
+  robots: { index: true, follow: true },
   icons: {
     icon: "/images/logo/favicon_logo.png",
   },
@@ -57,6 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={manrope.className}>
+        <BusinessSchema />
         <MotionProvider />
         <Header />
         {children}

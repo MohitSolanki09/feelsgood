@@ -39,7 +39,7 @@ export default function CapabilitiesGrid() {
             <div className="mx-auto max-w-[1500px] px-10 max-md:px-5">
                 <div className="mb-16 grid grid-cols-[0.8fr_1.2fr] gap-16 max-lg:grid-cols-1 max-lg:gap-8">
                     <div>
-                        <span className="mb-5 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
+                        <span data-reveal="fade-up" className="mb-5 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
                             / What We Do
                         </span>
 
@@ -55,7 +55,7 @@ export default function CapabilitiesGrid() {
 
                 <div className="grid grid-cols-3 border border-[#e7e1d7] max-lg:grid-cols-2 max-md:grid-cols-1">
                     {capabilities.map((item, index) => (
-                        <div
+                        <div data-reveal="fade-up" data-reveal-stagger
                             key={item.title}
                             className={`group min-h-[310px] border-[#e7e1d7] px-9 py-10 transition-colors duration-500 hover:bg-[#0B1F35] max-md:min-h-[260px] max-md:px-6 ${index !== 2 && index !== 5 ? "border-r" : ""
                                 } ${index < 3 ? "border-b" : ""} max-lg:border-r-0 max-lg:border-b`}

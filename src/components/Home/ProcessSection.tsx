@@ -198,9 +198,20 @@ import {
     useScroll,
     useSpring,
     useTransform,
-    useReducedMotion,
 } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useSyncExternalStore } from "react";
+
+const lightMotionQuery = "(prefers-reduced-motion: reduce), (max-width: 767px)";
+function subscribeLightMotion(callback: () => void) {
+    const media = window.matchMedia(lightMotionQuery);
+    media.addEventListener("change", callback);
+    return () => media.removeEventListener("change", callback);
+}
+const getLightMotion = () => window.matchMedia(lightMotionQuery).matches;
+const getServerLightMotion = () => true;
+function useLightMotion() {
+    return useSyncExternalStore(subscribeLightMotion, getLightMotion, getServerLightMotion);
+}
 
 type ProcessStep = {
     title: string;
@@ -264,7 +275,7 @@ function useElementHeight(ref: React.RefObject<HTMLDivElement | null>) {
 }
 
 function ArrowNutComponent({ y }: { y: MotionValue<number> }) {
-    const reducedMotion = useReducedMotion();
+    const reducedMotion = useLightMotion();
     return (
         <motion.div
             style={{ y: reducedMotion ? 0 : y }}
@@ -374,26 +385,9 @@ function ProcessCard({
     index: number;
 }) {
     const isLeft = step.side === "left";
-    const reducedMotion = useReducedMotion();
 
     return (
-        <motion.div
-            initial={reducedMotion ? false : {
-                opacity: 0,
-                x: isLeft ? -45 : 45,
-                y: 25,
-            }}
-            whileInView={{
-                opacity: 1,
-                x: 0,
-                y: 0,
-            }}
-            viewport={{ once: true, margin: "-120px" }}
-            transition={{
-                duration: 0.65,
-                delay: index * 0.08,
-                ease: [0.22, 1, 0.36, 1],
-            }}
+        <div data-reveal="fade-up"
             className="relative grid min-h-[280px] grid-cols-[minmax(0,1fr)_160px_minmax(0,1fr)] max-lg:grid-cols-[52px_minmax(0,1fr)] max-lg:gap-5 max-md:min-h-[250px]"
         >
             {isLeft && (
@@ -411,12 +405,12 @@ function ProcessCard({
                     <ProcessContent step={step} index={index} />
                 </div>
             )}
-        </motion.div>
+        </div>
     );
 }
 
 export default function ProcessSection() {
-    const reducedMotion = useReducedMotion();
+    const reducedMotion = useLightMotion();
     const sectionRef = useRef<HTMLElement | null>(null);
     const timelineRef = useRef<HTMLDivElement | null>(null);
 
@@ -449,11 +443,7 @@ export default function ProcessSection() {
             className="relative overflow-hidden bg-white py-[110px] max-lg:py-20 max-md:py-16"
         >
             <div className="mx-auto max-w-[1220px] px-6">
-                <motion.div
-                    initial={reducedMotion ? false : { opacity: 0, y: 35 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.7, ease: "easeOut" }}
+                <div data-reveal="fade-up"
                     className="mx-auto mb-20 max-w-[780px] text-center max-md:mb-14"
                 >
                     <span className="mb-5 inline-flex items-center gap-2 text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
@@ -463,7 +453,7 @@ export default function ProcessSection() {
                     <h2 className="text-[48px] font-extrabold uppercase leading-[1.08] tracking-[-2px] text-[#050505] max-lg:text-[40px] max-md:text-[32px] max-sm:text-[28px]">
                         Unveiling The Process Of Precision Brass Parts Production
                     </h2>
-                </motion.div>
+                </div>
 
                 <div ref={timelineRef} className="relative">
                     {/* base center line */}

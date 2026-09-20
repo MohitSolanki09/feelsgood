@@ -1,12 +1,13 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import Lenis from "lenis";
 
 /** One root scroll controller; page content remains server rendered. */
 export default function MotionProvider() {
   const pathname = usePathname();
+  const revealed = useRef(new WeakSet<Element>());
 
   useEffect(() => {
     const preference = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -47,7 +48,8 @@ export default function MotionProvider() {
 
   useEffect(() => {
     const preference = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const elements = Array.from(document.querySelectorAll<HTMLElement>("[data-reveal]"));
+    const elements = Array.from(document.querySelectorAll<HTMLElement>("[data-reveal]"))
+      .filter((element) => !element.parentElement?.closest("[data-reveal]"));
     let observer: IntersectionObserver | undefined;
     const reset = () => {
       observer?.disconnect();
@@ -60,20 +62,41 @@ export default function MotionProvider() {
         entries.forEach(({ target, isIntersecting }) => {
           if (!isIntersecting) return;
           target.classList.remove("reveal-pending");
+          revealed.current.add(target);
           observer?.unobserve(target);
         });
-      }, { threshold: 0.08 });
+      }, { threshold: 0 });
       elements.forEach((element) => {
+        if (element.hasAttribute("data-reveal-stagger")) {
+          const siblings = Array.from(element.parentElement?.children ?? [])
+            .filter((sibling) => sibling.hasAttribute("data-reveal-stagger"));
+          element.style.setProperty("--reveal-delay", `${Math.min(siblings.indexOf(element), 3) * 70}ms`);
+        }
         // Never hide initial viewport content or delay the page's LCP.
-        if (element.getBoundingClientRect().top < window.innerHeight) return;
+        if (revealed.current.has(element)) return;
+        if (element.getBoundingClientRect().top < window.innerHeight) {
+          revealed.current.add(element);
+          return;
+        }
         element.classList.add("reveal-pending");
         observer?.observe(element);
       });
     };
     setup();
+    const revealFocused = (event: FocusEvent) => {
+      if (!(event.target instanceof Element)) return;
+      elements.forEach((element) => {
+        if (!element.contains(event.target as Node)) return;
+        element.classList.remove("reveal-pending");
+        revealed.current.add(element);
+        observer?.unobserve(element);
+      });
+    };
+    document.addEventListener("focusin", revealFocused);
     preference.addEventListener("change", setup);
     return () => {
       reset();
+      document.removeEventListener("focusin", revealFocused);
       preference.removeEventListener("change", setup);
     };
   }, [pathname]);

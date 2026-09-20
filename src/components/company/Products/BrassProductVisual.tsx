@@ -14,8 +14,8 @@ type BrassProductVisualProps = {
 export default function BrassProductVisual({ type, imageSrc, imageAlt = "", sizes, compact = false }: BrassProductVisualProps) {
     if (imageSrc) {
         return (
-            <div className={`relative flex h-full ${compact ? "min-h-0" : "min-h-[360px]"} items-center justify-center overflow-hidden bg-[#F8F3EA]`}>
-                <Image src={imageSrc} alt={imageAlt} fill sizes={sizes ?? "(max-width: 1023px) 100vw, 740px"} className="object-contain" />
+            <div data-reveal="image-in" className={`relative flex h-full ${compact ? "min-h-0" : "min-h-[360px]"} items-center justify-center overflow-hidden bg-[#F8F3EA]`}>
+                <Image data-reveal-image src={imageSrc} alt={imageAlt} fill sizes={sizes ?? "(max-width: 1023px) 100vw, 740px"} className="object-contain" />
             </div>
         );
     }

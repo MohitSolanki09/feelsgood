@@ -13,9 +13,11 @@ function harness(reduced = false) {
     addEventListener: (_, callback) => listeners.add(callback),
     removeEventListener: (_, callback) => listeners.delete(callback),
   };
+  const documentListeners = new Map();
   const element = (top) => {
     const classes = new Set();
-    return { classes, getBoundingClientRect: () => ({ top }), classList: {
+    return { classes, parentElement: null, hasAttribute: () => false, contains: (target) => target === null,
+      getBoundingClientRect: () => ({ top }), classList: {
       add: (name) => classes.add(name), remove: (name) => classes.delete(name),
     } };
   };
@@ -46,17 +48,20 @@ function harness(reduced = false) {
   vm.runInNewContext(code, {
     exports,
     require: (name) => ({
-      react: { useEffect: (effect) => effects.push(effect) },
+      react: { useEffect: (effect) => effects.push(effect), useRef: (value) => ({ current: value }) },
       'next/navigation': { usePathname: () => '/' },
       lenis: { default: Lenis },
     })[name],
     window: { matchMedia: () => preference, innerHeight: 900, IntersectionObserver },
-    document: { documentElement: root, querySelectorAll: () => elements },
+    document: { documentElement: root, querySelectorAll: () => elements,
+      addEventListener: (name, callback) => documentListeners.set(name, callback),
+      removeEventListener: (name) => documentListeners.delete(name),
+    },
     MutationObserver, IntersectionObserver,
   });
   exports.default();
   return {
-    effects, instances, mutations, intersections, elements, root, listeners,
+    effects, instances, mutations, intersections, elements, root, listeners, documentListeners,
     active: () => active, peak: () => peak,
     reduce(value) { preference.matches = value; [...listeners].forEach((callback) => callback()); },
   };
@@ -106,4 +111,23 @@ test('reveal skips initial viewport, reveals once, and cleans up on route change
   assert.equal(h.listeners.size, 0);
   const cleanupNextRoute = h.effects[1](); cleanupNextRoute();
   assert.ok(h.intersections.every((entry) => entry.disconnected));
+  assert.equal(h.documentListeners.size, 0);
+});
+
+test('stagger is bounded and previously revealed persistent content is not hidden on navigation', () => {
+  const h = harness();
+  const card = h.elements[1];
+  let delay;
+  card.hasAttribute = () => true;
+  card.style = { setProperty: (_, value) => { delay = value; } };
+  card.parentElement = { closest: () => null, children: Array.from({length: 12}, () => ({ hasAttribute: () => true })) };
+  card.parentElement.children.push(card);
+  const cleanup = h.effects[1]();
+  assert.equal(delay, '210ms');
+  h.intersections[0].callback([{ target: card, isIntersecting: true }]);
+  cleanup();
+  const nextCleanup = h.effects[1]();
+  assert.equal(card.classes.size, 0);
+  assert.equal(h.intersections[1].targets.size, 0);
+  nextCleanup();
 });

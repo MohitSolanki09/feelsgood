@@ -26,7 +26,7 @@ export default function Footer() {
             <div className="mx-auto w-full max-w-[1825px] overflow-hidden bg-[#F8F3EA] px-[90px] pb-[48px] pt-[78px] max-2xl:px-[60px] max-xl:px-10 max-md:px-6">
                 {/* TOP */}
                 <div className="grid grid-cols-[0.85fr_1.15fr] gap-[90px] border-b border-[#e7e1d7] pb-[72px] max-xl:grid-cols-1 max-xl:gap-12 max-md:pb-12">
-                    <div>
+                    <div data-reveal="fade-up" data-reveal-stagger>
                         <Link
                             href="/"
                             className="relative block h-[78px] w-[320px] max-md:w-[280px] max-sm:w-[230px]"
@@ -49,7 +49,7 @@ export default function Footer() {
                         </p>
                     </div>
 
-                    <div className="flex items-start">
+                    <div data-reveal="fade-up" data-reveal-stagger className="flex items-start">
                         <h2 className="max-w-[950px] text-[32px] font-black uppercase leading-[1.18] tracking-[-1.2px] text-[#0B1F35] max-xl:text-[28px] max-md:text-[23px]">
                             Innovate, Inspire And Impact With High-Quality Brass Manufacturing
                             Solutions
@@ -59,18 +59,18 @@ export default function Footer() {
 
                 {/* 4 COLUMNS */}
                 <div className="grid grid-cols-[1.35fr_0.8fr_1fr_0.45fr] gap-x-[70px] gap-y-12 border-b border-[#e7e1d7] py-[58px] max-xl:grid-cols-2 max-md:grid-cols-1">
-                    <div>
+                    <div data-reveal="fade-up" data-reveal-stagger>
                         <h3 className="mb-6 text-[18px] font-medium text-[#0B1F35]">
                             Company Address
                         </h3>
 
                         <p className="max-w-[380px] text-[18px] font-extrabold leading-[1.45] text-[#0B1F35] max-md:text-[16px]">
                             Plot No. 50/2, Survey No.45, FCI Godown Zone, Lalpur Road, Dared,
-                            Jamnagar-361004
+                            Jamnagar-361004, Gujarat, India
                         </p>
                     </div>
 
-                    <div>
+                    <div data-reveal="fade-up" data-reveal-stagger>
                         <h3 className="mb-6 text-[18px] font-medium text-[#0B1F35]">
                             GST NO
                         </h3>
@@ -80,27 +80,27 @@ export default function Footer() {
                         </p>
                     </div>
 
-                    <div>
+                    <div data-reveal="fade-up" data-reveal-stagger>
                         <h3 className="mb-6 text-[18px] font-medium text-[#0B1F35]">
                             Contact Us
                         </h3>
 
                         <div className="space-y-4 text-[18px] font-extrabold leading-[1.45] text-[#0B1F35] max-md:text-[16px]">
                             <Link
-                                href="mailto:info@feelgoodbrass.com"
+                                href="mailto:feelgoodbrass@gmail.com"
                                 className="block transition-colors duration-300 hover:text-[#D79229] max-sm:break-all"
                             >
                                 feelgoodbrass@gmail.com
                             </Link>
 
                             <Link
-                                href="tel:+910000000000"
+                                href="tel:+919316636271"
                                 className="block transition-colors duration-300 hover:text-[#D79229]"
                             >
                                 +91 93166-36271
                             </Link>
                             <Link
-                                href="tel:+910000000000"
+                                href="tel:+919723541192"
                                 className="block transition-colors duration-300 hover:text-[#D79229]"
                             >
 
@@ -109,27 +109,25 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    <div>
+                    <div data-reveal="fade-up" data-reveal-stagger>
                         <h3 className="mb-6 text-[18px] font-medium text-[#0B1F35]">
                             Social
                         </h3>
 
                         <div className="flex items-center gap-6 text-[#0B1F35]">
-                            <Link
-                                href="#"
+                            <span
                                 aria-label="LinkedIn"
                                 className="transition-colors duration-300 hover:text-[#D79229]"
                             >
                                 <LinkedinIcon />
-                            </Link>
+                            </span>
 
-                            <Link
-                                href="#"
+                            <span
                                 aria-label="Facebook"
                                 className="transition-colors duration-300 hover:text-[#D79229]"
                             >
                                 <FacebookIcon />
-                            </Link>
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -138,19 +136,17 @@ export default function Footer() {
                 <div className="grid grid-cols-[6fr_5fr_1fr] gap-x-10 pt-8 text-[15px] text-[#465566] max-lg:grid-cols-1 max-lg:gap-y-4">
                     <p>© 2026 Feel Good Brass Industry. All rights reserved.</p>
 
-                    <Link
-                        href="/terms-conditions"
+                    <span
                         className="transition-colors duration-300 hover:text-[#D79229]"
                     >
                         Terms & Conditions
-                    </Link>
+                    </span>
 
-                    <Link
-                        href="/privacy-policy"
+                    <span
                         className="transition-colors duration-300 hover:text-[#D79229]"
                     >
                         Privacy Policy
-                    </Link>
+                    </span>
                 </div>
             </div>
         </footer>

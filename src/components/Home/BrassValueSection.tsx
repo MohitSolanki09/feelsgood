@@ -7,7 +7,7 @@ const topStats = [
     {
         type: "intro",
         title:
-            "Precision brass manufacturing solutions for industries, OEMs, exporters, and custom component requirements.",
+            "Precision brass manufacturing in Jamnagar, Gujarat, India, for industries, OEMs, exporters, and custom component requirements.",
     },
     {
         type: "stat",
@@ -68,7 +68,7 @@ export default function BrassValueSection() {
                 {/* Top row */}
                 <div className="grid min-h-[360px] grid-cols-3 border-b border-[#e7e1d7] max-lg:grid-cols-1">
                     {topStats.map((item, index) => (
-                        <div
+                        <div data-reveal="fade-up" data-reveal-stagger
                             key={index}
                             className="flex flex-col justify-start border-r border-[#e7e1d7] px-10 pt-[72px] last:border-r-0 max-lg:min-h-[230px] max-lg:border-b max-lg:border-r-0 max-md:px-5 max-md:pt-10"
                         >
@@ -97,7 +97,7 @@ export default function BrassValueSection() {
                         const isGold = card.variant === "gold";
 
                         return (
-                            <Link
+                            <Link data-reveal="fade-up" data-reveal-stagger data-image-hover
                                 key={index}
                                 href={card.href}
                                 className={`group/card relative min-h-[445px] overflow-hidden border-r border-[#e7e1d7] last:border-r-0 max-lg:border-b max-lg:border-r-0 ${isGold ? "bg-[#D79229]" : "bg-[#F8F3EA]"

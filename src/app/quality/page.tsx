@@ -1,3 +1,5 @@
+import { pageMetadata, seoPages } from "@/src/lib/seo";
+import { BreadcrumbSchema } from "@/src/components/common/StructuredData";
 // src/app/quality/page.tsx
 
 import Link from "next/link";
@@ -89,9 +91,12 @@ function CheckIcon() {
     );
 }
 
+export const metadata = pageMetadata(...seoPages["/quality"], "/quality");
+
 export default function QualityPage() {
     return (
         <main>
+            <BreadcrumbSchema items={[{ name: "Quality", path: "/quality" }]} />
             {/* HERO */}
             <section className="bg-white">
                 <div className="mx-auto max-w-[1600px] px-5">
@@ -141,7 +146,7 @@ export default function QualityPage() {
                 <div className="mx-auto max-w-[1500px] px-10 max-md:px-5">
                     <div className="mb-16 grid grid-cols-[0.8fr_1.2fr] gap-16 max-lg:grid-cols-1 max-lg:gap-8">
                         <div>
-                            <span className="mb-5 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
+                            <span data-reveal="fade-up" className="mb-5 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
                                 / Our Quality Standard
                             </span>
 
@@ -159,7 +164,7 @@ export default function QualityPage() {
 
                     <div className="grid grid-cols-3 border border-[#e7e1d7] max-lg:grid-cols-1">
                         {qualityPillars.map((item, index) => (
-                            <div
+                            <div data-reveal="fade-up" data-reveal-stagger
                                 key={item.title}
                                 className={`group min-h-[370px] px-10 py-12 transition-colors duration-500 hover:bg-[#0B1F35] max-md:min-h-[300px] max-md:px-6 ${index !== qualityPillars.length - 1
                                     ? "border-r border-[#e7e1d7] max-lg:border-r-0 max-lg:border-b"
@@ -187,18 +192,18 @@ export default function QualityPage() {
             <section className="bg-[#F8F3EA] py-[110px] max-lg:py-20 max-md:py-16">
                 <div className="mx-auto max-w-[1500px] px-10 max-md:px-5">
                     <div className="mb-16 max-w-[850px]">
-                        <span className="mb-5 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
+                        <span data-reveal="fade-up" className="mb-5 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
                             / Inspection Flow
                         </span>
 
-                        <h2 className="text-[56px] font-extrabold uppercase leading-[1.08] tracking-[-2px] text-[#050505] max-xl:text-[46px] max-md:text-[34px] max-sm:text-[29px]">
+                        <h2 data-reveal="fade-up" className="text-[56px] font-extrabold uppercase leading-[1.08] tracking-[-2px] text-[#050505] max-xl:text-[46px] max-md:text-[34px] max-sm:text-[29px]">
                             From Raw Material To Final Packing
                         </h2>
                     </div>
 
                     <div className="grid grid-cols-6 border border-[#e7e1d7] bg-white max-xl:grid-cols-3 max-md:grid-cols-1">
                         {inspectionFlow.map((item, index) => (
-                            <div
+                            <div data-reveal="fade-up" data-reveal-stagger
                                 key={item}
                                 className="relative min-h-[240px] border-r border-[#e7e1d7] px-7 py-9 last:border-r-0 max-xl:border-b max-md:border-r-0"
                             >
@@ -226,11 +231,11 @@ export default function QualityPage() {
                 <div className="mx-auto max-w-[1500px] px-10 max-md:px-5">
                     <div className="mb-16 grid grid-cols-[0.8fr_1.2fr] gap-16 max-lg:grid-cols-1 max-lg:gap-8">
                         <div>
-                            <span className="mb-5 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
+                            <span data-reveal="fade-up" className="mb-5 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
                                 / Quality Checks
                             </span>
 
-                            <h2 className="text-[56px] font-extrabold uppercase leading-[1.08] tracking-[-2px] text-[#050505] max-xl:text-[46px] max-md:text-[34px] max-sm:text-[29px]">
+                            <h2 data-reveal="fade-up" className="text-[56px] font-extrabold uppercase leading-[1.08] tracking-[-2px] text-[#050505] max-xl:text-[46px] max-md:text-[34px] max-sm:text-[29px]">
                                 What We Check Before Dispatch
                             </h2>
                         </div>
@@ -242,7 +247,7 @@ export default function QualityPage() {
 
                     <div className="grid grid-cols-3 gap-6 max-lg:grid-cols-2 max-md:grid-cols-1">
                         {checkAreas.map((item, index) => (
-                            <div
+                            <div data-reveal="fade-up" data-reveal-stagger
                                 key={item.title}
                                 className="group bg-[#F8F3EA] px-8 py-9 transition-all duration-500 hover:-translate-y-2 hover:bg-[#0B1F35] hover:shadow-xl max-md:px-6"
                             >
@@ -274,15 +279,15 @@ export default function QualityPage() {
                 <div className="mx-auto max-w-[1500px] px-10 max-md:px-5">
                     <div className="grid overflow-hidden bg-[#0B1F35] lg:grid-cols-[1fr_0.72fr]">
                         <div className="px-[80px] py-[80px] max-xl:px-12 max-md:px-6 max-md:py-12">
-                            <span className="mb-6 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
+                            <span data-reveal="fade-up" className="mb-6 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
                                 / Quality Support
                             </span>
 
-                            <h2 className="max-w-[800px] text-[54px] font-extrabold uppercase leading-[1.08] tracking-[-2px] text-white max-xl:text-[44px] max-md:text-[34px] max-sm:text-[29px]">
+                            <h2 data-reveal="fade-up" className="max-w-[800px] text-[54px] font-extrabold uppercase leading-[1.08] tracking-[-2px] text-white max-xl:text-[44px] max-md:text-[34px] max-sm:text-[29px]">
                                 Need Brass Parts With Reliable Quality Control?
                             </h2>
 
-                            <p className="mt-7 max-w-[650px] text-[17px] leading-[1.8] text-white/70">
+                            <p data-reveal="fade-up" data-reveal-delay="70" className="mt-7 max-w-[650px] text-[17px] leading-[1.8] text-white/70">
                                 Share your drawing, sample, quantity, tolerance, material grade,
                                 or finish requirement. We will guide you with the right
                                 manufacturing and inspection process.
