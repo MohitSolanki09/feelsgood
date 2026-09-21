@@ -23,14 +23,14 @@ export default function ManufacturingHero() {
         <section className="bg-white">
             <div className="mx-auto max-w-[1600px] px-5">
                 <div className="grid min-h-[310px] grid-cols-[1.15fr_0.85fr] border-x border-[#e7e1d7] max-lg:grid-cols-1">
-                    <div className="flex items-center border-r border-[#e7e1d7] px-10 py-16 max-lg:border-r-0 max-lg:border-b max-md:px-5">
-                        <div>
-                            <p className="mb-6 flex items-center gap-2 text-[18px] font-medium text-[#0B1F35]">
+                    <div className="hero-heading-panel flex items-center border-r border-[#e7e1d7] px-10 py-16 max-lg:border-r-0 max-lg:border-b max-md:px-5">
+                        <div className="hero-copy">
+                            <p className="hero-eyebrow mb-6 flex items-center gap-2 text-[18px] font-medium text-[#0B1F35]">
                                 <span className="text-[#D79229]">/</span>
                                 Manufacturing Capabilities
                             </p>
 
-                            <h1 className="max-w-[850px] text-[64px] font-extrabold uppercase leading-[1.1] tracking-[-2.5px] text-[#050505] max-xl:text-[52px] max-md:text-[40px] max-sm:text-[32px]">
+                            <h1 className="hero-title max-w-[850px] text-[64px] font-extrabold uppercase leading-[1.1] tracking-[-2.5px] text-[#050505] max-xl:text-[52px] max-md:text-[40px] max-sm:text-[32px]">
                                 Precision Brass Manufacturing Built For Industrial Needs
                             </h1>
                         </div>

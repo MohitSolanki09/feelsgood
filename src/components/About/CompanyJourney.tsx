@@ -73,12 +73,12 @@ export default function CompanyJourney() {
         <section className="bg-white py-[110px] max-lg:py-20 max-md:py-16">
             <div className="mx-auto max-w-[1500px] px-10 max-md:px-5">
                 {/* Top intro */}
-                <div className="mx-auto mb-[80px] max-w-[980px] text-center max-md:mb-14">
-                    <span data-reveal="fade-up" className="mb-5 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
+                <div className="mobile-heading-group mx-auto mb-[80px] max-w-[980px] text-center max-md:mb-14">
+                    <span data-reveal="fade-up" className="mobile-eyebrow mb-5 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
                         / Our Journey
                     </span>
 
-                    <h2 data-reveal="fade-up" className="text-[42px] font-extrabold uppercase leading-[1.18] tracking-[-1.6px] text-[#050505] max-lg:text-[34px] max-md:text-[28px]">
+                    <h2 data-reveal="fade-up" className="mobile-section-title text-[42px] font-extrabold uppercase leading-[1.18] tracking-[-1.6px] text-[#050505] max-lg:text-[34px] max-md:text-[28px]">
                         Since our beginning, Feel Good Brass Industry has grown with a clear
                         commitment to precision brass parts, reliable quality, and long-term
                         customer trust.
@@ -95,11 +95,11 @@ export default function CompanyJourney() {
                             <div className="text-center">
                                 <BrassPartVisual />
 
-                                <h3 className="mt-10 text-[34px] font-extrabold uppercase leading-[1.12] tracking-[-1px] text-white max-md:text-[28px]">
+                                <h3 className="mobile-feature-title mt-10 text-[34px] font-extrabold uppercase leading-[1.12] tracking-[-1px] text-white max-md:text-[28px]">
                                     Built Around Precision
                                 </h3>
 
-                                <p className="mx-auto mt-5 max-w-[420px] text-[16px] leading-[1.8] text-white/70">
+                                <p className="mobile-body mx-auto mt-5 max-w-[420px] text-[16px] leading-[1.8] text-white/70">
                                     From raw brass material to finished components, every stage is
                                     focused on accuracy, consistency, and dependable supply.
                                 </p>
@@ -119,7 +119,7 @@ export default function CompanyJourney() {
                                         0{index + 1}
                                     </span>
 
-                                    <h4 className="mt-10 text-[42px] font-extrabold leading-none tracking-[-1.5px] text-[#050505] max-md:text-[34px]">
+                                    <h4 className="mobile-year mt-10 text-[42px] font-extrabold leading-none tracking-[-1.5px] text-[#050505] max-md:text-[34px]">
                                         {item.year}
                                     </h4>
 
@@ -127,7 +127,7 @@ export default function CompanyJourney() {
                                         {item.title}
                                     </h5>
 
-                                    <p className="mt-5 text-[15px] leading-[1.75] text-[#465566]">
+                                    <p className="mobile-secondary mt-5 text-[15px] leading-[1.75] text-[#465566]">
                                         {item.text}
                                     </p>
                                 </div>

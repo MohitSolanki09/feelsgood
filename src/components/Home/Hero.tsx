@@ -9,13 +9,13 @@ export default function Hero() {
         <section className="relative overflow-hidden bg-white">
             {/* Top Content */}
             <div className="mx-auto grid max-w-[1500px] grid-cols-[1.15fr_0.85fr] border-x border-[#e7e1d7] max-lg:grid-cols-1">
-                <div className="border-r border-[#e7e1d7] px-10 pb-14 pt-[72px] max-xl:px-8 max-lg:border-r-0 max-md:px-5 max-md:pt-12">
-                    <p className="mb-6 flex items-center gap-2 text-[17px] font-medium text-[#0B1F35] max-sm:text-[15px]">
+                <div className="hero-heading-panel hero-copy border-r border-[#e7e1d7] px-10 pb-14 pt-[72px] max-xl:px-8 max-lg:border-r-0 max-md:px-5 max-md:pt-12">
+                    <p className="hero-eyebrow mb-6 flex items-center gap-2 text-[17px] font-medium text-[#0B1F35] max-sm:text-[15px]">
                         <span className="text-[#D79229]">/</span>
                         Trusted Brass Parts Manufacturer
                     </p>
 
-                    <h1 className="max-w-[860px] text-[72px] font-extrabold uppercase leading-[1.04] tracking-[-3px] text-[#050505] max-2xl:text-[62px] max-xl:text-[54px] max-md:text-[42px] max-sm:text-[34px]">
+                    <h1 className="hero-title max-w-[860px] text-[72px] font-extrabold uppercase leading-[1.04] tracking-[-3px] text-[#050505] max-2xl:text-[62px] max-xl:text-[54px] max-md:text-[42px] max-sm:text-[34px]">
                         Precision Brass Parts Built For Modern Industries
                     </h1>
                 </div>

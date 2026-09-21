@@ -129,19 +129,19 @@ export default function GalleryPage() {
                 <div className="mx-auto max-w-[1600px] px-5">
                     <div className="border-x border-[#e7e1d7]">
                         <div className="grid grid-cols-[1fr_440px] border-b border-[#e7e1d7] max-lg:grid-cols-1">
-                            <div className="px-12 py-20 max-md:px-6 max-md:py-14">
-                                <p className="mb-6 flex items-center gap-2 text-[18px] font-medium text-[#0B1F35]">
+                            <div className="hero-heading-panel hero-copy px-12 py-20 max-md:px-6 max-md:py-14">
+                                <p className="hero-eyebrow mb-6 flex items-center gap-2 text-[18px] font-medium text-[#0B1F35]">
                                     <span className="text-[#D79229]">/</span>
                                     Gallery
                                 </p>
 
-                                <h1 className="max-w-[1050px] text-[76px] font-extrabold uppercase leading-[0.98] tracking-[-3.5px] text-[#050505] max-2xl:text-[68px] max-xl:text-[56px] max-md:text-[40px] max-sm:text-[32px]">
+                                <h1 className="hero-title max-w-[1050px] text-[76px] font-extrabold uppercase leading-[0.98] tracking-[-3.5px] text-[#050505] max-2xl:text-[68px] max-xl:text-[56px] max-md:text-[40px] max-sm:text-[32px]">
                                     Brass Manufacturing Showcase
                                 </h1>
                             </div>
 
                             <div className="flex flex-col justify-end border-l border-[#e7e1d7] bg-[#F8F3EA] p-10 max-lg:border-l-0 max-lg:border-t max-md:p-6">
-                                <p className="text-[17px] leading-[1.8] text-[#465566]">
+                                <p className="mobile-body text-[17px] leading-[1.8] text-[#465566]">
                                     Explore our brass components, manufacturing process, quality
                                     inspection, finishing, and dispatch-ready product range.
                                 </p>
@@ -163,18 +163,18 @@ export default function GalleryPage() {
             {/* GALLERY GRID */}
             <section className="bg-white py-[110px] max-lg:py-20 max-md:py-16">
                 <div className="mx-auto max-w-[1500px] px-10 max-md:px-5">
-                    <div className="mb-16 grid grid-cols-[0.8fr_1.2fr] gap-16 max-lg:grid-cols-1 max-lg:gap-8">
+                    <div className="mobile-heading-group mb-16 grid grid-cols-[0.8fr_1.2fr] gap-16 max-lg:grid-cols-1 max-lg:gap-8">
                         <div>
-                            <span data-reveal="fade-up" className="mb-5 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
+                            <span data-reveal="fade-up" className="mobile-eyebrow mb-5 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
                                 / Product Gallery
                             </span>
 
-                            <h2 data-reveal="fade-up" className="text-[56px] font-extrabold uppercase leading-[1.08] tracking-[-2px] text-[#050505] max-xl:text-[46px] max-md:text-[34px] max-sm:text-[29px]">
+                            <h2 data-reveal="fade-up" className="mobile-section-title text-[56px] font-extrabold uppercase leading-[1.08] tracking-[-2px] text-[#050505] max-xl:text-[46px] max-md:text-[34px] max-sm:text-[29px]">
                                 Premium Brass Parts Collection
                             </h2>
                         </div>
 
-                        <p className="max-w-[760px] text-[19px] leading-[1.8] text-[#465566] max-md:text-[16px]">
+                        <p className="mobile-body max-w-[760px] text-[19px] leading-[1.8] text-[#465566] max-md:text-[16px]">
                             A visual overview of brass inserts, fittings, electrical parts,
                             fasteners, custom parts, quality inspection, and dispatch
                             preparation.
@@ -203,7 +203,7 @@ export default function GalleryPage() {
                                         </span>
                                     </div>
 
-                                    <h3 className="text-[25px] font-extrabold uppercase leading-[1.15] text-[#0B1F35] transition-colors duration-500 group-hover:text-white">
+                                    <h3 className="mobile-card-title text-[25px] font-extrabold uppercase leading-[1.15] text-[#0B1F35] transition-colors duration-500 group-hover:text-white">
                                         {item.title}
                                     </h3>
                                 </div>

@@ -37,15 +37,15 @@ export default function ManufacturingCTA() {
 
                     <div className="flex items-center px-[80px] py-[80px] max-xl:px-12 max-md:px-6 max-md:py-12">
                         <div>
-                            <span data-reveal="fade-up" className="mb-6 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
+                            <span data-reveal="fade-up" className="mobile-eyebrow mb-6 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
                                 / Custom Manufacturing
                             </span>
 
-                            <h2 data-reveal="fade-up" className="max-w-[650px] text-[54px] font-extrabold uppercase leading-[1.1] tracking-[-2px] text-[#050505] max-xl:text-[44px] max-md:text-[34px] max-sm:text-[29px]">
+                            <h2 data-reveal="fade-up" className="mobile-section-title max-w-[650px] text-[54px] font-extrabold uppercase leading-[1.1] tracking-[-2px] text-[#050505] max-xl:text-[44px] max-md:text-[34px] max-sm:text-[29px]">
                                 Share Your Drawing, Sample Or Brass Part Requirement
                             </h2>
 
-                            <p data-reveal="fade-up" data-reveal-delay="70" className="mt-7 max-w-[560px] text-[17px] leading-[1.8] text-[#465566]">
+                            <p data-reveal="fade-up" data-reveal-delay="70" className="mobile-body mt-7 max-w-[560px] text-[17px] leading-[1.8] text-[#465566]">
                                 We help you manufacture brass parts with the right material,
                                 accurate size, clean finish, inspection support, and dependable
                                 delivery for repeat production.

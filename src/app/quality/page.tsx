@@ -101,18 +101,18 @@ export default function QualityPage() {
             <section className="bg-white">
                 <div className="mx-auto max-w-[1600px] px-5">
                     <div className="grid min-h-[620px] grid-cols-[1.05fr_0.95fr] border-x border-[#e7e1d7] max-lg:grid-cols-1">
-                        <div className="flex items-center border-r border-[#e7e1d7] px-12 py-20 max-lg:border-r-0 max-lg:border-b max-md:px-6 max-md:py-14">
-                            <div>
-                                <p className="mb-6 flex items-center gap-2 text-[18px] font-medium text-[#0B1F35]">
+                        <div className="hero-heading-panel flex items-center border-r border-[#e7e1d7] px-12 py-20 max-lg:border-r-0 max-lg:border-b max-md:px-6 max-md:py-14">
+                            <div className="hero-copy">
+                                <p className="hero-eyebrow mb-6 flex items-center gap-2 text-[18px] font-medium text-[#0B1F35]">
                                     <span className="text-[#D79229]">/</span>
                                     Quality Assurance
                                 </p>
 
-                                <h1 className="max-w-[850px] text-[66px] font-extrabold uppercase leading-[1.05] tracking-[-2.8px] text-[#050505] max-xl:text-[54px] max-md:text-[40px] max-sm:text-[32px]">
+                                <h1 className="hero-title max-w-[850px] text-[66px] font-extrabold uppercase leading-[1.05] tracking-[-2.8px] text-[#050505] max-xl:text-[54px] max-md:text-[40px] max-sm:text-[32px]">
                                     Reliable Quality For Every Brass Component
                                 </h1>
 
-                                <p className="mt-8 max-w-[720px] text-[18px] leading-[1.85] text-[#465566] max-md:text-[16px]">
+                                <p className="mobile-body mt-8 max-w-[720px] text-[18px] leading-[1.85] text-[#465566] max-md:text-[16px]">
                                     Our quality process is built to maintain accurate dimensions, clean finishing, proper threading, and consistent production for brass inserts, fittings, fasteners, electrical parts, precision turned components, and custom brass products, ensuring reliable quality and long-lasting performance.
                                 </p>
 
@@ -144,18 +144,18 @@ export default function QualityPage() {
             {/* QUALITY PILLARS */}
             <section className="bg-white py-[110px] max-lg:py-20 max-md:py-16">
                 <div className="mx-auto max-w-[1500px] px-10 max-md:px-5">
-                    <div className="mb-16 grid grid-cols-[0.8fr_1.2fr] gap-16 max-lg:grid-cols-1 max-lg:gap-8">
+                    <div className="mobile-heading-group mb-16 grid grid-cols-[0.8fr_1.2fr] gap-16 max-lg:grid-cols-1 max-lg:gap-8">
                         <div>
-                            <span data-reveal="fade-up" className="mb-5 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
+                            <span data-reveal="fade-up" className="mobile-eyebrow mb-5 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
                                 / Our Quality Standard
                             </span>
 
-                            <h2 data-reveal="fade-up" className="text-[56px] font-extrabold uppercase leading-[1.08] tracking-[-2px] text-[#050505] max-xl:text-[46px] max-md:text-[34px] max-sm:text-[29px]">
+                            <h2 data-reveal="fade-up" className="mobile-section-title text-[56px] font-extrabold uppercase leading-[1.08] tracking-[-2px] text-[#050505] max-xl:text-[46px] max-md:text-[34px] max-sm:text-[29px]">
                                 Quality Built Into Manufacturing
                             </h2>
                         </div>
 
-                        <p className="max-w-[760px] text-[19px] leading-[1.8] text-[#465566] max-md:text-[16px]">
+                        <p className="mobile-body max-w-[760px] text-[19px] leading-[1.8] text-[#465566] max-md:text-[16px]">
                             We follow a practical inspection approach at every important
                             production stage so every brass component is suitable for
                             industrial use, OEM supply, and repeat production.
@@ -175,11 +175,11 @@ export default function QualityPage() {
                                     {item.number}
                                 </span>
 
-                                <h3 className="text-[27px] font-extrabold uppercase leading-[1.15] tracking-[-0.6px] text-[#0B1F35] transition-colors duration-500 group-hover:text-white">
+                                <h3 className="mobile-card-title text-[27px] font-extrabold uppercase leading-[1.15] tracking-[-0.6px] text-[#0B1F35] transition-colors duration-500 group-hover:text-white">
                                     {item.title}
                                 </h3>
 
-                                <p className="mt-6 text-[16px] leading-[1.75] text-[#465566] transition-colors duration-500 group-hover:text-white/75">
+                                <p className="mobile-body mt-6 text-[16px] leading-[1.75] text-[#465566] transition-colors duration-500 group-hover:text-white/75">
                                     {item.text}
                                 </p>
                             </div>
@@ -191,12 +191,12 @@ export default function QualityPage() {
             {/* INSPECTION FLOW */}
             <section className="bg-[#F8F3EA] py-[110px] max-lg:py-20 max-md:py-16">
                 <div className="mx-auto max-w-[1500px] px-10 max-md:px-5">
-                    <div className="mb-16 max-w-[850px]">
-                        <span data-reveal="fade-up" className="mb-5 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
+                    <div className="mobile-heading-group mb-16 max-w-[850px]">
+                        <span data-reveal="fade-up" className="mobile-eyebrow mb-5 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
                             / Inspection Flow
                         </span>
 
-                        <h2 data-reveal="fade-up" className="text-[56px] font-extrabold uppercase leading-[1.08] tracking-[-2px] text-[#050505] max-xl:text-[46px] max-md:text-[34px] max-sm:text-[29px]">
+                        <h2 data-reveal="fade-up" className="mobile-section-title text-[56px] font-extrabold uppercase leading-[1.08] tracking-[-2px] text-[#050505] max-xl:text-[46px] max-md:text-[34px] max-sm:text-[29px]">
                             From Raw Material To Final Packing
                         </h2>
                     </div>
@@ -211,7 +211,7 @@ export default function QualityPage() {
                                     0{index + 1}
                                 </span>
 
-                                <h3 className="text-[21px] font-extrabold uppercase leading-[1.2] text-[#0B1F35]">
+                                <h3 className="mobile-card-title text-[21px] font-extrabold uppercase leading-[1.2] text-[#0B1F35]">
                                     {item}
                                 </h3>
 
@@ -229,18 +229,18 @@ export default function QualityPage() {
             {/* QUALITY CHECK AREAS */}
             <section className="bg-white py-[110px] max-lg:py-20 max-md:py-16">
                 <div className="mx-auto max-w-[1500px] px-10 max-md:px-5">
-                    <div className="mb-16 grid grid-cols-[0.8fr_1.2fr] gap-16 max-lg:grid-cols-1 max-lg:gap-8">
+                    <div className="mobile-heading-group mb-16 grid grid-cols-[0.8fr_1.2fr] gap-16 max-lg:grid-cols-1 max-lg:gap-8">
                         <div>
-                            <span data-reveal="fade-up" className="mb-5 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
+                            <span data-reveal="fade-up" className="mobile-eyebrow mb-5 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
                                 / Quality Checks
                             </span>
 
-                            <h2 data-reveal="fade-up" className="text-[56px] font-extrabold uppercase leading-[1.08] tracking-[-2px] text-[#050505] max-xl:text-[46px] max-md:text-[34px] max-sm:text-[29px]">
+                            <h2 data-reveal="fade-up" className="mobile-section-title text-[56px] font-extrabold uppercase leading-[1.08] tracking-[-2px] text-[#050505] max-xl:text-[46px] max-md:text-[34px] max-sm:text-[29px]">
                                 What We Check Before Dispatch
                             </h2>
                         </div>
 
-                        <p className="max-w-[760px] text-[19px] leading-[1.8] text-[#465566] max-md:text-[16px]">
+                        <p className="mobile-body max-w-[760px] text-[19px] leading-[1.8] text-[#465566] max-md:text-[16px]">
                             Our inspection checklist helps maintain consistency in custom brass components, precision turned components, electrical brass parts, fittings, inserts, and fasteners, while ensuring accurate dimensions, proper finishing, and reliable product performance.
                         </p>
                     </div>
@@ -261,11 +261,11 @@ export default function QualityPage() {
                                     </span>
                                 </div>
 
-                                <h3 className="text-[24px] font-extrabold uppercase leading-[1.15] text-[#0B1F35] transition-colors duration-500 group-hover:text-white">
+                                <h3 className="mobile-card-title text-[24px] font-extrabold uppercase leading-[1.15] text-[#0B1F35] transition-colors duration-500 group-hover:text-white">
                                     {item.title}
                                 </h3>
 
-                                <p className="mt-5 text-[16px] leading-[1.75] text-[#465566] transition-colors duration-500 group-hover:text-white/70">
+                                <p className="mobile-body mt-5 text-[16px] leading-[1.75] text-[#465566] transition-colors duration-500 group-hover:text-white/70">
                                     {item.text}
                                 </p>
                             </div>
@@ -279,15 +279,15 @@ export default function QualityPage() {
                 <div className="mx-auto max-w-[1500px] px-10 max-md:px-5">
                     <div className="grid overflow-hidden bg-[#0B1F35] lg:grid-cols-[1fr_0.72fr]">
                         <div className="px-[80px] py-[80px] max-xl:px-12 max-md:px-6 max-md:py-12">
-                            <span data-reveal="fade-up" className="mb-6 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
+                            <span data-reveal="fade-up" className="mobile-eyebrow mb-6 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
                                 / Quality Support
                             </span>
 
-                            <h2 data-reveal="fade-up" className="max-w-[800px] text-[54px] font-extrabold uppercase leading-[1.08] tracking-[-2px] text-white max-xl:text-[44px] max-md:text-[34px] max-sm:text-[29px]">
+                            <h2 data-reveal="fade-up" className="mobile-section-title max-w-[800px] text-[54px] font-extrabold uppercase leading-[1.08] tracking-[-2px] text-white max-xl:text-[44px] max-md:text-[34px] max-sm:text-[29px]">
                                 Need Brass Parts With Reliable Quality Control?
                             </h2>
 
-                            <p data-reveal="fade-up" data-reveal-delay="70" className="mt-7 max-w-[650px] text-[17px] leading-[1.8] text-white/70">
+                            <p data-reveal="fade-up" data-reveal-delay="70" className="mobile-body mt-7 max-w-[650px] text-[17px] leading-[1.8] text-white/70">
                                 Share your drawing, sample, quantity, tolerance, material grade,
                                 or finish requirement. We will guide you with the right
                                 manufacturing and inspection process.
@@ -296,11 +296,11 @@ export default function QualityPage() {
 
                         <div className="flex items-end bg-[#F8F3EA] p-10 max-md:p-6">
                             <div>
-                                <h3 className="text-[34px] font-extrabold uppercase leading-[1.12] text-[#0B1F35] max-md:text-[28px]">
+                                <h3 className="mobile-feature-title text-[34px] font-extrabold uppercase leading-[1.12] text-[#0B1F35] max-md:text-[28px]">
                                     Send Your Requirement
                                 </h3>
 
-                                <p className="mt-5 text-[16px] leading-[1.7] text-[#465566]">
+                                <p className="mobile-body mt-5 text-[16px] leading-[1.7] text-[#465566]">
                                     Get support for brass inserts, fittings, fasteners, electrical
                                     parts,and custom brass components.
                                 </p>

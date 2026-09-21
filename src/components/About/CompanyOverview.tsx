@@ -48,7 +48,7 @@ export default function CompanyOverview() {
                 <div className="grid grid-cols-3 border-x border-[#e7e1d7] max-lg:grid-cols-1">
                     {/* Top left heading */}
                     <div className="min-h-[345px] border-r border-[#e7e1d7] px-10 py-14 max-lg:min-h-0 max-lg:border-b max-lg:border-r-0 max-md:px-5">
-                        <h2 data-reveal="fade-up" className="max-w-[390px] text-[28px] font-extrabold uppercase leading-[1.18] tracking-[-0.8px] text-[#050505] max-md:text-[24px]">
+                        <h2 data-reveal="fade-up" className="mobile-compact-title max-w-[390px] text-[28px] font-extrabold uppercase leading-[1.18] tracking-[-0.8px] text-[#050505] max-md:text-[24px]">
                             The Next Generation Of Brass Manufacturing: Precision,
                             Consistency And Speed
                         </h2>
@@ -56,14 +56,14 @@ export default function CompanyOverview() {
 
                     {/* Top center paragraph */}
                     <div className="min-h-[345px] border-r border-[#e7e1d7] px-10 py-14 max-lg:min-h-0 max-lg:border-b max-lg:border-r-0 max-md:px-5">
-                        <p className="text-[17px] leading-[1.6] tracking-[-0.2px] text-[#465566] max-md:text-[16px]">
+                        <p className="mobile-body text-[17px] leading-[1.6] tracking-[-0.2px] text-[#465566] max-md:text-[16px]">
                             At Feel Good Brass Industry in Jamnagar, Gujarat, India, we manufacture <Link href="/products">brass inserts, fittings, fasteners, electrical parts, turned components, and customized brass parts</Link>, with a strong focus on precision, superior finish, durability, and long-term reliability.
                         </p>
                     </div>
 
                     {/* Top right paragraph */}
                     <div className="min-h-[345px] px-10 py-14 max-lg:min-h-0 max-lg:border-b max-md:px-5">
-                        <p className="text-[17px] leading-[1.6] tracking-[-0.2px] text-[#465566] max-md:text-[16px]">
+                        <p className="mobile-body text-[17px] leading-[1.6] tracking-[-0.2px] text-[#465566] max-md:text-[16px]">
                             From material selection to final inspection, our process is built
                             to support industrial customers, OEM suppliers, exporters, and
                             businesses that need repeat-quality brass components delivered on
@@ -85,16 +85,16 @@ export default function CompanyOverview() {
 
                         {/* Floating stat card */}
                         <div className="absolute bottom-0 left-0 w-[430px] bg-white px-10 py-10 max-md:w-[calc(100%-28px)] max-md:px-6 max-md:py-8">
-                            <p className="mb-8 flex items-center gap-2 text-[16px] font-medium text-[#465566]">
+                            <p className="mobile-eyebrow mb-8 flex items-center gap-2 text-[16px] font-medium text-[#465566]">
                                 <span className="text-[#D79229]">/</span>
                                 Experience. Transparency. Results.
                             </p>
 
-                            <strong className="block text-[66px] font-extrabold leading-none tracking-[-2px] text-[#050505] max-md:text-[50px]">
+                            <strong className="mobile-stat block text-[66px] font-extrabold leading-none tracking-[-2px] text-[#050505] max-md:text-[50px]">
                                 25K+
                             </strong>
 
-                            <p className="mt-4 text-[17px] font-extrabold text-[#0B1F35]">
+                            <p className="mobile-body mt-4 text-[17px] font-extrabold text-[#0B1F35]">
                                 Brass Parts Manufactured
                             </p>
                         </div>
@@ -112,11 +112,11 @@ export default function CompanyOverview() {
                             <InspectionIcon />
                         </div>
 
-                        <strong className="block text-[64px] font-extrabold leading-none tracking-[-2px] text-[#050505] max-md:text-[48px]">
+                        <strong className="mobile-stat block text-[64px] font-extrabold leading-none tracking-[-2px] text-[#050505] max-md:text-[48px]">
                             10K+
                         </strong>
 
-                        <p className="mt-4 max-w-[290px] text-[16px] font-extrabold leading-[1.35] text-[#0B1F35]">
+                        <p className="mobile-body mt-4 max-w-[290px] text-[16px] font-extrabold leading-[1.35] text-[#0B1F35]">
                             Quality Inspections Yearly Average
                         </p>
                     </div>
@@ -127,11 +127,11 @@ export default function CompanyOverview() {
                             <ComponentIcon />
                         </div>
 
-                        <strong className="block text-[64px] font-extrabold leading-none tracking-[-2px] text-[#050505] max-md:text-[48px]">
+                        <strong className="mobile-stat block text-[64px] font-extrabold leading-none tracking-[-2px] text-[#050505] max-md:text-[48px]">
                             400+
                         </strong>
 
-                        <p className="mt-4 max-w-[290px] text-[16px] font-extrabold leading-[1.35] text-[#0B1F35]">
+                        <p className="mobile-body mt-4 max-w-[290px] text-[16px] font-extrabold leading-[1.35] text-[#0B1F35]">
                             Custom Brass Components Supplied
                         </p>
                     </div>

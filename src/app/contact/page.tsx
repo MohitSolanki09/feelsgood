@@ -103,19 +103,19 @@ export default function ContactPage() {
                 <div className="mx-auto max-w-[1600px] px-5">
                     <div className="border-x border-[#e7e1d7]">
                         <div className="grid grid-cols-[1fr_440px] border-b border-[#e7e1d7] max-lg:grid-cols-1">
-                            <div className="px-12 py-20 max-md:px-6 max-md:py-14">
-                                <p className="mb-6 flex items-center gap-2 text-[18px] font-medium text-[#0B1F35]">
+                            <div className="hero-heading-panel hero-copy px-12 py-20 max-md:px-6 max-md:py-14">
+                                <p className="hero-eyebrow mb-6 flex items-center gap-2 text-[18px] font-medium text-[#0B1F35]">
                                     <span className="text-[#D79229]">/</span>
                                     Contact Us
                                 </p>
 
-                                <h1 className="max-w-[1050px] text-[76px] font-extrabold uppercase leading-[0.98] tracking-[-3.5px] text-[#050505] max-2xl:text-[68px] max-xl:text-[56px] max-md:text-[40px] max-sm:text-[32px]">
+                                <h1 className="hero-title max-w-[1050px] text-[76px] font-extrabold uppercase leading-[0.98] tracking-[-3.5px] text-[#050505] max-2xl:text-[68px] max-xl:text-[56px] max-md:text-[40px] max-sm:text-[32px]">
                                     Let’s Build Your Brass Component Requirement
                                 </h1>
                             </div>
 
                             <div className="flex flex-col justify-end border-l border-[#e7e1d7] bg-[#F8F3EA] p-10 max-lg:border-l-0 max-lg:border-t max-md:p-6">
-                                <p className="text-[17px] leading-[1.8] text-[#465566]">
+                                <p className="mobile-body text-[17px] leading-[1.8] text-[#465566]">
                                     Send your drawing, sample, part size, material grade, quantity,
                                     or finish requirement. We will guide you with the right brass
                                     manufacturing solution.
@@ -182,11 +182,11 @@ export default function ContactPage() {
                                                     {item.number}
                                                 </span>
 
-                                                <h2 className="max-w-[320px] text-[30px] font-extrabold uppercase leading-[1.08] tracking-[-0.8px] text-[#0B1F35] transition-colors duration-500 group-hover:text-white max-md:text-[25px]">
+                                                <h2 className="mobile-compact-title max-w-[320px] text-[30px] font-extrabold uppercase leading-[1.08] tracking-[-0.8px] text-[#0B1F35] transition-colors duration-500 group-hover:text-white max-md:text-[25px]">
                                                     {item.title}
                                                 </h2>
 
-                                                <p className="mt-6 max-w-[340px] text-[16px] leading-[1.75] text-[#465566] transition-colors duration-500 group-hover:text-white/70">
+                                                <p className="mobile-body mt-6 max-w-[340px] text-[16px] leading-[1.75] text-[#465566] transition-colors duration-500 group-hover:text-white/70">
                                                     {item.text}
                                                 </p>
                                             </div>
@@ -225,15 +225,15 @@ export default function ContactPage() {
             <section className="bg-white py-[110px] max-lg:py-20 max-md:py-16">
                 <div className="mx-auto grid max-w-[1500px] grid-cols-[0.85fr_1.15fr] gap-10 px-10 max-lg:grid-cols-1 max-md:px-5">
                     <div className="bg-[#0B1F35] p-12 max-md:p-6">
-                        <span data-reveal="fade-up" className="mb-6 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
+                        <span data-reveal="fade-up" className="mobile-eyebrow mb-6 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
                             / Inquiry Details
                         </span>
 
-                        <h2 data-reveal="fade-up" className="text-[52px] font-extrabold uppercase leading-[1.08] tracking-[-2px] text-white max-xl:text-[42px] max-md:text-[34px]">
+                        <h2 data-reveal="fade-up" className="mobile-section-title text-[52px] font-extrabold uppercase leading-[1.08] tracking-[-2px] text-white max-xl:text-[42px] max-md:text-[34px]">
                             Share Your Brass Part Requirement
                         </h2>
 
-                        <p data-reveal="fade-up" data-reveal-delay="70" className="mt-7 text-[17px] leading-[1.8] text-white/70">
+                        <p data-reveal="fade-up" data-reveal-delay="70" className="mobile-body mt-7 text-[17px] leading-[1.8] text-white/70">
                             Add your product type, dimensions, material grade, finish,
                             quantity, and application details. For custom parts, mention if
                             you have a drawing or sample available.
@@ -365,15 +365,15 @@ export default function ContactPage() {
                 <div className="mx-auto max-w-[1500px] px-10 max-md:px-5">
                     <div className="grid overflow-hidden border border-[#e7e1d7] lg:grid-cols-[0.9fr_1.1fr]">
                         <div className="bg-[#F8F3EA] p-12 max-md:p-6">
-                            <span data-reveal="fade-up" className="mb-6 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
+                            <span data-reveal="fade-up" className="mobile-eyebrow mb-6 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
                                 / Visit & Connect
                             </span>
 
-                            <h2 data-reveal="fade-up" className="text-[48px] font-extrabold uppercase leading-[1.1] tracking-[-2px] text-[#050505] max-md:text-[34px]">
+                            <h2 data-reveal="fade-up" className="mobile-section-title text-[48px] font-extrabold uppercase leading-[1.1] tracking-[-2px] text-[#050505] max-md:text-[34px]">
                                 Manufacturing Support From Jamnagar
                             </h2>
 
-                            <p data-reveal="fade-up" data-reveal-delay="70" className="mt-7 text-[17px] leading-[1.8] text-[#465566]">
+                            <p data-reveal="fade-up" data-reveal-delay="70" className="mobile-body mt-7 text-[17px] leading-[1.8] text-[#465566]">
                                 Feel Good Brass Industry supports brass parts manufacturing for
                                 OEMs, traders, exporters, industrial suppliers, and businesses
                                 requiring custom brass components.
@@ -386,11 +386,11 @@ export default function ContactPage() {
                                     Address
                                 </span>
 
-                                <p className="text-[24px] font-extrabold uppercase leading-[1.25] text-[#0B1F35] max-md:text-[21px]">
+                                <p className="mobile-card-title text-[24px] font-extrabold uppercase leading-[1.25] text-[#0B1F35] max-md:text-[21px]">
                                     Jamnagar, Gujarat, India
                                 </p>
 
-                                <p className="mt-5 text-[16px] leading-[1.7] text-[#465566]">
+                                <p className="mobile-body mt-5 text-[16px] leading-[1.7] text-[#465566]">
                                     Feel Good Brass Industry, Plot No. 50/2, Survey No.45, FCI Godown Zone, Lalpur Road, Dared, Jamnagar-361004.
                                 </p>
                             </div>
@@ -400,11 +400,11 @@ export default function ContactPage() {
                                     Response
                                 </span>
 
-                                <p className="text-[24px] font-extrabold uppercase leading-[1.25] text-[#0B1F35] max-md:text-[21px]">
+                                <p className="mobile-card-title text-[24px] font-extrabold uppercase leading-[1.25] text-[#0B1F35] max-md:text-[21px]">
                                     Within 1 Working Day
                                 </p>
 
-                                <p className="mt-5 text-[16px] leading-[1.7] text-[#465566]">
+                                <p className="mobile-body mt-5 text-[16px] leading-[1.7] text-[#465566]">
                                     Send your requirement with drawing, sample, or quantity details
                                     for faster response.
                                 </p>

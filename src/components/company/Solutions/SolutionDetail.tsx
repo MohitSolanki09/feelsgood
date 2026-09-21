@@ -49,14 +49,14 @@ export default function SolutionDetail({
             <section className="bg-white">
                 <div className="mx-auto max-w-[1600px] px-5">
                     <div className="grid min-h-[310px] grid-cols-[1.15fr_0.85fr] border-x border-[#e7e1d7] max-lg:grid-cols-1">
-                        <div className="flex items-center border-r border-[#e7e1d7] px-10 py-16 max-lg:border-r-0 max-lg:border-b max-md:px-5">
-                            <div>
-                                <p className="mb-6 flex items-center gap-2 text-[18px] font-medium text-[#0B1F35]">
+                        <div className="hero-heading-panel flex items-center border-r border-[#e7e1d7] px-10 py-16 max-lg:border-r-0 max-lg:border-b max-md:px-5">
+                            <div className="hero-copy">
+                                <p className="hero-eyebrow mb-6 flex items-center gap-2 text-[18px] font-medium text-[#0B1F35]">
                                     <span className="text-[#D79229]">/</span>
                                     {eyebrow}
                                 </p>
 
-                                <h1 className="max-w-[900px] text-[64px] font-extrabold uppercase leading-[1.1] tracking-[-2.5px] text-[#050505] max-xl:text-[52px] max-md:text-[40px] max-sm:text-[32px]">
+                                <h1 className="hero-title max-w-[900px] text-[64px] font-extrabold uppercase leading-[1.1] tracking-[-2.5px] text-[#050505] max-xl:text-[52px] max-md:text-[40px] max-sm:text-[32px]">
                                     {title}
                                 </h1>
                             </div>
@@ -94,16 +94,16 @@ export default function SolutionDetail({
             <section className="bg-white py-[100px] max-lg:py-20 max-md:py-16">
                 <div className="mx-auto grid max-w-[1500px] grid-cols-[0.8fr_1.2fr] gap-16 px-10 max-lg:grid-cols-1 max-lg:gap-8 max-md:px-5">
                     <div>
-                        <span className="mb-5 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
+                        <span className="mobile-eyebrow mb-5 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
                             / Solution Overview
                         </span>
 
-                        <h2 className="text-[52px] font-extrabold uppercase leading-[1.08] tracking-[-2px] text-[#050505] max-xl:text-[44px] max-md:text-[34px] max-sm:text-[29px]">
+                        <h2 className="mobile-section-title text-[52px] font-extrabold uppercase leading-[1.08] tracking-[-2px] text-[#050505] max-xl:text-[44px] max-md:text-[34px] max-sm:text-[29px]">
                             Brass Components Made For Reliable Industry Use
                         </h2>
                     </div>
 
-                    <p className="max-w-[760px] text-[19px] leading-[1.8] text-[#465566] max-md:text-[16px]">
+                    <p className="mobile-body max-w-[760px] text-[19px] leading-[1.8] text-[#465566] max-md:text-[16px]">
                         {description}
                     </p>
                 </div>
@@ -112,12 +112,12 @@ export default function SolutionDetail({
             {/* Parts */}
             <section className="bg-[#F8F3EA] py-[100px] max-lg:py-20 max-md:py-16">
                 <div className="mx-auto max-w-[1500px] px-10 max-md:px-5">
-                    <div className="mb-14 max-w-[760px]">
-                        <span className="mb-5 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
+                    <div className="mobile-heading-group mb-14 max-w-[760px]">
+                        <span className="mobile-eyebrow mb-5 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
                             / Parts We Manufacture
                         </span>
 
-                        <h2 className="text-[50px] font-extrabold uppercase leading-[1.1] tracking-[-2px] text-[#050505] max-md:text-[34px] max-sm:text-[29px]">
+                        <h2 className="mobile-section-title text-[50px] font-extrabold uppercase leading-[1.1] tracking-[-2px] text-[#050505] max-md:text-[34px] max-sm:text-[29px]">
                             Product Range
                         </h2>
                     </div>
@@ -132,7 +132,7 @@ export default function SolutionDetail({
                                     0{index + 1}
                                 </span>
 
-                                <h3 className="text-[22px] font-extrabold uppercase leading-[1.2] text-[#0B1F35] transition-colors duration-500 group-hover:text-white">
+                                <h3 className="mobile-card-title text-[22px] font-extrabold uppercase leading-[1.2] text-[#0B1F35] transition-colors duration-500 group-hover:text-white">
                                     {item}
                                 </h3>
                             </div>
@@ -157,11 +157,11 @@ export default function SolutionDetail({
                                     Application 0{index + 1}
                                 </span>
 
-                                <h3 className="text-[25px] font-extrabold uppercase leading-[1.15] text-[#0B1F35]">
+                                <h3 className="mobile-card-title text-[25px] font-extrabold uppercase leading-[1.15] text-[#0B1F35]">
                                     {item.title}
                                 </h3>
 
-                                <p className="mt-6 text-[16px] leading-[1.75] text-[#465566]">
+                                <p className="mobile-body mt-6 text-[16px] leading-[1.75] text-[#465566]">
                                     {item.text}
                                 </p>
                             </div>
@@ -175,11 +175,11 @@ export default function SolutionDetail({
                 <div className="mx-auto max-w-[1500px] px-10 max-md:px-5">
                     <div className="grid overflow-hidden bg-[#0B1F35] lg:grid-cols-[1fr_0.8fr]">
                         <div className="px-[80px] py-[80px] max-xl:px-12 max-md:px-6 max-md:py-12">
-                            <span className="mb-6 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
+                            <span className="mobile-eyebrow mb-6 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
                                 / Why Choose Us
                             </span>
 
-                            <h2 className="max-w-[720px] text-[52px] font-extrabold uppercase leading-[1.1] tracking-[-2px] text-white max-xl:text-[42px] max-md:text-[34px] max-sm:text-[29px]">
+                            <h2 className="mobile-section-title max-w-[720px] text-[52px] font-extrabold uppercase leading-[1.1] tracking-[-2px] text-white max-xl:text-[42px] max-md:text-[34px] max-sm:text-[29px]">
                                 Built For Precision, Repeat Quality And Timely Delivery
                             </h2>
 
@@ -190,7 +190,7 @@ export default function SolutionDetail({
                                         className="flex items-start gap-4 border-b border-white/10 pb-4"
                                     >
                                         <span className="mt-2 h-2 w-2 rounded-full bg-[#D79229]" />
-                                        <p className="text-[17px] leading-[1.6] text-white/75">
+                                        <p className="mobile-body text-[17px] leading-[1.6] text-white/75">
                                             {item}
                                         </p>
                                     </div>
@@ -200,11 +200,11 @@ export default function SolutionDetail({
 
                         <div className="flex items-end bg-[#F8F3EA] p-10 max-md:p-6">
                             <div>
-                                <h3 className="text-[34px] font-extrabold uppercase leading-[1.12] text-[#0B1F35] max-md:text-[28px]">
+                                <h3 className="mobile-feature-title text-[34px] font-extrabold uppercase leading-[1.12] text-[#0B1F35] max-md:text-[28px]">
                                     Have A Custom Brass Part Requirement?
                                 </h3>
 
-                                <p className="mt-5 text-[16px] leading-[1.7] text-[#465566]">
+                                <p className="mobile-body mt-5 text-[16px] leading-[1.7] text-[#465566]">
                                     Share your drawing, sample, size, material grade, finish, or
                                     quantity details. We will help you with the right solution.
                                 </p>

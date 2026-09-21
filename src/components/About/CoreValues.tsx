@@ -92,15 +92,15 @@ export default function CoreValues() {
                 <div className="grid min-h-[620px] grid-cols-4 border-x border-y border-[#e7e1d7] max-xl:grid-cols-2 max-md:grid-cols-1">
                     {/* Heading block */}
                     <div className="border-r border-[#e7e1d7] px-10 py-[78px] max-xl:border-b max-md:border-r-0 max-md:px-5 max-md:py-12">
-                        <span data-reveal="fade-up" className="mb-6 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
+                        <span data-reveal="fade-up" className="mobile-eyebrow mb-6 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
                             / Values
                         </span>
 
-                        <h2 data-reveal="fade-up" className="text-[58px] font-extrabold uppercase leading-[1.08] tracking-[-2.2px] text-[#050505] max-xl:text-[48px] max-md:text-[38px] max-sm:text-[32px]">
+                        <h2 data-reveal="fade-up" className="mobile-section-title text-[58px] font-extrabold uppercase leading-[1.08] tracking-[-2.2px] text-[#050505] max-xl:text-[48px] max-md:text-[38px] max-sm:text-[32px]">
                             Core Values
                         </h2>
 
-                        <p data-reveal="fade-up" data-reveal-delay="70" className="mt-8 max-w-[360px] text-[20px] leading-[1.55] tracking-[-0.4px] text-[#0B1F35] max-md:text-[17px]">
+                        <p data-reveal="fade-up" data-reveal-delay="70" className="mobile-body mt-8 max-w-[360px] text-[20px] leading-[1.55] tracking-[-0.4px] text-[#0B1F35] max-md:text-[17px]">
                             Our core values define how we manufacture, inspect, and deliver
                             precision brass components.
                         </p>
@@ -119,11 +119,11 @@ export default function CoreValues() {
                                 <ValueIcon type={item.icon} />
                             </div>
 
-                            <h3 className="text-[23px] font-extrabold uppercase leading-[1.2] tracking-[-0.5px] text-[#050505] transition-colors duration-500 group-hover:text-white">
+                            <h3 className="mobile-card-title text-[23px] font-extrabold uppercase leading-[1.2] tracking-[-0.5px] text-[#050505] transition-colors duration-500 group-hover:text-white">
                                 {item.title}
                             </h3>
 
-                            <p className="mt-5 max-w-[360px] text-[17px] leading-[1.65] tracking-[-0.2px] text-[#465566] transition-colors duration-500 group-hover:text-white/75">
+                            <p className="mobile-body mt-5 max-w-[360px] text-[17px] leading-[1.65] tracking-[-0.2px] text-[#465566] transition-colors duration-500 group-hover:text-white/75">
                                 {item.text}
                             </p>
                         </div>

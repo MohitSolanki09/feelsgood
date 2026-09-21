@@ -1,0 +1,48 @@
+.actions {
+  position: fixed;
+  right: max(28px, env(safe-area-inset-right));
+  bottom: calc(28px + env(safe-area-inset-bottom));
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.top, .whatsapp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 50%;
+  color: white;
+  box-shadow: 0 4px 14px rgb(11 31 53 / 18%);
+  transition: transform 160ms ease, color 160ms ease;
+}
+
+.top { width: 46px; height: 46px; background: #0b1f35; }
+.whatsapp { width: 52px; height: 52px; background: #25d366; }
+.top:focus-visible, .whatsapp:focus-visible {
+  outline: 3px solid #d79229;
+  outline-offset: 4px;
+}
+
+@media (hover: hover) {
+  .top:hover { color: #f4c76a; }
+  .whatsapp:hover { transform: scale(1.05); }
+}
+
+@media (width < 48rem) {
+  .actions {
+    right: max(16px, env(safe-area-inset-right));
+    bottom: calc(20px + env(safe-area-inset-bottom));
+  }
+}
+
+/* The existing menu lock also keeps floating links out of its focus/paint layer. */
+:global(html[data-scroll-locked="true"]) .actions { visibility: hidden; }
+
+@media (prefers-reduced-motion: reduce) {
+  .top, .whatsapp { transition: none; }
+  .whatsapp:hover { transform: none; }
+}

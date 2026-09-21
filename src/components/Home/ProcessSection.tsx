@@ -195,6 +195,7 @@
 import {
     motion,
     MotionValue,
+    useReducedMotion,
     useScroll,
     useSpring,
     useTransform,
@@ -274,22 +275,18 @@ function useElementHeight(ref: React.RefObject<HTMLDivElement | null>) {
     return height;
 }
 
-function ArrowNutComponent({ y }: { y: MotionValue<number> }) {
-    const reducedMotion = useLightMotion();
+function ArrowNutComponent({ y, nutRef }: {
+    y: MotionValue<number>;
+    nutRef: React.RefObject<HTMLDivElement | null>;
+}) {
+    const reducedMotion = useReducedMotion();
     return (
         <motion.div
+            ref={nutRef}
             style={{ y: reducedMotion ? 0 : y }}
             className="pointer-events-none absolute left-1/2 top-0 z-30 flex h-[126px] w-[126px] -translate-x-1/2 items-center justify-center max-lg:left-[26px] max-lg:h-[96px] max-lg:w-[96px]"
         >
-            <motion.div
-                animate={{
-                    rotate: reducedMotion ? 0 : [0, 8, -6, 0],
-                }}
-                transition={{
-                    duration: 5,
-                    repeat: reducedMotion ? 0 : Infinity,
-                    ease: "easeInOut",
-                }}
+            <div
                 className="relative h-[112px] w-[112px] max-lg:h-[82px] max-lg:w-[82px]"
             >
                 {/* soft glow */}
@@ -348,7 +345,7 @@ function ArrowNutComponent({ y }: { y: MotionValue<number> }) {
 
                 {/* dark shine */}
                 <div className="absolute right-[24px] top-[18px] h-[70px] w-[8px] rotate-[22deg] rounded-full bg-[#0B1F35]/20 blur-[1px] max-lg:right-[18px] max-lg:top-[13px] max-lg:h-[52px]" />
-            </motion.div>
+            </div>
         </motion.div>
     );
 }
@@ -413,23 +410,20 @@ export default function ProcessSection() {
     const reducedMotion = useLightMotion();
     const sectionRef = useRef<HTMLElement | null>(null);
     const timelineRef = useRef<HTMLDivElement | null>(null);
+    const nutRef = useRef<HTMLDivElement | null>(null);
 
     const timelineHeight = useElementHeight(timelineRef);
+    const nutHeight = useElementHeight(nutRef);
 
     const { scrollYProgress } = useScroll({
         target: timelineRef,
         offset: ["start 58%", "end 58%"],
     });
 
-    const maxTravel = Math.max(timelineHeight - 126, 0);
+    const maxTravel = Math.max(timelineHeight - nutHeight, 0);
 
-    const rawY = useTransform(scrollYProgress, [0, 1], [0, maxTravel]);
-
-    const componentY = useSpring(rawY, {
-        stiffness: 90,
-        damping: 28,
-        mass: 0.45,
-    });
+    // Follow the existing native/Lenis scroll directly, without spring lag or overshoot.
+    const componentY = useTransform(scrollYProgress, [0, 1], [0, maxTravel], { clamp: true });
 
     const lineScale = useSpring(scrollYProgress, {
         stiffness: 90,
@@ -444,13 +438,13 @@ export default function ProcessSection() {
         >
             <div className="mx-auto max-w-[1220px] px-6">
                 <div data-reveal="fade-up"
-                    className="mx-auto mb-20 max-w-[780px] text-center max-md:mb-14"
+                    className="mobile-heading-group mx-auto mb-20 max-w-[780px] text-center max-md:mb-14"
                 >
-                    <span className="mb-5 inline-flex items-center gap-2 text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
+                    <span className="mobile-eyebrow mb-5 inline-flex items-center gap-2 text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
                         / Our Process
                     </span>
 
-                    <h2 className="text-[48px] font-extrabold uppercase leading-[1.08] tracking-[-2px] text-[#050505] max-lg:text-[40px] max-md:text-[32px] max-sm:text-[28px]">
+                    <h2 className="mobile-section-title text-[48px] font-extrabold uppercase leading-[1.08] tracking-[-2px] text-[#050505] max-lg:text-[40px] max-md:text-[32px] max-sm:text-[28px]">
                         Unveiling The Process Of Precision Brass Parts Production
                     </h2>
                 </div>
@@ -466,7 +460,7 @@ export default function ProcessSection() {
                     />
 
                     {/* moving brass component */}
-                    <ArrowNutComponent y={componentY} />
+                    <ArrowNutComponent y={componentY} nutRef={nutRef} />
 
                     <div className="relative z-10 pt-[150px]">
                         {processSteps.map((step, index) => (

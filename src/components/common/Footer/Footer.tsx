@@ -40,17 +40,17 @@ export default function Footer() {
                             />
                         </Link>
 
-                        <p className="mt-7 text-[18px] font-semibold text-[#0B1F35]">
+                        <p className="mobile-body mt-7 text-[18px] font-semibold text-[#0B1F35]">
                             Precision Brass Parts Manufacturer
                         </p>
 
-                        <p className="mt-10 max-w-[560px] text-[17px] leading-[1.75] text-[#465566]">
+                        <p className="mobile-body mt-10 max-w-[560px] text-[17px] leading-[1.75] text-[#465566]">
                             Feel Good Brass Industry delivers high-quality brass inserts, fittings, fasteners, electrical parts, turned components, and custom brass products, manufactured with precision, reliability, and consistent quality to meet the diverse requirements of multiple industries.
                         </p>
                     </div>
 
                     <div data-reveal="fade-up" data-reveal-stagger className="flex items-start">
-                        <h2 className="max-w-[950px] text-[32px] font-black uppercase leading-[1.18] tracking-[-1.2px] text-[#0B1F35] max-xl:text-[28px] max-md:text-[23px]">
+                        <h2 className="mobile-compact-title max-w-[950px] text-[32px] font-black uppercase leading-[1.18] tracking-[-1.2px] text-[#0B1F35] max-xl:text-[28px] max-md:text-[23px]">
                             Innovate, Inspire And Impact With High-Quality Brass Manufacturing
                             Solutions
                         </h2>
@@ -60,28 +60,28 @@ export default function Footer() {
                 {/* 4 COLUMNS */}
                 <div className="grid grid-cols-[1.35fr_0.8fr_1fr_0.45fr] gap-x-[70px] gap-y-12 border-b border-[#e7e1d7] py-[58px] max-xl:grid-cols-2 max-md:grid-cols-1">
                     <div data-reveal="fade-up" data-reveal-stagger>
-                        <h3 className="mb-6 text-[18px] font-medium text-[#0B1F35]">
+                        <h3 className="mobile-label-title mb-6 text-[18px] font-medium text-[#0B1F35]">
                             Company Address
                         </h3>
 
-                        <p className="max-w-[380px] text-[18px] font-extrabold leading-[1.45] text-[#0B1F35] max-md:text-[16px]">
+                        <p className="mobile-body max-w-[380px] text-[18px] font-extrabold leading-[1.45] text-[#0B1F35] max-md:text-[16px]">
                             Plot No. 50/2, Survey No.45, FCI Godown Zone, Lalpur Road, Dared,
                             Jamnagar-361004, Gujarat, India
                         </p>
                     </div>
 
                     <div data-reveal="fade-up" data-reveal-stagger>
-                        <h3 className="mb-6 text-[18px] font-medium text-[#0B1F35]">
+                        <h3 className="mobile-label-title mb-6 text-[18px] font-medium text-[#0B1F35]">
                             GST NO
                         </h3>
 
-                        <p className="text-[18px] font-extrabold leading-[1.45] text-[#0B1F35] max-md:text-[16px]">
+                        <p className="mobile-body text-[18px] font-extrabold leading-[1.45] text-[#0B1F35] max-md:text-[16px]">
                             24AADFF0905G1Z0
                         </p>
                     </div>
 
                     <div data-reveal="fade-up" data-reveal-stagger>
-                        <h3 className="mb-6 text-[18px] font-medium text-[#0B1F35]">
+                        <h3 className="mobile-label-title mb-6 text-[18px] font-medium text-[#0B1F35]">
                             Contact Us
                         </h3>
 
@@ -110,7 +110,7 @@ export default function Footer() {
                     </div>
 
                     <div data-reveal="fade-up" data-reveal-stagger>
-                        <h3 className="mb-6 text-[18px] font-medium text-[#0B1F35]">
+                        <h3 className="mobile-label-title mb-6 text-[18px] font-medium text-[#0B1F35]">
                             Social
                         </h3>
 
@@ -134,7 +134,7 @@ export default function Footer() {
 
                 {/* BOTTOM */}
                 <div className="grid grid-cols-[6fr_5fr_1fr] gap-x-10 pt-8 text-[15px] text-[#465566] max-lg:grid-cols-1 max-lg:gap-y-4">
-                    <p>© 2026 Feel Good Brass Industry. All rights reserved.</p>
+                    <p className="mobile-body">© 2026 Feel Good Brass Industry. All rights reserved.</p>
 
                     <span
                         className="transition-colors duration-300 hover:text-[#D79229]"

@@ -66,23 +66,23 @@ export default function BrassValueSection() {
         <section className="bg-white">
             <div className="mx-auto max-w-[1500px] border-x border-[#e7e1d7]">
                 {/* Top row */}
-                <div className="grid min-h-[360px] grid-cols-3 border-b border-[#e7e1d7] max-lg:grid-cols-1">
+                <div className="mobile-stats-grid grid min-h-[360px] grid-cols-3 border-b border-[#e7e1d7] max-lg:grid-cols-1">
                     {topStats.map((item, index) => (
                         <div data-reveal="fade-up" data-reveal-stagger
                             key={index}
-                            className="flex flex-col justify-start border-r border-[#e7e1d7] px-10 pt-[72px] last:border-r-0 max-lg:min-h-[230px] max-lg:border-b max-lg:border-r-0 max-md:px-5 max-md:pt-10"
+                            className="mobile-stat-panel flex flex-col justify-start border-r border-[#e7e1d7] px-10 pt-[72px] last:border-r-0 max-lg:min-h-[230px] max-lg:border-b max-lg:border-r-0 max-md:px-5 max-md:pt-10"
                         >
                             {item.type === "intro" ? (
-                                <h2 className="max-w-[420px] text-[24px] font-extrabold uppercase leading-[1.15] tracking-[-0.8px] text-[#0B1F35] max-md:text-[21px]">
+                                <h2 className="mobile-compact-title max-w-[420px] text-[24px] font-extrabold uppercase leading-[1.15] tracking-[-0.8px] text-[#0B1F35] max-md:text-[21px]">
                                     {item.title}
                                 </h2>
                             ) : (
                                 <>
-                                    <strong className="text-[52px] font-extrabold leading-none tracking-[-2px] text-[#0B1F35] max-md:text-[42px]">
+                                    <strong className="mobile-stat text-[52px] font-extrabold leading-none tracking-[-2px] text-[#0B1F35] max-md:text-[42px]">
                                         {item.value}
                                     </strong>
 
-                                    <p className="mt-3 max-w-[330px] text-[19px] leading-[1.35] tracking-[-0.4px] text-[#465566] max-md:text-[17px]">
+                                    <p className="mobile-body mt-3 max-w-[330px] text-[19px] leading-[1.35] tracking-[-0.4px] text-[#465566] max-md:text-[17px]">
                                         {item.text}
                                     </p>
                                 </>
@@ -111,7 +111,7 @@ export default function BrassValueSection() {
 
 
                                 <div className="relative z-20 flex h-full min-h-[445px] flex-col justify-between px-10 pb-0 pt-12 max-md:px-5">
-                                    <div className="flex items-center gap-2 text-[20px] font-medium tracking-[-0.4px] text-[#465566] transition-colors duration-300 group-hover/card:text-white">
+                                    <div className="mobile-eyebrow flex items-center gap-2 text-[20px] font-medium tracking-[-0.4px] text-[#465566] transition-colors duration-300 group-hover/card:text-white">
                                         <span className="text-[#D79229] group-hover/card:text-white">
                                             /
                                         </span>
@@ -120,7 +120,7 @@ export default function BrassValueSection() {
 
                                     <div className="pb-[96px]">
                                         <h3
-                                            className={`max-w-[360px] text-[31px] font-extrabold uppercase leading-[1.16] tracking-[-1px] transition-colors duration-300 max-xl:text-[27px] max-md:text-[25px] ${isGold
+                                            className={`mobile-feature-title max-w-[360px] text-[31px] font-extrabold uppercase leading-[1.16] tracking-[-1px] transition-colors duration-300 max-xl:text-[27px] max-md:text-[25px] ${isGold
                                                 ? "text-white"
                                                 : "text-[#0B1F35] group-hover/card:text-white"
                                                 }`}

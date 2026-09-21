@@ -37,18 +37,18 @@ export default function CapabilitiesGrid() {
     return (
         <section className="bg-white py-[110px] max-lg:py-20 max-md:py-16">
             <div className="mx-auto max-w-[1500px] px-10 max-md:px-5">
-                <div className="mb-16 grid grid-cols-[0.8fr_1.2fr] gap-16 max-lg:grid-cols-1 max-lg:gap-8">
+                <div className="mobile-heading-group mb-16 grid grid-cols-[0.8fr_1.2fr] gap-16 max-lg:grid-cols-1 max-lg:gap-8">
                     <div>
-                        <span data-reveal="fade-up" className="mb-5 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
+                        <span data-reveal="fade-up" className="mobile-eyebrow mb-5 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
                             / What We Do
                         </span>
 
-                        <h2 data-reveal="fade-up" className="text-[58px] font-extrabold uppercase leading-[1.08] tracking-[-2px] text-[#050505] max-xl:text-[48px] max-md:text-[36px] max-sm:text-[30px]">
+                        <h2 data-reveal="fade-up" className="mobile-section-title text-[58px] font-extrabold uppercase leading-[1.08] tracking-[-2px] text-[#050505] max-xl:text-[48px] max-md:text-[36px] max-sm:text-[30px]">
                             Complete Brass Part Manufacturing Support
                         </h2>
                     </div>
 
-                    <p className="max-w-[720px] text-[19px] leading-[1.8] text-[#465566] max-md:text-[16px]">
+                    <p className="mobile-body max-w-[720px] text-[19px] leading-[1.8] text-[#465566] max-md:text-[16px]">
                         Our manufacturing setup supports the production of precision brass inserts, fittings, fasteners, electrical parts, turned components, sanitary parts, and customized brass products, ensuring consistent quality, reliable performance, and timely delivery for diverse industrial applications.
                     </p>
                 </div>
@@ -64,11 +64,11 @@ export default function CapabilitiesGrid() {
                                 {item.number}
                             </span>
 
-                            <h3 className="text-[25px] font-extrabold uppercase leading-[1.15] tracking-[-0.6px] text-[#0B1F35] transition-colors duration-500 group-hover:text-white">
+                            <h3 className="mobile-card-title text-[25px] font-extrabold uppercase leading-[1.15] tracking-[-0.6px] text-[#0B1F35] transition-colors duration-500 group-hover:text-white">
                                 {item.title}
                             </h3>
 
-                            <p className="mt-6 text-[16px] leading-[1.75] text-[#465566] transition-colors duration-500 group-hover:text-white/75">
+                            <p className="mobile-body mt-6 text-[16px] leading-[1.75] text-[#465566] transition-colors duration-500 group-hover:text-white/75">
                                 {item.text}
                             </p>
                         </div>

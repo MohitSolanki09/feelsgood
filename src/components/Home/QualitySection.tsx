@@ -117,12 +117,12 @@ export default function QualitySection() {
     return (
         <section className="bg-white py-[110px] max-lg:py-20 max-md:py-16">
             <div className="mx-auto max-w-[1500px] px-10 max-md:px-5">
-                <div className="mb-[70px] max-w-[720px] max-md:mb-12">
-                    <span data-reveal="fade-up" className="mb-5 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
+                <div className="mobile-heading-group mb-[70px] max-w-[720px] max-md:mb-12">
+                    <span data-reveal="fade-up" className="mobile-eyebrow mb-5 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
                         / Quality Assurance
                     </span>
 
-                    <h2 data-reveal="fade-up" className="text-[62px] font-extrabold uppercase leading-[1.08] tracking-[-2.5px] text-[#050505] max-xl:text-[52px] max-lg:text-[42px] max-md:text-[34px] max-sm:text-[30px]">
+                    <h2 data-reveal="fade-up" className="mobile-section-title text-[62px] font-extrabold uppercase leading-[1.08] tracking-[-2.5px] text-[#050505] max-xl:text-[52px] max-lg:text-[42px] max-md:text-[34px] max-sm:text-[30px]">
                         Quality From Start To Finish
                     </h2>
                 </div>
@@ -142,11 +142,11 @@ export default function QualitySection() {
                                     0{index + 1}
                                 </span>
 
-                                <h3 className="max-w-[280px] text-[22px] font-extrabold leading-[1.25] tracking-[-0.5px] text-[#0B1F35] transition-colors duration-500 group-hover:text-white max-sm:text-[20px]">
+                                <h3 className="mobile-card-title max-w-[280px] text-[22px] font-extrabold leading-[1.25] tracking-[-0.5px] text-[#0B1F35] transition-colors duration-500 group-hover:text-white max-sm:text-[20px]">
                                     {item.title}
                                 </h3>
 
-                                <p className="mt-5 max-w-[300px] text-[15px] leading-[1.7] text-[#465566] transition-colors duration-500 group-hover:text-white/75">
+                                <p className="mobile-secondary mt-5 max-w-[300px] text-[15px] leading-[1.7] text-[#465566] transition-colors duration-500 group-hover:text-white/75">
                                     {item.text}
                                 </p>
                             </div>

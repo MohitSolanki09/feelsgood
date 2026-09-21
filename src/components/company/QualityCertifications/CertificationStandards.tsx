@@ -39,16 +39,16 @@ export default function CertificationStandards() {
     return (
         <section className="bg-[#F8F3EA] py-[110px] max-lg:py-20 max-md:py-16">
             <div className="mx-auto max-w-[1500px] px-10 max-md:px-5">
-                <div className="mx-auto mb-16 max-w-[850px] text-center">
-                    <span data-reveal="fade-up" className="mb-5 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
+                <div className="mobile-heading-group mx-auto mb-16 max-w-[850px] text-center">
+                    <span data-reveal="fade-up" className="mobile-eyebrow mb-5 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
                         / Certifications & Standards
                     </span>
 
-                    <h2 data-reveal="fade-up" className="text-[56px] font-extrabold uppercase leading-[1.1] tracking-[-2px] text-[#050505] max-xl:text-[46px] max-md:text-[34px] max-sm:text-[29px]">
+                    <h2 data-reveal="fade-up" className="mobile-section-title text-[56px] font-extrabold uppercase leading-[1.1] tracking-[-2px] text-[#050505] max-xl:text-[46px] max-md:text-[34px] max-sm:text-[29px]">
                         Reliable Standards For Industrial Brass Supply
                     </h2>
 
-                    <p data-reveal="fade-up" data-reveal-delay="70" className="mx-auto mt-7 max-w-[720px] text-[18px] leading-[1.8] text-[#465566] max-md:text-[16px]">
+                    <p data-reveal="fade-up" data-reveal-delay="70" className="mobile-body mx-auto mt-7 max-w-[720px] text-[18px] leading-[1.8] text-[#465566] max-md:text-[16px]">
                         We follow structured inspection, documentation, and packing
                         practices to support consistent brass part manufacturing.
                     </p>
@@ -64,11 +64,11 @@ export default function CertificationStandards() {
                                 <CertificateIcon />
                             </div>
 
-                            <h3 className="text-[25px] font-extrabold uppercase leading-[1.15] tracking-[-0.6px] text-[#0B1F35] transition-colors duration-500 group-hover:text-white">
+                            <h3 className="mobile-card-title text-[25px] font-extrabold uppercase leading-[1.15] tracking-[-0.6px] text-[#0B1F35] transition-colors duration-500 group-hover:text-white">
                                 {item.title}
                             </h3>
 
-                            <p className="mt-6 text-[16px] leading-[1.75] text-[#465566] transition-colors duration-500 group-hover:text-white/75">
+                            <p className="mobile-body mt-6 text-[16px] leading-[1.75] text-[#465566] transition-colors duration-500 group-hover:text-white/75">
                                 {item.text}
                             </p>
                         </div>

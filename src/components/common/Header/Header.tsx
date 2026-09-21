@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { products } from "@/src/components/company/Products/productsData";
 
@@ -13,7 +14,7 @@ type MegaMenuItem = {
 type NavItem = {
     label: string;
     href: string;
-    active?: boolean;
+    activePath?: string;
     mega?: {
         title: string;
         image: string;
@@ -27,11 +28,11 @@ const navItems: NavItem[] = [
     {
         label: "Home",
         href: "/",
-        active: true,
     },
     {
         label: "Company",
         href: "/company/about",
+        activePath: "/company",
         mega: {
             title: "Precision Brass Manufacturing With Innovation And Trust",
             image: "/images/about/about-manufacturing.webp",
@@ -512,6 +513,13 @@ function SideMenu({
 }
 
 export default function Header() {
+    const pathname = usePathname();
+    const [hoveredItem, setHoveredItem] = useState<string | null>(null);
+    const activeItem = navItems.find((item) => {
+        const path = item.activePath ?? item.href;
+        return pathname === path || (path !== "/" && pathname.startsWith(`${path}/`));
+    })?.href;
+    const highlightedItem = hoveredItem ?? activeItem;
     const [searchOpen, setSearchOpen] = useState(false);
     const [sideOpen, setSideOpen] = useState(false);
     const closeSideMenu = useCallback(() => setSideOpen(false), []);
@@ -535,18 +543,24 @@ export default function Header() {
 
                     <nav aria-label="Main navigation" className="hidden min-w-0 flex-1 items-center justify-center gap-8 xl:flex">
                         {navItems.map((item) => (
-                            <div key={item.label} className="group flex h-full items-center">
+                            <div
+                                key={item.label}
+                                className="group flex h-full items-center"
+                                onMouseEnter={() => setHoveredItem(item.href)}
+                                onMouseLeave={() => setHoveredItem(null)}
+                            >
                                 <Link
                                     href={item.href}
-                                    className={`relative flex h-full items-center text-[13px] font-extrabold uppercase tracking-[2.7px] transition-colors duration-300 ${item.active
+                                    aria-current={activeItem === item.href ? "page" : undefined}
+                                    className={`relative flex h-full items-center text-[13px] font-extrabold uppercase tracking-[2.7px] transition-colors duration-300 ${highlightedItem === item.href
                                         ? "text-[#D79229]"
-                                        : "text-[#0B1F35] group-hover:text-[#D79229]"
+                                        : "text-[#0B1F35]"
                                         }`}
                                 >
                                     <span
-                                        className={`absolute left-0 top-0 h-[3px] w-full bg-[#D79229] transition-transform duration-300 ${item.active
-                                            ? "scale-x-100"
-                                            : "scale-x-0 group-hover:scale-x-100"
+                                        className={`absolute left-0 top-0 h-[3px] w-full bg-[#D79229] transition-transform ${highlightedItem === item.href
+                                            ? "scale-x-100 duration-300"
+                                            : "scale-x-0 duration-0"
                                             }`}
                                     />
                                     {item.label}

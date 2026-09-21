@@ -40,14 +40,14 @@ export default function ProductsLanding() {
             <section className="bg-white">
                 <div className="mx-auto max-w-[1600px] px-5">
                     <div className="grid min-h-[340px] grid-cols-[1.1fr_0.9fr] border-x border-[#e7e1d7] max-lg:grid-cols-1">
-                        <div className="flex items-center border-r border-[#e7e1d7] px-10 py-16 max-lg:border-r-0 max-lg:border-b max-md:px-5">
-                            <div>
-                                <p className="mb-6 flex items-center gap-2 text-[18px] font-medium text-[#0B1F35]">
+                        <div className="hero-heading-panel flex items-center border-r border-[#e7e1d7] px-10 py-16 max-lg:border-r-0 max-lg:border-b max-md:px-5">
+                            <div className="hero-copy">
+                                <p className="hero-eyebrow mb-6 flex items-center gap-2 text-[18px] font-medium text-[#0B1F35]">
                                     <span className="text-[#D79229]">/</span>
                                     Products
                                 </p>
 
-                                <h1 className="max-w-[900px] text-[64px] font-extrabold uppercase leading-[1.08] tracking-[-2.5px] text-[#050505] max-xl:text-[52px] max-md:text-[40px] max-sm:text-[32px]">
+                                <h1 className="hero-title max-w-[900px] text-[64px] font-extrabold uppercase leading-[1.08] tracking-[-2.5px] text-[#050505] max-xl:text-[52px] max-md:text-[40px] max-sm:text-[32px]">
                                     Precision Brass Parts And Components
                                 </h1>
                             </div>
@@ -55,7 +55,7 @@ export default function ProductsLanding() {
 
                         <div className="flex items-end">
                             <div className="w-full bg-[#0B1F35] px-12 py-12 max-md:px-6">
-                                <p className="text-[18px] leading-[1.8] text-white/75">
+                                <p className="mobile-body text-[18px] leading-[1.8] text-white/75">
                                     Explore brass inserts, fittings, fasteners, electrical parts,
                                     CNC turned components, and custom brass products manufactured
                                     for industrial use with <Link href="/quality">quality inspection</Link>.
@@ -68,18 +68,18 @@ export default function ProductsLanding() {
 
             <section className="bg-white py-[110px] max-lg:py-20 max-md:py-16">
                 <div className="mx-auto max-w-[1500px] px-10 max-md:px-5">
-                    <div className="mb-16 grid grid-cols-[0.8fr_1.2fr] gap-16 max-lg:grid-cols-1 max-lg:gap-8">
+                    <div className="mobile-heading-group mb-16 grid grid-cols-[0.8fr_1.2fr] gap-16 max-lg:grid-cols-1 max-lg:gap-8">
                         <div>
-                            <span data-reveal="fade-up" className="mb-5 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
+                            <span data-reveal="fade-up" className="mobile-eyebrow mb-5 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
                                 / Product Range
                             </span>
 
-                            <h2 data-reveal="fade-up" className="text-[56px] font-extrabold uppercase leading-[1.08] tracking-[-2px] text-[#050505] max-xl:text-[46px] max-md:text-[34px] max-sm:text-[29px]">
+                            <h2 data-reveal="fade-up" className="mobile-section-title text-[56px] font-extrabold uppercase leading-[1.08] tracking-[-2px] text-[#050505] max-xl:text-[46px] max-md:text-[34px] max-sm:text-[29px]">
                                 Brass Products For Multiple Industries
                             </h2>
                         </div>
 
-                        <p className="max-w-[760px] text-[19px] leading-[1.8] text-[#465566] max-md:text-[16px]">
+                        <p className="mobile-body max-w-[760px] text-[19px] leading-[1.8] text-[#465566] max-md:text-[16px]">
                             Our product range supports automotive, electrical, plumbing,
                             industrial, OEM, and export supply requirements with accurate
                             machining, clean finishing, and reliable production quality.
@@ -108,11 +108,11 @@ export default function ProductsLanding() {
                                         0{index + 1}
                                     </span>
 
-                                    <h3 className="text-[25px] font-extrabold uppercase leading-[1.15] text-[#0B1F35] transition-colors duration-500 group-hover:text-white">
+                                    <h3 className="mobile-card-title text-[25px] font-extrabold uppercase leading-[1.15] text-[#0B1F35] transition-colors duration-500 group-hover:text-white">
                                         {product.title}
                                     </h3>
 
-                                    <p className="mt-5 text-[16px] leading-[1.7] text-[#465566] transition-colors duration-500 group-hover:text-white/75">
+                                    <p className="mobile-body mt-5 text-[16px] leading-[1.7] text-[#465566] transition-colors duration-500 group-hover:text-white/75">
                                         {product.shortText}
                                     </p>
 

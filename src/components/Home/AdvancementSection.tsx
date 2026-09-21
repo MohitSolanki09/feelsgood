@@ -43,16 +43,16 @@ export default function AdvancementSection() {
 
                     {/* Content */}
                     <div className="max-w-[600px]">
-                        <p data-reveal="fade-up" className="mb-9 flex items-center gap-2 text-[20px] font-medium tracking-[-0.5px] text-[#0B1F35] max-md:text-[17px]">
+                        <p data-reveal="fade-up" className="mobile-eyebrow mb-9 flex items-center gap-2 text-[20px] font-medium tracking-[-0.5px] text-[#0B1F35] max-md:text-[17px]">
                             <span className="text-[#D79229]">/</span>
                             Become a Customer
                         </p>
 
-                        <h2 data-reveal="fade-up" className="text-[62px] font-extrabold uppercase leading-[1.16] tracking-[-2.2px] text-[#050505] max-2xl:text-[56px] max-xl:text-[48px] max-md:text-[38px] max-sm:text-[32px]">
+                        <h2 data-reveal="fade-up" className="mobile-section-title text-[62px] font-extrabold uppercase leading-[1.16] tracking-[-2.2px] text-[#050505] max-2xl:text-[56px] max-xl:text-[48px] max-md:text-[38px] max-sm:text-[32px]">
                             Advancements In The Brass Parts Industry
                         </h2>
 
-                        <p data-reveal="fade-up" data-reveal-delay="70" className="mt-8 max-w-[500px] text-[17px] leading-[1.8] text-[#465566]">
+                        <p data-reveal="fade-up" data-reveal-delay="70" className="mobile-body mt-8 max-w-[500px] text-[17px] leading-[1.8] text-[#465566]">
                             We manufacture precision brass inserts, fittings, fasteners, turned parts, electrical components, and custom brass parts with reliable quality and consistent production standards.
                         </p>
 

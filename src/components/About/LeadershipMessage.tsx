@@ -45,22 +45,22 @@ export default function LeadershipMessage() {
                     {/* Center Content */}
                     <div className="flex items-center border-r border-[#e7e1d7] px-10 py-[90px] max-lg:border-b max-lg:border-r-0 max-md:px-5 max-md:py-12">
                         <div>
-                            <span className="mb-8 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
+                            <span className="mobile-eyebrow mb-8 block text-[14px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
                                 / Leadership Message
                             </span>
 
-                            <blockquote className="text-[30px] font-medium leading-[1.35] tracking-[-1px] text-[#0B1F35] max-xl:text-[26px] max-md:text-[22px]">
+                            <blockquote className="mobile-quote text-[30px] font-medium leading-[1.35] tracking-[-1px] text-[#0B1F35] max-xl:text-[26px] max-md:text-[22px]">
                                 “At Feel Good Brass Industry, our focus is simple — manufacture
                                 precision brass components with reliable quality, honest
                                 communication, and long-term customer trust.”
                             </blockquote>
 
                             <div className="mt-16">
-                                <h3 className="text-[22px] font-extrabold uppercase tracking-[-0.4px] text-[#050505]">
+                                <h3 className="mobile-card-title text-[22px] font-extrabold uppercase tracking-[-0.4px] text-[#050505]">
                                     Feel Good Brass Industry
                                 </h3>
 
-                                <p className="mt-3 text-[17px] font-medium text-[#465566]">
+                                <p className="mobile-body mt-3 text-[17px] font-medium text-[#465566]">
                                     Brass Parts Manufacturer
                                 </p>
                             </div>
