@@ -3,6 +3,7 @@
 import Link from "next/link";
 import type { Product } from "./productsData";
 import BrassProductVisual from "./BrassProductVisual";
+import styles from "./ProductDetail.module.css";
 
 type ProductDetailProps = {
     product: Product;
@@ -34,6 +35,10 @@ export default function ProductDetail({ product }: ProductDetailProps) {
                     <div className="grid min-h-[620px] grid-cols-[1fr_0.9fr] border-x border-[#e7e1d7] max-lg:grid-cols-1">
                         <div className="hero-heading-panel flex items-center border-r border-[#e7e1d7] px-10 py-16 max-lg:border-r-0 max-lg:border-b max-md:px-5">
                             <div className="hero-copy">
+                                <Link href="/products" className={styles.backLink}>
+                                    <span className={styles.arrow} aria-hidden="true">←</span>
+                                    Back to Products
+                                </Link>
                                 <p className="hero-eyebrow mb-6 flex items-center gap-2 text-[18px] font-medium text-[#0B1F35]">
                                     <span className="text-[#D79229]">/</span>
                                     {product.title}

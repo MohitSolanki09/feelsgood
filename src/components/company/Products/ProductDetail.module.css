@@ -1,0 +1,35 @@
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  gap: 8px;
+  margin-bottom: 24px;
+  color: var(--fg-navy);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 250ms ease;
+}
+
+.arrow {
+  color: var(--fg-gold);
+  transition: transform 250ms ease;
+}
+
+.backLink:focus-visible {
+  outline: 2px solid var(--fg-gold);
+  outline-offset: 4px;
+}
+
+@media (hover: hover) {
+  .backLink:hover { color: var(--fg-gold); }
+  .backLink:hover .arrow { transform: translateX(-5px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .backLink, .arrow { transition: none; }
+  .backLink:hover .arrow { transform: none; }
+}

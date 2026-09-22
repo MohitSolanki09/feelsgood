@@ -12,10 +12,12 @@ function LinkedinIcon() {
     );
 }
 
-function FacebookIcon() {
+function InstagramIcon() {
     return (
-        <svg viewBox="0 0 24 24" className="h-[22px] w-[22px]" fill="currentColor">
-            <path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06C2 17.08 5.66 21.25 10.44 22v-7.03H7.9v-2.91h2.54V9.84c0-2.52 1.5-3.91 3.78-3.91 1.1 0 2.24.2 2.24.2v2.47H15.2c-1.24 0-1.63.78-1.63 1.57v1.89h2.78l-.44 2.91h-2.34V22C18.34 21.25 22 17.08 22 12.06Z" />
+        <svg viewBox="0 0 24 24" className="h-[22px] w-[22px]" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="5" />
+            <circle cx="12" cy="12" r="4" />
+            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
         </svg>
     );
 }
@@ -115,19 +117,27 @@ export default function Footer() {
                         </h3>
 
                         <div className="flex items-center gap-6 text-[#0B1F35]">
-                            <span
-                                aria-label="LinkedIn"
-                                className="transition-colors duration-300 hover:text-[#D79229]"
+                            <a
+                                href="https://www.linkedin.com/in/feelgood-brass-228854423?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Feel Good Brass Industry on LinkedIn"
+                                className="inline-flex transition-colors duration-300 hover:text-[#D79229]"
+                                style={{ minWidth: 22, minHeight: 22 }}
                             >
                                 <LinkedinIcon />
-                            </span>
+                            </a>
 
-                            <span
-                                aria-label="Facebook"
-                                className="transition-colors duration-300 hover:text-[#D79229]"
+                            <a
+                                href="https://www.instagram.com/feelgoodbrass?stkn=MXY0ZXlwemxqYWtlbw=="
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Feel Good Brass Industry on Instagram"
+                                className="inline-flex transition-colors duration-300 hover:text-[#D79229]"
+                                style={{ minWidth: 22, minHeight: 22 }}
                             >
-                                <FacebookIcon />
-                            </span>
+                                <InstagramIcon />
+                            </a>
                         </div>
                     </div>
                 </div>
