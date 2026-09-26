@@ -1,96 +1,68 @@
 .page {
   display: flex;
   align-items: center;
-  min-height: calc(100vh - 84px);
-  min-height: calc(100svh - 84px);
-  padding: 96px clamp(24px, 6vw, 110px);
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: 80px clamp(24px, 6vw, 112px);
   background: var(--fg-cream);
   color: var(--fg-navy);
 }
-
 .content {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  align-items: center;
+  gap: clamp(48px, 7vw, 112px);
   width: 100%;
   max-width: 1440px;
   margin-inline: auto;
 }
-
+.visual { width: 100%; }
+.visual svg { display: block; width: 100%; height: auto; }
+.guides { color: var(--fg-brass); opacity: 0.2; }
+.nut { color: var(--fg-brass); }
+.nutFace { fill: var(--fg-gold); fill-opacity: 0.08; }
+/* Preserve the former link row space so the existing composition does not shift. */
+.copy { min-width: 0; padding-bottom: 44px; }
 .eyebrow {
   display: flex;
   align-items: center;
   gap: 16px;
   margin: 0 0 24px;
-  color: var(--fg-brass);
-  font-size: 14px;
+  color: var(--fg-slate);
+  font-size: 12px;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
 }
-
 .eyebrow::before {
   content: "";
-  width: 40px;
+  width: 32px;
   height: 1px;
-  background: var(--fg-gold);
+  background: var(--fg-brass);
 }
-
 .heading {
-  max-width: 1000px;
   margin: 0;
-  font-size: clamp(32px, 6.5vw, 88px);
+  font-size: clamp(32px, 4.5vw, 68px);
   font-weight: 800;
   line-height: 1.08;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.045em;
   text-transform: uppercase;
   text-wrap: balance;
 }
-
 .message {
-  max-width: 500px;
-  margin: 24px 0 28px;
+  max-width: 410px;
+  margin: 24px 0 32px;
   color: var(--fg-slate);
-  font-size: clamp(16px, 1.4vw, 18px);
-  line-height: 1.75;
+  font-size: clamp(15px, 1.2vw, 17px);
+  line-height: 1.8;
 }
-
-.homeLink {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  min-height: 44px;
-  color: var(--fg-navy);
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: color 250ms ease;
+@media (width < 768px) {
+  .page { padding: 48px 24px; }
+  .content { grid-template-columns: 1fr; gap: 40px; max-width: 460px; }
+  .visual { width: min(100%, 240px); margin-inline: auto; }
+  .heading { font-size: clamp(32px, 7.5vw, 48px); }
+  .message { margin-block: 20px 24px; }
 }
-
-.arrow {
-  color: var(--fg-gold);
-  transition: transform 250ms ease;
-}
-
-.homeLink:hover {
-  color: var(--fg-brass);
-}
-
-.homeLink:hover .arrow {
-  transform: translateX(-5px);
-}
-
-.homeLink:focus-visible {
-  outline: 2px solid var(--fg-brass);
-  outline-offset: 5px;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .homeLink,
-  .arrow {
-    transition: none;
-  }
-
-  .homeLink:hover .arrow {
-    transform: none;
-  }
+@media (width <= 375px) {
+  .copy { padding-bottom: 92px; }
 }

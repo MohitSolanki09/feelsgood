@@ -7,7 +7,7 @@ const root = '.next/server/app';
 const origin = 'https://feelsgoodbrass.netlify.app';
 const sitemap = fs.readFileSync(path.join(root, 'sitemap.xml.body'), 'utf8');
 const urls = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(match => match[1]);
-assert.equal(urls.length, 18);
+assert.equal(urls.length, 20);
 assert.equal(new Set(urls).size, urls.length);
 const titles = new Set(), descriptions = new Set();
 const attr = (tag, name) => tag.match(new RegExp(`\\b${name}="([^"]*)"`))?.[1];

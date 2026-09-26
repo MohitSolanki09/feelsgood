@@ -1,0 +1,23 @@
+.page { color: var(--fg-navy); }
+.hero { background: var(--fg-cream); border-bottom: 1px solid var(--fg-border); }
+.container { width: 100%; max-width: 1600px; margin-inline: auto; padding: 56px 60px; }
+.eyebrow { display: flex; gap: 8px; align-items: center; margin: 0 0 24px; font-size: 18px; font-weight: 500; }
+.eyebrow span { color: var(--fg-gold); }
+.hero h1 { margin: 0; font-size: clamp(32px, 4.5vw, 64px); font-weight: 800; line-height: 1.12; letter-spacing: -0.04em; text-transform: uppercase; text-wrap: balance; }
+.updated { margin: 24px 0 0; font-size: 14px; line-height: 1.7; color: var(--fg-slate); }
+.content { max-width: 1000px; margin-inline: auto; padding: 64px 24px 80px; font-size: clamp(16px, 1.2vw, 18px); line-height: 1.75; color: var(--fg-slate); }
+.intro { margin: 0 0 48px; }
+.section + .section { margin-top: 40px; }
+.section h2 { margin: 0 0 16px; font-size: clamp(21px, 2vw, 26px); font-weight: 700; line-height: 1.35; letter-spacing: -0.02em; color: var(--fg-navy); }
+.section p { margin: 0; }
+.section p + p, .section ul + p { margin-top: 16px; }
+.section ul { margin: 16px 0; padding-left: 24px; list-style: disc; }
+.section li + li { margin-top: 6px; }
+.section li::marker { color: var(--fg-brass); }
+@media (width < 768px) {
+  .container { padding: 40px 24px; }
+  .eyebrow { font-size: 16px; }
+  .content { padding-block: 40px 56px; }
+  .intro { margin-bottom: 36px; }
+  .section + .section { margin-top: 32px; }
+}

@@ -146,17 +146,17 @@ export default function Footer() {
                 <div className="grid grid-cols-[6fr_5fr_1fr] gap-x-10 pt-8 text-[15px] text-[#465566] max-lg:grid-cols-1 max-lg:gap-y-4">
                     <p className="mobile-body">© 2026 Feel Good Brass Industry. All rights reserved.</p>
 
-                    <span
+                    <Link href="/terms-and-conditions"
                         className="transition-colors duration-300 hover:text-[#D79229]"
                     >
                         Terms & Conditions
-                    </span>
+                    </Link>
 
-                    <span
+                    <Link href="/privacy-policy"
                         className="transition-colors duration-300 hover:text-[#D79229]"
                     >
                         Privacy Policy
-                    </span>
+                    </Link>
                 </div>
             </div>
         </footer>

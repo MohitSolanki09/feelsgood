@@ -4,9 +4,6 @@ import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import MotionProvider from "@/src/components/common/MotionProvider";
 import "lenis/dist/lenis.css";
-import Header from "@/src/components/common/Header/Header";
-import Footer from "@/src/components/common/Footer/Footer";
-import FloatingActions from "@/src/components/common/FloatingActions";
 import "./globals.css";
 
 const manrope = Manrope({
@@ -34,10 +31,7 @@ export default function RootLayout({
       <body className={manrope.className}>
         <BusinessSchema />
         <MotionProvider />
-        <Header />
         {children}
-        <Footer />
-        <FloatingActions phone={business.telephone} />
       </body>
     </html>
   );
