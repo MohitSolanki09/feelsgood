@@ -85,10 +85,10 @@ export default function Hero() {
                         02
                     </span>
                     <h3 className="text-[21px] font-extrabold uppercase text-[#0B1F35]">
-                        CNC Precision
+                        Precision Machining
                     </h3>
                     <p className="mt-3 text-[15px] leading-[1.7] text-[#465566]">
-                        High accuracy brass inserts, fittings, fasteners, turned parts, and electrical parts.
+                        High accuracy brass inserts, fittings, fasteners, and turned parts.
                     </p>
                 </div>
 

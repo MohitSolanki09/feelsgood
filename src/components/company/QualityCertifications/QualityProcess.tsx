@@ -58,7 +58,7 @@ export default function QualityProcess() {
                     </div>
 
                     <p className="mobile-body max-w-[720px] text-[19px] leading-[1.8] text-[#465566] max-md:text-[16px]">
-                        Our quality process is designed to maintain consistent standards across brass inserts, brass fittings, brass fasteners, precision turned parts, electrical brass components, and customized products, ensuring accuracy, durability, and reliable performance.
+                        Our quality process is designed to maintain consistent standards across brass inserts, brass fittings, brass fasteners, precision turned parts, and customized products, ensuring accuracy, durability, and reliable performance.
                     </p>
                 </div>
 

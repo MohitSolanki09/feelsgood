@@ -9,7 +9,7 @@ const capabilities = [
     {
         number: "02",
         title: "Threading & Tapping",
-        text: "Internal and external threading for brass inserts, fittings, fasteners, and electrical components.",
+        text: "Internal and external threading for brass inserts, fittings, and fasteners.",
     },
     {
         number: "03",
@@ -49,7 +49,7 @@ export default function CapabilitiesGrid() {
                     </div>
 
                     <p className="mobile-body max-w-[720px] text-[19px] leading-[1.8] text-[#465566] max-md:text-[16px]">
-                        Our manufacturing setup supports the production of precision brass inserts, fittings, fasteners, electrical parts, turned components, sanitary parts, and customized brass products, ensuring consistent quality, reliable performance, and timely delivery for diverse industrial applications.
+                        Our manufacturing setup supports the production of precision brass inserts, fittings, fasteners, turned components, sanitary parts, and customized brass products, ensuring consistent quality, reliable performance, and timely delivery for diverse industrial applications.
                     </p>
                 </div>
 

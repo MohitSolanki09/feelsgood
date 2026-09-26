@@ -53,7 +53,7 @@ export default function AdvancementSection() {
                         </h2>
 
                         <p data-reveal="fade-up" data-reveal-delay="70" className="mobile-body mt-8 max-w-[500px] text-[17px] leading-[1.8] text-[#465566]">
-                            We manufacture precision brass inserts, fittings, fasteners, turned parts, electrical components, and custom brass parts with reliable quality and consistent production standards.
+                            We manufacture precision brass inserts, fittings, fasteners, turned parts, and custom brass parts with reliable quality and consistent production standards.
                         </p>
 
                         <Link

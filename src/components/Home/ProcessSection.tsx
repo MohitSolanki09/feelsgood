@@ -17,8 +17,8 @@
 //         side: "right",
 //     },
 //     {
-//         title: "CNC Manufacturing",
-//         text: "Precision brass inserts, fittings, fasteners, electrical parts, and custom turned components are produced using reliable machining processes.",
+//         title: "Precision Manufacturing",
+//         text: "Precision brass inserts, fittings, fasteners, and custom turned components are produced using reliable machining processes.",
 //         side: "left",
 //     },
 //     {

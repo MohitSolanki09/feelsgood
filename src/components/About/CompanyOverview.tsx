@@ -57,7 +57,7 @@ export default function CompanyOverview() {
                     {/* Top center paragraph */}
                     <div className="min-h-[345px] border-r border-[#e7e1d7] px-10 py-14 max-lg:min-h-0 max-lg:border-b max-lg:border-r-0 max-md:px-5">
                         <p className="mobile-body text-[17px] leading-[1.6] tracking-[-0.2px] text-[#465566] max-md:text-[16px]">
-                            At Feel Good Brass Industry in Jamnagar, Gujarat, India, we manufacture <Link href="/products">brass inserts, fittings, fasteners, electrical parts, turned components, and customized brass parts</Link>, with a strong focus on precision, superior finish, durability, and long-term reliability.
+                            At Feel Good Brass Industry in Jamnagar, Gujarat, India, we manufacture <Link href="/products">brass inserts, fittings, fasteners, turned components, and customized brass parts</Link>, with a strong focus on precision, superior finish, durability, and long-term reliability.
                         </p>
                     </div>
 

@@ -63,7 +63,7 @@ const navItems: NavItem[] = [
         //         },
         //         {
         //             label: "Brass Reducer",
-        //             href: "/products/cnc-turned-components",
+        //             href: "/products/custom-brass-components",
         //         },
         //         {
         //             label: "Brass Sanitary Fitting",

@@ -29,7 +29,7 @@ const inquiryTypes = [
     "Brass Inserts",
     "Brass Fittings",
     "Brass Fasteners",
-    "Brass Electrical Parts",
+    "Brass CPVC Inserts",
     "Custom Brass Components",
 ];
 

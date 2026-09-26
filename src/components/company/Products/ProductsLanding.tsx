@@ -56,8 +56,8 @@ export default function ProductsLanding() {
                         <div className="flex items-end">
                             <div className="w-full bg-[#0B1F35] px-12 py-12 max-md:px-6">
                                 <p className="mobile-body text-[18px] leading-[1.8] text-white/75">
-                                    Explore brass inserts, fittings, fasteners, electrical parts,
-                                    CNC turned components, and custom brass products manufactured
+                                    Explore brass inserts, fittings, fasteners,
+                                    precision turned components, and custom brass products manufactured
                                     for industrial use with <Link href="/quality">quality inspection</Link>.
                                 </p>
                             </div>

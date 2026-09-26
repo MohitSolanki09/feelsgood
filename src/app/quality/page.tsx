@@ -113,7 +113,7 @@ export default function QualityPage() {
                                 </h1>
 
                                 <p className="mobile-body mt-8 max-w-[720px] text-[18px] leading-[1.85] text-[#465566] max-md:text-[16px]">
-                                    Our quality process is built to maintain accurate dimensions, clean finishing, proper threading, and consistent production for brass inserts, fittings, fasteners, electrical parts, precision turned components, and custom brass products, ensuring reliable quality and long-lasting performance.
+                                    Our quality process is built to maintain accurate dimensions, clean finishing, proper threading, and consistent production for brass inserts, fittings, fasteners, precision turned components, and custom brass products, ensuring reliable quality and long-lasting performance.
                                 </p>
 
                                 <div className="mt-10 flex flex-wrap gap-4">
@@ -241,7 +241,7 @@ export default function QualityPage() {
                         </div>
 
                         <p className="mobile-body max-w-[760px] text-[19px] leading-[1.8] text-[#465566] max-md:text-[16px]">
-                            Our inspection checklist helps maintain consistency in custom brass components, precision turned components, electrical brass parts, fittings, inserts, and fasteners, while ensuring accurate dimensions, proper finishing, and reliable product performance.
+                            Our inspection checklist helps maintain consistency in custom brass components, precision turned components, fittings, inserts, and fasteners, while ensuring accurate dimensions, proper finishing, and reliable product performance.
                         </p>
                     </div>
 
@@ -301,8 +301,8 @@ export default function QualityPage() {
                                 </h3>
 
                                 <p className="mobile-body mt-5 text-[16px] leading-[1.7] text-[#465566]">
-                                    Get support for brass inserts, fittings, fasteners, electrical
-                                    parts,and custom brass components.
+                                    Get support for brass inserts, fittings, fasteners, and
+                                    custom brass components.
                                 </p>
 
                                 <Link

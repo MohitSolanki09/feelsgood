@@ -25,9 +25,9 @@ function InstagramIcon() {
 export default function Footer() {
     return (
         <footer className="w-full overflow-hidden bg-white px-[38px] max-lg:px-5 max-sm:px-4">
-            <div className="mx-auto w-full max-w-[1825px] overflow-hidden bg-[#F8F3EA] px-[90px] pb-[48px] pt-[78px] max-2xl:px-[60px] max-xl:px-10 max-md:px-6">
+            <div className="mx-auto w-full max-w-[1825px] overflow-hidden bg-[#F8F3EA] px-[90px] pb-[48px] pt-[78px] xl:pb-10 xl:pt-16 max-2xl:px-[60px] max-xl:px-10 max-md:px-6">
                 {/* TOP */}
-                <div className="grid grid-cols-[0.85fr_1.15fr] gap-[90px] border-b border-[#e7e1d7] pb-[72px] max-xl:grid-cols-1 max-xl:gap-12 max-md:pb-12">
+                <div className="grid grid-cols-[1.15fr_0.85fr] gap-12 border-b border-[#e7e1d7] pb-[72px] xl:pb-14 max-xl:grid-cols-1 max-xl:gap-12 max-md:pb-12">
                     <div data-reveal="fade-up" data-reveal-stagger>
                         <Link
                             href="/"
@@ -46,8 +46,8 @@ export default function Footer() {
                             Precision Brass Parts Manufacturer
                         </p>
 
-                        <p className="mobile-body mt-10 max-w-[560px] text-[17px] leading-[1.75] text-[#465566]">
-                            Feel Good Brass Industry delivers high-quality brass inserts, fittings, fasteners, electrical parts, turned components, and custom brass products, manufactured with precision, reliability, and consistent quality to meet the diverse requirements of multiple industries.
+                        <p className="mobile-body mt-10 w-full max-w-[760px] xl:mt-7 max-xl:max-w-full text-[17px] leading-[1.75] text-[#465566]">
+                            Feel Good Brass Industry delivers high-quality brass inserts, fittings, fasteners, turned components, and custom brass products, manufactured with precision, reliability, and consistent quality to meet the diverse requirements of multiple industries.
                         </p>
                     </div>
 
@@ -60,7 +60,7 @@ export default function Footer() {
                 </div>
 
                 {/* 4 COLUMNS */}
-                <div className="grid grid-cols-[1.35fr_0.8fr_1fr_0.45fr] gap-x-[70px] gap-y-12 border-b border-[#e7e1d7] py-[58px] max-xl:grid-cols-2 max-md:grid-cols-1">
+                <div className="grid grid-cols-[1.35fr_0.8fr_1fr_0.45fr] gap-x-[70px] gap-y-12 border-b border-[#e7e1d7] py-[58px] xl:pt-12 xl:pb-10 max-xl:grid-cols-2 max-md:grid-cols-1">
                     <div data-reveal="fade-up" data-reveal-stagger>
                         <h3 className="mobile-label-title mb-6 text-[18px] font-medium text-[#0B1F35]">
                             Company Address

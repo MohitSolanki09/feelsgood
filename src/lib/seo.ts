@@ -13,7 +13,7 @@ export const business = {
   postalCode: "361004",
   addressCountry: "IN",
 };
-export const defaultDescription = "Feel Good Brass Industry manufactures precision brass inserts, fittings, fasteners, electrical parts and custom components in Jamnagar, Gujarat, India.";
+export const defaultDescription = "Feel Good Brass Industry manufactures precision brass inserts, fittings, fasteners and custom components in Jamnagar, Gujarat, India.";
 export const socialImage = "/images/logo/FEEL_GOOD_LOGO.png";
 export const absoluteUrl = (path: string) => new URL(path, siteUrl).toString();
 
@@ -37,7 +37,7 @@ export const seoPages = {
   "/company/about": ["About Our Brass Manufacturing Company", "Learn about Feel Good Brass Industry, a precision brass components manufacturer in Jamnagar, Gujarat, serving industrial and custom assembly requirements."],
   "/company/manufacturing": ["Precision Brass Manufacturing in Jamnagar", "Explore brass turning, threading, machining and finishing capabilities at Feel Good Brass Industry in Jamnagar, Gujarat."],
   "/company/qualitycertifications": ["Quality Processes & Manufacturing Standards", "Explore material checks, dimensional inspection and manufacturing standards used for brass components at Feel Good Brass Industry."],
-  "/products": ["Brass Parts & Components from Jamnagar", "Browse brass inserts, fittings, fasteners, electrical parts and custom components manufactured by Feel Good Brass Industry in Jamnagar, Gujarat."],
+  "/products": ["Brass Parts & Components from Jamnagar", "Browse brass inserts, fittings, fasteners and custom components manufactured by Feel Good Brass Industry in Jamnagar, Gujarat."],
   "/quality": ["Brass Component Quality & Inspection", "See how material selection, thread checks, dimensional inspection and final review support reliable brass components at Feel Good Brass Industry."],
   "/gallery": ["Brass Parts Manufacturing Gallery", "Explore the Feel Good Brass Industry gallery of brass inserts, fittings, fasteners and custom machined components from Jamnagar, Gujarat."],
   "/contact": ["Contact Our Jamnagar Brass Manufacturing Team", "Contact Feel Good Brass Industry in Dared, Jamnagar, Gujarat. Share drawings, samples and quantities for brass parts and custom component inquiries."],

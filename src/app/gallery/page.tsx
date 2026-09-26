@@ -29,8 +29,8 @@ const galleryItems = [
     },
     {
         number: "04",
-        title: "Electrical Brass Parts",
-        category: "Conductive Parts",
+        title: "Brass CPVC Inserts",
+        category: "Threaded Components",
         image: "/images/gallery/processed/cleaned/brass-cpvc-female-inserts-1.webp",
         alt: "Brass CPVC Female Inserts",
     },
@@ -57,8 +57,8 @@ const galleryItems = [
     },
     {
         number: "08",
-        title: "Electrical Brass Parts",
-        category: "Conductive Parts",
+        title: "Brass CPVC Inserts",
+        category: "Threaded Components",
         image: "/images/gallery/processed/cleaned/industrial-cpvc-female-inserts-1.webp",
         alt: "Industrial CPVC Female Inserts",
     },
@@ -175,7 +175,7 @@ export default function GalleryPage() {
                         </div>
 
                         <p className="mobile-body max-w-[760px] text-[19px] leading-[1.8] text-[#465566] max-md:text-[16px]">
-                            A visual overview of brass inserts, fittings, electrical parts,
+                            A visual overview of brass inserts, fittings,
                             fasteners, custom parts, quality inspection, and dispatch
                             preparation.
                         </p>
