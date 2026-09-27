@@ -10,28 +10,28 @@ const galleryItems = [
         number: "01",
         title: "Brass Inserts",
         category: "Threaded Components",
-        image: "/images/gallery/processed/cleaned/brass-cpvc-inserts-1.webp",
+        image: "/images/gallery/first-row/brass insert.png",
         alt: "Brass CPVC Inserts",
     },
     {
         number: "02",
         title: "Brass Fittings",
         category: "Connection Parts",
-        image: "/images/gallery/processed/cleaned/brass-cpvc-fitting-inserts-1.webp",
+        image: "/images/gallery/first-row/brass Sanitary Fitting.png",
         alt: "Brass CPVC Fitting Inserts",
     },
     {
         number: "03",
         title: "Brass Fasteners",
         category: "Assembly Components",
-        image: "/images/gallery/processed/cleaned/brass-cpvc-male-inserts-1.webp",
+        image: "/images/gallery/first-row/brass composite unioun.png",
         alt: "Brass CPVC Male Inserts",
     },
     {
         number: "04",
         title: "Brass CPVC Inserts",
         category: "Threaded Components",
-        image: "/images/gallery/processed/cleaned/brass-cpvc-female-inserts-1.webp",
+        image: "/images/gallery/first-row/CPVC Female insert.png",
         alt: "Brass CPVC Female Inserts",
     },
     {
@@ -185,14 +185,14 @@ export default function GalleryPage() {
                         {galleryItems.map((item, index) => (
                             <div data-reveal="fade-up" data-reveal-stagger data-image-hover
                                 key={item.number}
-                                className={`group overflow-hidden bg-[#F8F3EA] transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl ${index === 0 || index === 6 ? "max-2xl:col-span-2 max-md:col-span-1" : ""
+                                className={`group flex flex-col overflow-hidden bg-[#F8F3EA] transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl ${index === 0 || index === 6 ? "max-2xl:col-span-2 max-md:col-span-1" : ""
                                     }`}
                             >
-                                <div className="h-[360px]">
+                                <div className="h-[360px] shrink-0">
                                     <BrassVisual image={item.image} alt={item.alt} />
                                 </div>
 
-                                <div className="bg-white px-8 py-8 transition-colors duration-500 group-hover:bg-[#0B1F35] max-md:px-6">
+                                <div className="flex-1 bg-white px-8 py-8 transition-colors duration-500 group-hover:bg-[#0B1F35] max-md:px-6">
                                     <div className="mb-8 flex items-center justify-between">
                                         <span className="text-[13px] font-extrabold uppercase tracking-[3px] text-[#D79229]">
                                             {item.number}
@@ -203,10 +203,11 @@ export default function GalleryPage() {
                                         </span>
                                     </div>
 
-                                    <h3 className="mobile-card-title text-[25px] font-extrabold uppercase leading-[1.15] text-[#0B1F35] transition-colors duration-500 group-hover:text-white">
+                                    <h3 className="mobile-card-title min-h-[2lh] text-[25px] font-extrabold uppercase leading-[1.15] text-[#0B1F35] transition-colors duration-500 group-hover:text-white">
                                         {item.title}
                                     </h3>
                                 </div>
+                                <div aria-hidden="true" className="h-[28.75px] w-full shrink-0 bg-[var(--fg-cream)]" />
                             </div>
                         ))}
                     </div>
