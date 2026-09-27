@@ -8,86 +8,86 @@ import Image from "next/image";
 const galleryItems = [
     {
         number: "01",
-        title: "Brass Inserts",
-        category: "Threaded Components",
+        title: "BRASS THREADED INSERTS",
+        category: "THREADED COMPONENTS",
         image: "/images/gallery/first-row/brass insert.png",
         alt: "Brass CPVC Inserts",
     },
     {
         number: "02",
-        title: "Brass Fittings",
-        category: "Connection Parts",
+        title: "BRASS MALE FITTINGS",
+        category: "CONNECTION PARTS",
         image: "/images/gallery/first-row/brass Sanitary Fitting.png",
         alt: "Brass CPVC Fitting Inserts",
     },
     {
         number: "03",
-        title: "Brass Fasteners",
-        category: "Assembly Components",
+        title: "BRASS THREADED ADAPTERS",
+        category: "ADAPTER COMPONENTS",
         image: "/images/gallery/first-row/brass composite unioun.png",
         alt: "Brass CPVC Male Inserts",
     },
     {
         number: "04",
-        title: "Brass CPVC Inserts",
-        category: "Threaded Components",
+        title: "BRASS CPVC INSERTS",
+        category: "CPVC COMPONENTS",
         image: "/images/gallery/first-row/CPVC Female insert.png",
         alt: "Brass CPVC Female Inserts",
     },
     {
         number: "05",
-        title: "Quality Inspection",
-        category: "QC Process",
-        image: "/images/gallery/processed/cleaned/brass-cpvc-female-t2-2.webp",
+        title: "BRASS HEX NUTS",
+        category: "FASTENING COMPONENTS",
+        image: "/images/gallery/first-row/Brass Hex Nut.png",
         alt: "Brass CPVC Female T2",
     },
     {
         number: "06",
-        title: "Custom Components",
-        category: "Drawing Based Parts",
-        image: "/images/gallery/processed/cleaned/brass-cpvc-inserts-t1-1.webp",
+        title: "BRASS BUSHINGS",
+        category: "BUSHING COMPONENTS",
+        image: "/images/gallery/first-row/Brass Knurling insert.png",
         alt: "Brass CPVC Inserts T1",
     },
     {
         number: "07",
-        title: "Packing & Dispatch",
-        category: "Safe Delivery",
-        image: "/images/gallery/processed/cleaned/brass-cpvc-fitting-inserts-3.webp",
+        title: "BRASS KNURLED INSERTS",
+        category: "KNURLED COMPONENTS",
+        image: "/images/gallery/first-row/Brass threaded insert.png",
         alt: "Brass CPVC Fitting Inserts",
     },
     {
         number: "08",
-        title: "Brass CPVC Inserts",
-        category: "Threaded Components",
-        image: "/images/gallery/processed/cleaned/industrial-cpvc-female-inserts-1.webp",
+        title: "BRASS SLOTTED INSERTS",
+        category: "INSERT COMPONENTS",
+        image: "/images/gallery/first-row/CPVC Male insert.png",
         alt: "Industrial CPVC Female Inserts",
     },
     {
         number: "09",
         title: "Quality Inspection",
         category: "QC Process",
-        image: "/images/gallery/processed/cleaned/brass-cpvc-inserts-2.webp",
+        image: "/images/gallery/first-row/Hex Reducer.png",
         alt: "Brass CPVC Inserts",
     },
     {
         number: "10",
         title: "Custom Components",
         category: "Drawing Based Parts",
-        image: "/images/gallery/processed/cleaned/brass-cpvc-female-inserts-2.webp",
+        image: "/images/gallery/first-row/Knurled PPR.png",
         alt: "Brass CPVC Female Inserts",
     },
     {
         number: "11",
         title: "Packing & Dispatch",
         category: "Safe Delivery",
-        image: "/images/gallery/processed/cleaned/brass-cpvc-male-inserts-3.webp",
+        image: "/images/gallery/first-row/PPR female insert.png",
         alt: "Brass CPVC Male Inserts",
     },
     {
         number: "12",
         title: "Brass CPVC Inserts",
         category: "Threaded Components",
-        image: "/images/gallery/processed/cleaned/brass-cpvc-inserts-t1-3.webp",
+        image: "/images/gallery/first-row/PPR male insert.png",
         alt: "Brass CPVC Inserts T1",
     },
 ];
@@ -112,8 +112,8 @@ function ArrowIcon() {
 
 function BrassVisual({ image, alt }: { image: string; alt: string }) {
     return (
-        <div data-reveal="image-in" className="relative flex h-full min-h-[360px] items-center justify-center overflow-hidden bg-[#F8F3EA]">
-            <Image data-reveal-image src={image} alt={alt} fill sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, (max-width: 1535px) 33vw, 355px" className="object-contain" />
+        <div data-reveal="image-in" className="relative h-full w-full overflow-hidden bg-[#F8F3EA]">
+            <Image data-reveal-image src={image} alt={alt} fill sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, (max-width: 1535px) 33vw, 355px" className="object-cover object-center" />
         </div>
     );
 }
@@ -188,7 +188,7 @@ export default function GalleryPage() {
                                 className={`group flex flex-col overflow-hidden bg-[#F8F3EA] transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl ${index === 0 || index === 6 ? "max-2xl:col-span-2 max-md:col-span-1" : ""
                                     }`}
                             >
-                                <div className="h-[360px] shrink-0">
+                                <div className="aspect-[4/3] w-full shrink-0">
                                     <BrassVisual image={item.image} alt={item.alt} />
                                 </div>
 
@@ -203,7 +203,7 @@ export default function GalleryPage() {
                                         </span>
                                     </div>
 
-                                    <h3 className="mobile-card-title min-h-[2lh] text-[25px] font-extrabold uppercase leading-[1.15] text-[#0B1F35] transition-colors duration-500 group-hover:text-white">
+                                    <h3 className="min-h-[57.5px] max-md:min-h-[calc(clamp(1.1875rem,5vw,1.375rem)*2.44)] whitespace-nowrap text-[clamp(15.5px,1.3vw,19.75px)] font-extrabold uppercase leading-[1.15] tracking-[-0.025em] text-[#0B1F35] transition-colors duration-500 group-hover:text-white">
                                         {item.title}
                                     </h3>
                                 </div>
