@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 // src/components/Company/CompanyJourney.tsx
 
 const milestones = [
@@ -23,51 +25,6 @@ const milestones = [
     },
 ];
 
-function BrassPartVisual() {
-    return (
-        <div className="relative mx-auto h-[260px] w-[260px] max-md:h-[210px] max-md:w-[210px]">
-            <div className="absolute inset-0 rounded-full bg-[#D79229]/10 blur-3xl" />
-
-            {/* Big brass gear */}
-            <div
-                className="absolute left-1/2 top-1/2 h-[170px] w-[170px] -translate-x-1/2 -translate-y-1/2 shadow-[0_30px_80px_rgba(11,31,53,0.16)]"
-                style={{
-                    clipPath:
-                        "polygon(50% 0%, 58% 18%, 78% 10%, 72% 31%, 94% 36%, 76% 50%, 94% 64%, 72% 69%, 78% 90%, 58% 82%, 50% 100%, 42% 82%, 22% 90%, 28% 69%, 6% 64%, 24% 50%, 6% 36%, 28% 31%, 22% 10%, 42% 18%)",
-                    background:
-                        "linear-gradient(135deg, #8a5519 0%, #d79229 38%, #f3c46a 55%, #b96f1f 78%, #6e4214 100%)",
-                }}
-            />
-
-            {/* Gear hole */}
-            <div className="absolute left-1/2 top-1/2 h-[66px] w-[66px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white shadow-[inset_10px_10px_20px_rgba(11,31,53,0.14)]" />
-
-            {/* Small silver part */}
-            <div
-                className="absolute bottom-[25px] right-[18px] h-[86px] w-[86px] shadow-[0_20px_45px_rgba(11,31,53,0.12)]"
-                style={{
-                    clipPath:
-                        "polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0 50%)",
-                    background:
-                        "linear-gradient(135deg, #dce3e8 0%, #ffffff 42%, #9faab4 100%)",
-                }}
-            />
-
-            <div
-                className="absolute left-[28px] top-[34px] h-[76px] w-[76px] shadow-[0_20px_45px_rgba(11,31,53,0.12)]"
-                style={{
-                    clipPath:
-                        "polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0 50%)",
-                    background:
-                        "linear-gradient(135deg, #9c641e 0%, #e3a13a 45%, #7a4512 100%)",
-                }}
-            />
-
-            <div className="absolute left-[58px] top-[20px] h-[120px] w-[1px] rotate-[35deg] bg-white/70" />
-        </div>
-    );
-}
-
 export default function CompanyJourney() {
     return (
         <section className="bg-white py-[110px] max-lg:py-20 max-md:py-16">
@@ -88,22 +45,15 @@ export default function CompanyJourney() {
                 {/* Main card */}
                 <div className="overflow-hidden bg-[#F8F3EA]">
                     <div className="grid grid-cols-[0.9fr_1.1fr] max-lg:grid-cols-1">
-                        {/* Visual */}
-                        <div className="relative flex min-h-[520px] items-center justify-center bg-[#0B1F35] px-10 py-16 max-lg:min-h-[420px] max-md:px-5">
-                            <div data-reveal="line-x" className="absolute left-0 top-0 h-[6px] w-[38%] bg-[#D79229]" />
-
-                            <div className="text-center">
-                                <BrassPartVisual />
-
-                                <h3 className="mobile-feature-title mt-10 text-[34px] font-extrabold uppercase leading-[1.12] tracking-[-1px] text-white max-md:text-[28px]">
-                                    Built Around Precision
-                                </h3>
-
-                                <p className="mobile-body mx-auto mt-5 max-w-[420px] text-[16px] leading-[1.8] text-white/70">
-                                    From raw brass material to finished components, every stage is
-                                    focused on accuracy, consistency, and dependable supply.
-                                </p>
-                            </div>
+                        {/* Preserve the former visual footprint after removing its illustration and copy. */}
+                        <div className="relative min-h-[520px] overflow-hidden max-lg:min-h-[572.48px] max-md:min-h-[calc(510.8px+clamp(20px,5.5vw,24px)*1.18)] max-[22.5rem]:min-h-[585.2px]">
+                            <Image
+                                src="/images/about/about-journey-brass.png"
+                                alt="Technical brass fitting assembly with component labels and engineering dimensions"
+                                fill
+                                sizes="(max-width: 767px) calc(100vw - 40px), (max-width: 1023px) calc(100vw - 80px), (max-width: 1500px) calc((100vw - 80px) * 0.45), 639px"
+                                className="object-cover object-center"
+                            />
                         </div>
 
                         {/* Timeline */}

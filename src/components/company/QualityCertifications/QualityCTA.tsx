@@ -54,7 +54,7 @@ export default function QualityCTA() {
 
                     <div className="relative h-[560px] max-lg:h-[420px] max-md:h-[320px]">
                         <Image data-reveal-image
-                            src="/images/quality/quality_main.png"
+                            src="/images/quality/quality-support.png"
                             alt="Precision quality inspection of brass components"
                             fill
                             sizes="(max-width: 1024px) 100vw, 750px"

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import brassParts from "@/public/images/manufacturing/manufacturing-main.webp";
+import brassParts from "@/public/images/manufacturing/manufacturing-main.png";
 
 function ArrowIcon() {
     return (
