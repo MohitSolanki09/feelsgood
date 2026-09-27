@@ -66,3 +66,43 @@
 @media (width <= 375px) {
   .copy { padding-bottom: 92px; }
 }
+
+/* Use the reserved copy space without moving the approved composition. */
+.navigation { position: relative; height: 0; }
+.links {
+  position: absolute;
+  top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 36px;
+  width: 100%;
+}
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  color: var(--fg-navy);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+}
+.link:focus-visible {
+  outline: 2px solid var(--fg-brass);
+  outline-offset: 4px;
+}
+.backArrow, .forwardArrow {
+  display: inline-block;
+  color: var(--fg-brass);
+  transition: transform 250ms ease;
+}
+.link:hover .backArrow { transform: translateX(-4px); }
+.link:hover .forwardArrow { transform: translateX(4px); }
+@media (width < 768px) {
+  .links { top: 20px; }
+}
+@media (width < 360px) {
+  .links { flex-direction: column; align-items: flex-start; }
+}

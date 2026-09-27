@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./not-found.module.css";
 
 export default function NotFound() {
@@ -31,6 +32,18 @@ export default function NotFound() {
           <p className={styles.message}>
             The page you’re looking for may have moved, changed, or no longer exists.
           </p>
+          <nav className={styles.navigation} aria-label="Page not found navigation">
+            <div className={styles.links}>
+              <Link href="/" className={styles.link}>
+                <span className={styles.backArrow} aria-hidden="true">←</span>
+                BACK TO HOME
+              </Link>
+              <Link href="/contact" className={styles.link}>
+                CONTACT US
+                <span className={styles.forwardArrow} aria-hidden="true">→</span>
+              </Link>
+            </div>
+          </nav>
         </div>
       </div>
     </main>

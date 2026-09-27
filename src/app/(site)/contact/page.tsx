@@ -3,6 +3,7 @@ import { BreadcrumbSchema } from "@/src/components/common/StructuredData";
 // src/app/contact/page.tsx
 
 import Link from "next/link";
+import ContactForm from "./ContactForm";
 
 const contactCards = [
     {
@@ -254,109 +255,7 @@ export default function ContactPage() {
                         </div>
                     </div>
 
-                    <form
-                        action="mailto:feelgoodbrass@gmail.com"
-                        method="post"
-                        encType="text/plain"
-                        className="grid gap-6 bg-[#F8F3EA] p-12 max-md:p-6"
-                    >
-                        <div className="grid grid-cols-2 gap-6 max-md:grid-cols-1">
-                            <div>
-                                <label className="mb-3 block text-[13px] font-extrabold uppercase tracking-[3px] text-[#0B1F35]">
-                                    Full Name
-                                </label>
-                                <input
-                                    name="name"
-                                    type="text"
-                                    required
-                                    placeholder="Your name"
-                                    className="h-[58px] w-full border border-[#e7e1d7] bg-white px-5 text-[15px] text-[#0B1F35] outline-none transition-colors duration-300 placeholder:text-[#465566]/50 focus:border-[#D79229]"
-                                />
-                            </div>
-
-                            <div>
-                                <label className="mb-3 block text-[13px] font-extrabold uppercase tracking-[3px] text-[#0B1F35]">
-                                    Company Name
-                                </label>
-                                <input
-                                    name="company"
-                                    type="text"
-                                    placeholder="Company name"
-                                    className="h-[58px] w-full border border-[#e7e1d7] bg-white px-5 text-[15px] text-[#0B1F35] outline-none transition-colors duration-300 placeholder:text-[#465566]/50 focus:border-[#D79229]"
-                                />
-                            </div>
-                        </div>
-
-                        <div className="grid grid-cols-2 gap-6 max-md:grid-cols-1">
-                            <div>
-                                <label className="mb-3 block text-[13px] font-extrabold uppercase tracking-[3px] text-[#0B1F35]">
-                                    Email Address
-                                </label>
-                                <input
-                                    name="email"
-                                    type="email"
-                                    required
-                                    placeholder="you@example.com"
-                                    className="h-[58px] w-full border border-[#e7e1d7] bg-white px-5 text-[15px] text-[#0B1F35] outline-none transition-colors duration-300 placeholder:text-[#465566]/50 focus:border-[#D79229]"
-                                />
-                            </div>
-
-                            <div>
-                                <label className="mb-3 block text-[13px] font-extrabold uppercase tracking-[3px] text-[#0B1F35]">
-                                    Phone Number
-                                </label>
-                                <input
-                                    name="phone"
-                                    type="tel"
-                                    required
-                                    placeholder="+91"
-                                    className="h-[58px] w-full border border-[#e7e1d7] bg-white px-5 text-[15px] text-[#0B1F35] outline-none transition-colors duration-300 placeholder:text-[#465566]/50 focus:border-[#D79229]"
-                                />
-                            </div>
-                        </div>
-
-                        <div>
-                            <label className="mb-3 block text-[13px] font-extrabold uppercase tracking-[3px] text-[#0B1F35]">
-                                Product Requirement
-                            </label>
-                            <select
-                                name="product"
-                                defaultValue=""
-                                required
-                                className="h-[58px] w-full border border-[#e7e1d7] bg-white px-5 text-[15px] text-[#0B1F35] outline-none transition-colors duration-300 focus:border-[#D79229]"
-                            >
-                                <option value="" disabled>
-                                    Select product type
-                                </option>
-                                {inquiryTypes.map((item) => (
-                                    <option key={item} value={item}>
-                                        {item}
-                                    </option>
-                                ))}
-                            </select>
-                        </div>
-
-                        <div>
-                            <label className="mb-3 block text-[13px] font-extrabold uppercase tracking-[3px] text-[#0B1F35]">
-                                Requirement Details
-                            </label>
-                            <textarea
-                                name="message"
-                                required
-                                rows={7}
-                                placeholder="Share size, quantity, drawing/sample details, material grade, finish, or application..."
-                                className="w-full resize-none border border-[#e7e1d7] bg-white px-5 py-5 text-[15px] leading-[1.7] text-[#0B1F35] outline-none transition-colors duration-300 placeholder:text-[#465566]/50 focus:border-[#D79229]"
-                            />
-                        </div>
-
-                        <button
-                            type="submit"
-                            className="group inline-flex h-[64px] w-fit items-center justify-center gap-4 bg-[#D79229] px-9 text-[14px] font-extrabold uppercase tracking-[3px] text-white transition-colors duration-300 hover:bg-[#0B1F35]"
-                        >
-                            Submit Inquiry
-                            <ArrowIcon />
-                        </button>
-                    </form>
+                    <ContactForm inquiryTypes={inquiryTypes} />
                 </div>
             </section>
 
