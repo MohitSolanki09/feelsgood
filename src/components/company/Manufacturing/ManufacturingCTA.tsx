@@ -46,7 +46,7 @@ export default function ManufacturingCTA() {
                             </h2>
 
                             <p data-reveal="fade-up" data-reveal-delay="70" className="mobile-body mt-7 max-w-[560px] text-[17px] leading-[1.8] text-[#465566]">
-                                We help you manufacture brass parts with the right material,
+                                From Jamnagar, Gujarat, India, we manufacture brass parts with the right material,
                                 accurate size, clean finish, inspection support, and dependable
                                 delivery for repeat production.
                             </p>

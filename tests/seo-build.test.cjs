@@ -3,21 +3,23 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const assert = require('node:assert/strict');
-const root = '.next/server/app';
-const origin = 'https://feelsgoodbrass.netlify.app';
-const sitemap = fs.readFileSync(path.join(root, 'sitemap.xml.body'), 'utf8');
+const root = 'out';
+const origin = 'https://feelgoodbrass.com';
+const sitemap = fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8');
 const urls = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(match => match[1]);
-assert.equal(urls.length, 20);
+assert.equal(urls.length, 19);
+assert.ok(!urls.some(url => url.includes("brass-electrical-parts")));
 assert.equal(new Set(urls).size, urls.length);
 const titles = new Set(), descriptions = new Set();
 const attr = (tag, name) => tag.match(new RegExp(`\\b${name}="([^"]*)"`))?.[1];
 for (const url of urls) {
   assert.ok(url.startsWith(origin + '/'));
+  assert.ok(url.endsWith('/'), `${url}: missing trailing slash`);
   const route = new URL(url).pathname;
-  const html = fs.readFileSync(path.join(root, route === '/' ? 'index.html' : route.slice(1) + '.html'), 'utf8');
+  const html = fs.readFileSync(path.join(root, route.slice(1), 'index.html'), 'utf8');
   const title = html.match(/<title>(.*?)<\/title>/)?.[1];
   assert.ok(title, `${route}: title missing`);
-  assert.ok(title.includes('Feel Good Brass Industry'), `${route}: missing brand in title`);
+  assert.ok(title.includes('Feel Good Brass'), `${route}: missing brand in title`);
   assert.ok(!titles.has(title), `${route}: duplicate title`); titles.add(title);
   const metas = [...html.matchAll(/<meta\b[^>]*>/g)].map(m => m[0]);
   const meta = name => metas.filter(tag => attr(tag, 'name') === name || attr(tag, 'property') === name).map(tag => attr(tag, 'content'));
@@ -40,10 +42,19 @@ for (const url of urls) {
     assert.ok(level <= previousLevel + 1, `${route}: skipped heading level`);
     previousLevel = level;
   }
-  for (const image of html.matchAll(/<img\b[^>]*>/g)) assert.notEqual(attr(image[0], 'alt'), undefined, `${route}: missing alt`);
+  for (const image of html.matchAll(/<img\b[^>]*>/g)) {
+    assert.notEqual(attr(image[0], 'alt'), undefined, `${route}: missing alt`);
+    const src = attr(image[0], 'src');
+    if (src?.startsWith('/')) assert.ok(fs.existsSync(path.join(root, decodeURIComponent(new URL(src, origin).pathname))), `${route}: missing image ${src}`);
+  }
   const schemas = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map(m=>JSON.parse(m[1]));
   const businesses = schemas.filter(s=>s['@type']==='LocalBusiness');
   assert.equal(businesses.length,1);
+  assert.equal(businesses[0].url, origin + '/');
+  assert.equal(businesses[0]['@id'], origin + '/#business');
+  assert.equal(businesses[0].address.addressLocality, 'Jamnagar');
+  assert.equal(businesses[0].address.addressRegion, 'Gujarat');
+  assert.equal(businesses[0].telephone, '+919316636271');
   assert.equal(businesses[0].address.postalCode,'361004');
   assert.equal(businesses[0].email,'feelgoodbrass@gmail.com');
   assert.ok(!/aggregateRating|priceCurrency|"review"/.test(JSON.stringify(schemas)));
@@ -53,12 +64,12 @@ for (const url of urls) {
   for(const match of html.matchAll(/<a\b[^>]*>/g)) {
     const href=attr(match[0],'href');
     if(!href?.startsWith('/') || href.startsWith('//')) continue;
-    const target=new URL(href,origin).pathname;
-    assert.ok(urls.includes(origin+target)||target==='/company',`${route}: broken internal route ${href}`);
+    const target=new URL(href,origin).pathname.replace(/\/?$/, '/');
+    assert.ok(urls.includes(origin+target)||target==='/company/',`${route}: broken internal route ${href}`);
   }
   console.log(`PASS ${route}`);
 }
-const robots = fs.readFileSync(path.join(root,'robots.txt.body'),'utf8');
+const robots = fs.readFileSync(path.join(root,'robots.txt'),'utf8');
 assert.match(robots,/User-Agent: \*/i); assert.match(robots,/Allow: \//);
 assert.ok(robots.includes(`${origin}/sitemap.xml`));
 console.log(`Validated ${urls.length} pages: metadata, canonical, H1, images, internal routes, JSON-LD, sitemap and robots.`);

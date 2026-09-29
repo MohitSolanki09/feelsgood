@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
-// No custom production domain is configured; this is the supplied live site.
-export const siteUrl = "https://feelsgoodbrass.netlify.app";
+// Canonical production origin for the static website.
+export const siteUrl = "https://feelgoodbrass.com";
 export const business = {
   name: "Feel Good Brass Industry",
   email: "feelgoodbrass@gmail.com",
@@ -15,12 +15,19 @@ export const business = {
 };
 export const defaultDescription = "Feel Good Brass Industry manufactures precision brass inserts, fittings, fasteners and custom components in Jamnagar, Gujarat, India.";
 export const socialImage = "/images/logo/FEEL_GOOD_LOGO.png";
-export const absoluteUrl = (path: string) => new URL(path, siteUrl).toString();
+export const absoluteUrl = (path: string) => {
+  const url = new URL(path, siteUrl);
+  // Match trailingSlash for page routes without changing asset or metadata file URLs.
+  if (url.origin === siteUrl && !url.pathname.endsWith("/") && !/\.[^/]+$/.test(url.pathname)) {
+    url.pathname += "/";
+  }
+  return url.toString();
+};
 
 export function pageMetadata(title: string, description: string, path: string, image = socialImage): Metadata {
-  const fullTitle = `${title} | ${business.name}`;
+  const fullTitle = `${title} | Feel Good Brass`;
   return {
-    title,
+    title: { absolute: fullTitle },
     description,
     alternates: { canonical: absoluteUrl(path) },
     openGraph: {
@@ -34,7 +41,7 @@ export function pageMetadata(title: string, description: string, path: string, i
 
 export const seoPages = {
   "/": ["Brass Parts Manufacturer in Jamnagar", defaultDescription],
-  "/company/about": ["About Our Brass Manufacturing Company", "Learn about Feel Good Brass Industry, a precision brass components manufacturer in Jamnagar, Gujarat, serving industrial and custom assembly requirements."],
+  "/company/about": ["Brass Manufacturing Company in Jamnagar", "Learn about Feel Good Brass Industry, a precision brass components manufacturer in Jamnagar, Gujarat, serving industrial and custom assembly requirements."],
   "/company/manufacturing": ["Precision Brass Manufacturing in Jamnagar", "Explore brass turning, threading, machining and finishing capabilities at Feel Good Brass Industry in Jamnagar, Gujarat."],
   "/company/qualitycertifications": ["Quality Processes & Manufacturing Standards", "Explore material checks, dimensional inspection and manufacturing standards used for brass components at Feel Good Brass Industry."],
   "/products": ["Brass Parts & Components from Jamnagar", "Browse brass inserts, fittings, fasteners and custom components manufactured by Feel Good Brass Industry in Jamnagar, Gujarat."],

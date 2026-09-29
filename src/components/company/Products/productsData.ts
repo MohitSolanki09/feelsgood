@@ -113,36 +113,6 @@ export const products: Product[] = [
         ],
     },
     {
-        slug: "brass-electrical-parts",
-        title: "Drawing-Based Brass Parts",
-        label: "Custom Brass Parts As Per Drawing Or Sample",
-        visual: "electrical",
-        shortText:
-            "Drawing-based brass parts manufactured to specified sizes, tolerances, and finish requirements.",
-        description:
-            "We help customers develop custom brass parts based on drawings, physical samples, application needs, and production quantities. This is suitable for OEMs, traders, exporters, and manufacturers who need special brass components.",
-        components: [
-            "Drawing-Based Brass Parts",
-            "Sample-Based Components",
-            "Special Threaded Parts",
-            "Custom Brass Fittings",
-            "Custom Inserts",
-            "Special Machined Brass Parts",
-        ],
-        applications: [
-            "OEM development",
-            "Export supply",
-            "Special industrial use",
-            "Replacement component manufacturing",
-        ],
-        specifications: [
-            "Manufacturing as per drawing",
-            "Material and finish flexibility",
-            "Sample-based development",
-            "Small and bulk quantity support",
-        ],
-    },
-    {
         slug: "custom-brass-components",
         title: "Custom Brass Components",
         label: "Custom Brass Parts As Per Drawing Or Sample",

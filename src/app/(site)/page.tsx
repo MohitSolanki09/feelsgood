@@ -9,7 +9,6 @@ import AdvancementSection from "@/src/components/Home/AdvancementSection";
 
 export const metadata = {
   ...pageMetadata(...seoPages["/"], "/"),
-  title: { absolute: "Feel Good Brass Industry | Brass Parts Manufacturer in Jamnagar" },
 };
 
 export default function Home() {

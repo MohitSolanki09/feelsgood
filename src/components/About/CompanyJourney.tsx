@@ -69,13 +69,13 @@ export default function CompanyJourney() {
                                         0{index + 1}
                                     </span>
 
-                                    <h4 className="mobile-year mt-10 text-[42px] font-extrabold leading-none tracking-[-1.5px] text-[#050505] max-md:text-[34px]">
+                                    <h3 className="mobile-year mt-10 text-[42px] font-extrabold leading-none tracking-[-1.5px] text-[#050505] max-md:text-[34px]">
                                         {item.year}
-                                    </h4>
+                                    </h3>
 
-                                    <h5 className="mt-6 text-[21px] font-extrabold uppercase leading-[1.2] tracking-[-0.5px] text-[#0B1F35]">
+                                    <h4 className="mt-6 text-[21px] font-extrabold uppercase leading-[1.2] tracking-[-0.5px] text-[#0B1F35]">
                                         {item.title}
-                                    </h5>
+                                    </h4>
 
                                     <p className="mobile-secondary mt-5 text-[15px] leading-[1.75] text-[#465566]">
                                         {item.text}
